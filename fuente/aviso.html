@@ -1,0 +1,43 @@
+<!-- ═════════ AVISO: confirmación del formulario de análisis (lo usan la home y la página de contacto) ═════════ -->
+<div class="aviso" id="aviso" data-theme="oscuro" hidden>
+  <div class="aviso__velo" data-cierra></div>
+  <div class="aviso__caja" id="aviso-caja" role="dialog" aria-modal="true" aria-labelledby="aviso-t1" tabindex="-1">
+    <span class="aviso__fondo" aria-hidden="true"><span class="wp-halo aviso__halo"></span></span>
+    <button class="aviso__x" type="button" data-cierra aria-label="Cerrar"><span></span><span></span></button>
+
+    <!-- Paso 1: enviar -->
+    <div class="aviso__paso aviso__paso--enviar">
+      <span class="wp-chip"><span class="wp-chip__punto late"></span><span>Tu solicitud está preparada</span></span>
+      <h2 class="titular-m" id="aviso-t1">Solo falta enviarla.</h2>
+      <p class="wp-suave" id="aviso-como">Se abre WhatsApp con el mensaje ya escrito. Pulsa enviar y listo.</p>
+      <dl class="aviso__resumen">
+        <div><dt>Web</dt><dd id="aviso-web"></dd></div>
+        <div><dt>Nombre</dt><dd id="aviso-nombre"></dd></div>
+      </dl>
+      <div class="aviso__acciones">
+        <a class="wp-btn wp-btn--primario" id="aviso-enviar" href="{{WHATSAPP}}" target="_blank" rel="noopener"><svg class="ico"><use href="#i-chat"/></svg><span>Abrir WhatsApp y enviar</span></a>
+        <a class="wp-btn wp-btn--cristal" id="aviso-gmail" href="https://mail.google.com/" target="_blank" rel="noopener" hidden>Abrir en Gmail</a>
+      </div>
+      <p class="aviso__direccion" id="aviso-direccion" hidden>¿No se abre? Escríbenos a <b>{{CORREO}}</b> <button class="aviso__copia" type="button" data-copia="{{CORREO}}" data-ok="Copiada">Copiar</button></p>
+      <button class="wp-btn wp-btn--texto" type="button" id="aviso-cambia">Prefiero enviarlo por correo <span class="wp-btn__flecha" aria-hidden="true">→</span></button>
+    </div>
+
+    <!-- Paso 2: confirmación -->
+    <div class="aviso__paso aviso__paso--hecho" hidden>
+      <div class="aviso__fiesta" aria-hidden="true">
+        <span class="aviso__chispas" id="aviso-chispas"></span>
+        <img class="aviso__punto" src="{{PUNTO_CELEBRA}}" alt="" width="132" height="114">
+      </div>
+      <h2 class="titular-m" id="aviso-t2">Te responderemos en menos de 24 h.</h2>
+      <p class="wp-suave">Si ya has pulsado enviar en <span id="aviso-donde">WhatsApp</span>, hemos recibido tu mensaje.</p>
+      <div class="aviso__plazo">
+        <svg class="aviso__reloj" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="27"/><circle class="aviso__reloj-v" cx="32" cy="32" r="27" pathLength="100"/><text x="32" y="37" text-anchor="middle">24 h</text></svg>
+        <p><span>Tendrás nuestra respuesta antes del</span><b id="aviso-plazo">mañana a esta hora</b></p>
+      </div>
+      <div class="aviso__acciones">
+        <button class="wp-btn wp-btn--solido" type="button" data-cierra>Entendido</button>
+        <button class="wp-btn wp-btn--texto" type="button" id="aviso-volver">No llegué a enviarlo</button>
+      </div>
+    </div>
+  </div>
+</div>

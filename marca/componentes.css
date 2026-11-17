@@ -1,0 +1,93 @@
+/* Web y Punto — componentes. Todo valor de color, sombra, radio y espaciado sale de tokens.json. */
+
+:root { --wp-curva: cubic-bezier(.2, .8, .2, 1); --wp-rapido: 200ms; --wp-lento: 500ms; }
+
+body { margin: 0; font-family: var(--font-sans); background: var(--fondo); color: var(--tinta); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+/* ── Sección: el reparto 60/30. Claro por defecto; data-theme="oscuro" la vuelve negra. ── */
+.wp-seccion { position: relative; overflow: hidden; background: var(--fondo); color: var(--tinta); padding: var(--esp-32) var(--esp-8); }
+.wp-seccion--compacta { padding: var(--esp-12) var(--esp-8); }
+.wp-seccion--insertada { border-radius: var(--radio-xl); margin: 0 var(--esp-4); }
+.wp-ancho { position: relative; max-width: 1120px; margin: 0 auto; }
+.wp-suave { color: var(--tinta-suave); }
+.wp-tenue { color: var(--tinta-tenue); }
+.wp-acento { color: var(--azul-texto); }
+.wp-equilibrado { text-wrap: balance; }
+
+/* ── Halo: la única “imagen de fondo” de la marca. Da algo que ver a través del cristal. ── */
+.wp-halo { position: absolute; width: 640px; height: 640px; border-radius: 50%; pointer-events: none; background: radial-gradient(closest-side, rgba(48, 79, 254, .7), rgba(48, 79, 254, .22) 55%, rgba(48, 79, 254, 0)); filter: blur(8px); }
+.wp-halo { opacity: .5; }
+[data-theme="oscuro"] .wp-halo { opacity: 1; }
+[data-theme="oscuro"] [data-theme="claro"] .wp-halo { opacity: .5; }
+
+/* ── Botón ── */
+.wp-btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--esp-2); box-sizing: border-box; height: 48px; padding: 0 var(--esp-6); border: 0; border-radius: var(--radio-pill); font: inherit; font-size: 17px; font-weight: 500; letter-spacing: -.01em; line-height: 1; text-decoration: none; white-space: nowrap; cursor: pointer; transition: transform var(--wp-rapido) var(--wp-curva), box-shadow var(--wp-rapido) var(--wp-curva), background-color var(--wp-rapido) var(--wp-curva); }
+.wp-btn:hover { transform: translateY(-1px); }
+.wp-btn:active { transform: translateY(0) scale(.98); }
+.wp-btn:focus-visible { outline: 2px solid transparent; outline-offset: 2px; box-shadow: var(--foco-anillo); }
+.wp-btn--primario { background: var(--azul); color: var(--sobre-azul); box-shadow: var(--azul-halo); }
+.wp-btn--solido { background: var(--tinta); color: var(--fondo); }
+.wp-btn--cristal { background: var(--cristal); color: var(--tinta); border: 1px solid var(--cristal-borde); box-shadow: var(--cristal-brillo); -webkit-backdrop-filter: blur(var(--desenfoque-cristal)) saturate(160%); backdrop-filter: blur(var(--desenfoque-cristal)) saturate(160%); }
+.wp-btn--texto { height: auto; padding: 0; border-radius: var(--radio-s); background: none; color: var(--azul-texto); }
+.wp-btn--texto:hover { transform: none; }
+.wp-btn--texto .wp-btn__flecha { transition: transform var(--wp-rapido) var(--wp-curva); }
+.wp-btn--texto:hover .wp-btn__flecha { transform: translateX(3px); }
+.wp-btn--s { height: 36px; padding: 0 var(--esp-4); font-size: 14px; }
+
+/* ── Chip ── */
+.wp-chip { display: inline-flex; align-items: center; gap: var(--esp-2); box-sizing: border-box; height: 32px; padding: 0 var(--esp-3); border-radius: var(--radio-pill); border: 1px solid var(--cristal-borde); background: var(--cristal); color: var(--tinta); box-shadow: var(--cristal-brillo); font-size: 13px; font-weight: 500; letter-spacing: .01em; line-height: 1; -webkit-backdrop-filter: blur(var(--desenfoque-cristal)) saturate(160%); backdrop-filter: blur(var(--desenfoque-cristal)) saturate(160%); }
+.wp-chip__punto { width: 8px; height: 8px; border-radius: 50%; background: var(--azul); flex: none; }
+.wp-chip--velo { background: var(--azul-velo); border-color: transparent; box-shadow: none; color: var(--azul-texto); -webkit-backdrop-filter: none; backdrop-filter: none; }
+
+/* ── Nav flotante ── */
+.wp-nav { display: flex; align-items: center; gap: var(--esp-8); box-sizing: border-box; height: 64px; padding: 0 var(--esp-3) 0 var(--esp-6); border-radius: var(--radio-pill); border: 1px solid var(--cristal-borde); background: var(--cristal); box-shadow: var(--cristal-brillo), var(--elev-1); -webkit-backdrop-filter: blur(var(--desenfoque-nav)) saturate(160%); backdrop-filter: blur(var(--desenfoque-nav)) saturate(160%); }
+.wp-nav__logo { display: block; height: 36px; width: auto; flex: none; }
+.wp-nav__enlaces { display: flex; gap: var(--esp-6); margin: 0 auto; padding: 0; list-style: none; }
+.wp-nav__enlaces a { color: var(--tinta-suave); font-size: 14px; font-weight: 500; text-decoration: none; border-radius: var(--radio-s); transition: color var(--wp-rapido) var(--wp-curva); }
+.wp-nav__enlaces a:hover, .wp-nav__enlaces a[aria-current] { color: var(--tinta); }
+.wp-nav__enlaces a:focus-visible { outline: 2px solid transparent; box-shadow: var(--foco-anillo); }
+
+/* ── Cristal: recuadro translúcido ── */
+.wp-cristal { position: relative; box-sizing: border-box; padding: var(--esp-8); border-radius: var(--radio-l); border: 1px solid var(--cristal-borde); background: var(--cristal); color: var(--tinta); box-shadow: var(--cristal-brillo), var(--elev-2); -webkit-backdrop-filter: blur(var(--desenfoque-cristal)) saturate(160%); backdrop-filter: blur(var(--desenfoque-cristal)) saturate(160%); }
+.wp-cristal--s { padding: var(--esp-6); border-radius: var(--radio-m); }
+
+/* ── Tarjeta: recuadro que se levanta del fondo ── */
+.wp-tarjeta { position: relative; box-sizing: border-box; padding: var(--esp-8); border-radius: var(--radio-l); background: var(--fondo-elevado); color: var(--tinta); box-shadow: var(--elev-2); transition: transform var(--wp-lento) var(--wp-curva), box-shadow var(--wp-lento) var(--wp-curva); }
+.wp-tarjeta--interactiva:hover, .wp-tarjeta--alzada { transform: translateY(-6px); box-shadow: var(--elev-3); }
+.wp-tarjeta--destacada { background: linear-gradient(var(--azul-velo), var(--azul-velo)), var(--fondo-elevado); }
+.wp-tarjeta__titulo { margin: 0 0 var(--esp-2); font-size: 21px; line-height: 1.25; font-weight: 600; letter-spacing: -.01em; }
+.wp-tarjeta__texto { margin: 0; font-size: 17px; line-height: 1.55; color: var(--tinta-suave); }
+.wp-tarjeta__numero { display: block; margin-bottom: var(--esp-6); font-size: 13px; font-weight: 500; letter-spacing: .01em; color: var(--azul-texto); }
+
+/* ── Cifra ── */
+.wp-cifra { display: flex; flex-direction: column; gap: var(--esp-2); }
+.wp-cifra__valor { font-size: 64px; line-height: 1; font-weight: 500; letter-spacing: -.04em; color: var(--tinta); }
+.wp-cifra__valor small { font-size: .45em; font-weight: 500; letter-spacing: -.02em; margin-left: .15em; }
+.wp-cifra__pie { font-size: 14px; line-height: 1.45; color: var(--tinta-suave); }
+
+/* ── Campo ── */
+.wp-campo { display: flex; flex-direction: column; gap: var(--esp-2); }
+.wp-campo__etiqueta { font-size: 14px; font-weight: 500; color: var(--tinta); }
+.wp-campo__control { box-sizing: border-box; width: 100%; height: 52px; padding: 0 var(--esp-4); border-radius: var(--radio-m); border: 1px solid var(--linea-control); background: var(--fondo-elevado); color: var(--tinta); font: inherit; font-size: 17px; transition: border-color var(--wp-rapido) var(--wp-curva), box-shadow var(--wp-rapido) var(--wp-curva); }
+.wp-campo__control::placeholder { color: var(--tinta-tenue); }
+.wp-campo__control:focus-visible { outline: 2px solid transparent; border-color: var(--foco); box-shadow: var(--foco-anillo); }
+.wp-campo__ayuda { font-size: 14px; color: var(--tinta-tenue); }
+
+/* ── Punto: la mascota señalando ── */
+.wp-punto { display: inline-flex; align-items: flex-end; gap: var(--esp-3); }
+.wp-punto__img { display: block; width: 88px; height: auto; flex: none; filter: drop-shadow(0 12px 16px rgba(0, 0, 0, .22)); }
+.wp-punto--s .wp-punto__img { width: 64px; }
+.wp-punto--l .wp-punto__img { width: 128px; }
+.wp-punto__nota { box-sizing: border-box; max-width: 260px; margin-bottom: var(--esp-4); padding: var(--esp-3) var(--esp-4); border-radius: var(--radio-m); border: 1px solid var(--cristal-borde); background: var(--cristal); color: var(--tinta); box-shadow: var(--cristal-brillo), var(--elev-1); font-size: 14px; line-height: 1.45; -webkit-backdrop-filter: blur(var(--desenfoque-cristal)) saturate(160%); backdrop-filter: blur(var(--desenfoque-cristal)) saturate(160%); }
+.wp-punto--espejo .wp-punto__img { transform: scaleX(-1); }
+.wp-punto--asomado { position: absolute; right: var(--esp-8); bottom: 100%; margin-bottom: -22px; z-index: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .wp-btn, .wp-tarjeta, .wp-btn--texto .wp-btn__flecha { transition: none; }
+  .wp-btn:hover, .wp-tarjeta--interactiva:hover { transform: none; }
+}
+
+/* ── Utilidades de las vistas previas ── */
+.wp-demo { display: flex; flex-wrap: wrap; align-items: center; gap: var(--esp-6); padding: var(--esp-8); background: var(--fondo); color: var(--tinta); position: relative; overflow: hidden; }
+.wp-demo-doble { display: grid; grid-template-columns: 1fr 1fr; }
+.wp-demo-doble > * { min-width: 0; }

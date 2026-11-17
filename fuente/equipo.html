@@ -1,0 +1,139 @@
+<!-- ═══════════════ PÁGINA: EQUIPO ═══════════════
+     FOTOS: cada hueco lleva data-foto="…". Para poner la foto real, sustituye el contenido del hueco por <img src="…" alt="…">.
+     Medidas recomendadas:
+       · marcos-retrato / asier-retrato   1200 × 1500 px (retrato vertical; el círculo del hero usa la misma foto recortada a la cara)
+       · equipo-juntos                    1600 × 1200 px (los dos juntos)
+       · con-cliente-1 … con-cliente-4    1200 × 1600 px en vertical o 1600 × 1200 px en horizontal -->
+<div data-vista="equipo" id="pagina-equipo" hidden>
+<main>
+
+<!-- ═════════ HERO: dos puntos que trabajan hacia un tercero, tu web ═════════ -->
+<section class="wp-seccion eq-hero" data-theme="oscuro" id="eq-hero">
+  <span class="wp-halo eq-hero__halo" aria-hidden="true"></span>
+  <div class="wp-ancho">
+    <div>
+      <span class="wp-chip"><span class="wp-chip__punto late"></span><span>Equipo · 2 personas, 0 intermediarios</span></span>
+    </div>
+    <h1 class="titular-xl"><span class="eq-hero__uno">Somos dos.</span> <span class="eq-hero__dos">Y punto<span class="punto-final" aria-hidden="true"></span><span class="sr">.</span></span></h1>
+    <p class="entradilla wp-suave">Sin comerciales, sin departamentos y sin gestores de cuenta. Quien te atiende es quien diseña y construye tu web.</p>
+
+    <div class="duo" id="duo">
+      <canvas class="duo__hilos" aria-hidden="true"></canvas>
+      <figure class="duo__persona" data-lado="izq">
+        <div class="duo__foto" data-inclina data-foto="marcos-retrato"><span class="duo__letra">M<i></i></span></div>
+        <figcaption><b>Marcos</b><span>Estrategia y clientes</span></figcaption>
+      </figure>
+      <div class="duo__web" aria-hidden="true"><span class="duo__nodo"></span><b>Tu web</b></div>
+      <figure class="duo__persona" data-lado="der">
+        <div class="duo__foto" data-inclina data-foto="asier-retrato"><span class="duo__letra">A<i></i></span></div>
+        <figcaption><b>Asier</b><span>Tecnología e IA</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ QUIÉN HACE QUÉ ═════════ -->
+<section class="wp-seccion eq-perfiles" data-theme="claro" id="eq-perfiles">
+  <div class="wp-ancho">
+    <header class="cabecera">
+      <span class="wp-chip wp-chip--velo aparece">Quién hace qué</span>
+      <h2 class="titular-l aparece" style="--i:1">Uno piensa tu web contigo. El otro hace que funcione.</h2>
+    </header>
+
+    <article class="eq-perfil" id="eq-marcos">
+      <figure class="eq-retrato aparece" data-inclina data-foto="marcos-retrato">
+        <span class="wp-halo" aria-hidden="true"></span><span class="eq-retrato__letra" aria-hidden="true">M<i></i></span>
+        <span class="marco__aviso">Foto provisional</span>
+      </figure>
+      <div class="eq-perfil__info aparece" style="--i:1">
+        <span class="caso__num">01 / 02</span>
+        <h3 class="titular-l">Marcos</h3>
+        <span class="wp-chip wp-chip--velo">Estrategia y clientes</span>
+        <p class="entradilla">Trato con los clientes, diseño estratégico y toma de decisiones.</p>
+        <ul class="eq-lista">
+          <li><svg class="ico"><use href="#i-check"/></svg>Habla contigo desde la primera llamada.</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Define la estrategia y la estructura de tu web.</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Toma las decisiones de diseño.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="eq-perfil eq-perfil--inv" id="eq-asier">
+      <figure class="eq-retrato aparece" data-inclina data-foto="asier-retrato">
+        <span class="wp-halo" aria-hidden="true"></span><span class="eq-retrato__letra" aria-hidden="true">A<i></i></span>
+        <span class="marco__aviso">Foto provisional</span>
+      </figure>
+      <div class="eq-perfil__info aparece" style="--i:1">
+        <span class="caso__num">02 / 02</span>
+        <h3 class="titular-l">Asier</h3>
+        <span class="wp-chip wp-chip--velo">Tecnología e IA</span>
+        <p class="entradilla">Informático. Se ocupa de la parte técnica de cada web y de todo lo que lleva IA.</p>
+        <ul class="eq-lista">
+          <li><svg class="ico"><use href="#i-check"/></svg>Construye la parte técnica de cada web.</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Conecta WhatsApp, formularios y email marketing.</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Se encarga de todo lo que lleva IA.</li>
+        </ul>
+      </div>
+    </article>
+
+    <aside class="wp-tarjeta eq-punto aparece">
+      <img class="wp-punto__img" src="{{PUNTO_SALUDO}}" alt="" width="88" height="84">
+      <div><h3 class="titular-xs">Y luego está Punto.</h3><p class="wp-suave">Nuestra mascota. Ni diseña ni programa, pero señala muy bien lo importante.</p></div>
+    </aside>
+  </div>
+</section>
+
+<!-- ═════════ CÓMO ES TRABAJAR CON NOSOTROS: se ilumina al bajar ═════════ -->
+<section class="wp-seccion isla eq-manifiesto" data-theme="oscuro">
+  <span class="wp-halo" style="left:-260px;bottom:-320px;width:860px;height:860px" aria-hidden="true"></span>
+  <div class="wp-ancho">
+    <span class="wp-chip aparece"><span class="wp-chip__punto"></span>Cómo es trabajar con nosotros</span>
+    <p class="eq-manifiesto__texto" id="eq-manifiesto">Somos un equipo de <em>dos</em>. Trabajamos con <em>tres proyectos</em> a la vez, como máximo. Hablas siempre con quien diseña tu web. Ves cada paso en tu portal de cliente. Y en <em>siete días</em>, tu web está publicada.</p>
+    <div class="eq-cifras">
+      <div class="wp-cifra aparece"><span class="wp-cifra__valor">2</span><span class="wp-cifra__pie">Personas. Las dos trabajan en tu web</span></div>
+      <div class="wp-cifra aparece" style="--i:1"><span class="wp-cifra__valor">3</span><span class="wp-cifra__pie">Proyectos a la vez, como máximo</span></div>
+      <div class="wp-cifra aparece" style="--i:2"><span class="wp-cifra__valor">7<small>días</small></span><span class="wp-cifra__pie">De tus recursos a la web publicada</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ CON NUESTROS CLIENTES ═════════ -->
+<section class="wp-seccion eq-clientes" data-theme="claro" id="eq-clientes">
+  <div class="wp-ancho">
+    <header class="cabecera eq-clientes__cab">
+      <div>
+        <span class="wp-chip wp-chip--velo aparece">Con nuestros clientes</span>
+        <h2 class="titular-l aparece" style="--i:1">Cada web empieza conociendo a quien hay detrás.</h2>
+      </div>
+      <div class="eq-carril__flechas aparece" style="--i:2">
+        <button class="agenda__flecha" type="button" id="eq-ant" aria-label="Fotos anteriores">‹</button>
+        <button class="agenda__flecha" type="button" id="eq-sig" aria-label="Fotos siguientes">›</button>
+      </div>
+    </header>
+  </div>
+  <div class="eq-carril" id="eq-carril" tabindex="0" role="region" aria-label="Fotos del equipo y con clientes">
+    <figure class="eq-foto eq-foto--ancha" data-foto="equipo-juntos"><div class="eq-foto__hueco"><span class="wp-halo"></span><span class="eq-foto__puntos"><i>M</i><i>A</i></span><span class="marco__aviso">Foto provisional</span></div><figcaption><b>Marcos y Asier</b><span>Los dos, juntos</span></figcaption></figure>
+    <figure class="eq-foto" data-foto="con-cliente-1"><div class="eq-foto__hueco"><span class="wp-halo"></span><span class="eq-foto__puntos"><i>W</i><i class="hueco"></i></span><span class="marco__aviso">Foto provisional</span></div><figcaption><b>Con un cliente</b><span>Foto y nombre, en camino</span></figcaption></figure>
+    <figure class="eq-foto eq-foto--ancha" data-foto="con-cliente-2"><div class="eq-foto__hueco"><span class="wp-halo"></span><span class="eq-foto__puntos"><i>W</i><i class="hueco"></i></span><span class="marco__aviso">Foto provisional</span></div><figcaption><b>Con un cliente</b><span>Foto y nombre, en camino</span></figcaption></figure>
+    <figure class="eq-foto" data-foto="con-cliente-3"><div class="eq-foto__hueco"><span class="wp-halo"></span><span class="eq-foto__puntos"><i>W</i><i class="hueco"></i></span><span class="marco__aviso">Foto provisional</span></div><figcaption><b>Con un cliente</b><span>Foto y nombre, en camino</span></figcaption></figure>
+    <figure class="eq-foto" data-foto="con-cliente-4"><div class="eq-foto__hueco"><span class="wp-halo"></span><span class="eq-foto__puntos"><i>W</i><i class="hueco"></i></span><span class="marco__aviso">Foto provisional</span></div><figcaption><b>Con un cliente</b><span>Foto y nombre, en camino</span></figcaption></figure>
+  </div>
+</section>
+
+<!-- ═════════ CIERRE ═════════ -->
+<section class="wp-seccion eq-cierre" data-theme="oscuro">
+  <span class="wp-halo" style="left:50%;bottom:-520px;margin-left:-560px;width:1120px;height:900px" aria-hidden="true"></span>
+  <div class="wp-ancho eq-cierre__dentro">
+    <span class="wp-chip aparece"><span class="wp-chip__punto late"></span><span>Quedan <span data-plazas="libres">4</span> plazas</span></span>
+    <h2 class="titular-l aparece" style="--i:1">Ponnos cara en 15 minutos.</h2>
+    <p class="entradilla wp-suave aparece" style="--i:2">Reserva una llamada y habla directamente con nosotros. Te decimos qué haríamos con tu web y si encaja en la oferta.</p>
+    <div class="of-cierre__botones aparece" style="--i:3">
+      <a class="wp-btn wp-btn--primario" href="{{CALENDLY}}" target="_blank" rel="noopener" data-iman><svg class="ico"><use href="#i-cal"/></svg>Hablemos 15 min</a>
+      <a class="wp-btn wp-btn--cristal" href="{{WHATSAPP}}" target="_blank" rel="noopener" data-iman><svg class="ico"><use href="#i-chat"/></svg>Escríbenos por WhatsApp</a>
+    </div>
+    <a class="wp-btn wp-btn--texto aparece" style="--i:4" href="#pagina-proyectos">Ver nuestros proyectos <span class="wp-btn__flecha" aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+</main>
+</div>

@@ -1,0 +1,77 @@
+:root, [data-theme="claro"] {
+  --fondo: #f8f8ff;
+  --fondo-elevado: #ffffff;
+  --fondo-hundido: #eeeef7;
+  --tinta: #000000;
+  --tinta-suave: #55555f;
+  --tinta-tenue: #666670;
+  --azul: #304ffe;
+  --sobre-azul: #f8f8ff;
+  --azul-texto: #304ffe;
+  --azul-velo: rgba(48, 79, 254, 0.08);
+  --linea: rgba(0, 0, 0, 0.1);
+  --linea-control: #8c8c96;
+  --cristal: rgba(255, 255, 255, 0.62);
+  --cristal-borde: rgba(255, 255, 255, 0.85);
+  --foco: var(--azul-texto);
+  --elev-1: 0 1px 2px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.05);
+  --elev-2: 0 2px 4px rgba(0, 0, 0, 0.04), 0 12px 32px rgba(0, 0, 0, 0.08), 0 32px 64px rgba(16, 24, 96, 0.08);
+  --elev-3: 0 4px 8px rgba(0, 0, 0, 0.04), 0 24px 48px rgba(0, 0, 0, 0.1), 0 64px 120px rgba(16, 24, 96, 0.14);
+  --cristal-brillo: inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 -1px 0 rgba(0, 0, 0, 0.04);
+  --azul-halo: 0 8px 24px rgba(48, 79, 254, 0.32);
+  --foco-anillo: 0 0 0 2px #f8f8ff, 0 0 0 4px #304ffe;
+}
+[data-theme="oscuro"] {
+  --fondo: #000000;
+  --fondo-elevado: #0e0e12;
+  --fondo-hundido: #08080b;
+  --tinta: #f8f8ff;
+  --tinta-suave: #a3a3ad;
+  --tinta-tenue: #85858f;
+  --azul: #304ffe;
+  --sobre-azul: #f8f8ff;
+  --azul-texto: #8496ff;
+  --azul-velo: rgba(48, 79, 254, 0.24);
+  --linea: rgba(248, 248, 255, 0.14);
+  --linea-control: #6e6e78;
+  --cristal: rgba(248, 248, 255, 0.07);
+  --cristal-borde: rgba(248, 248, 255, 0.16);
+  --foco: var(--azul-texto);
+  --elev-1: inset 0 1px 0 rgba(248, 248, 255, 0.06), 0 8px 24px rgba(0, 0, 0, 0.6);
+  --elev-2: inset 0 1px 0 rgba(248, 248, 255, 0.1), 0 0 0 1px rgba(248, 248, 255, 0.06), 0 24px 60px rgba(0, 0, 0, 0.7);
+  --elev-3: inset 0 1px 0 rgba(248, 248, 255, 0.14), 0 0 0 1px rgba(248, 248, 255, 0.08), 0 40px 100px rgba(48, 79, 254, 0.28);
+  --cristal-brillo: inset 0 1px 0 rgba(248, 248, 255, 0.18), inset 0 -1px 0 rgba(0, 0, 0, 0.4);
+  --azul-halo: 0 8px 32px rgba(48, 79, 254, 0.55);
+  --foco-anillo: 0 0 0 2px #000000, 0 0 0 4px #8496ff;
+}
+:root {
+  --esp-1: 4px;
+  --esp-2: 8px;
+  --esp-3: 12px;
+  --esp-4: 16px;
+  --esp-6: 24px;
+  --esp-8: 32px;
+  --esp-12: 48px;
+  --esp-16: 64px;
+  --esp-24: 96px;
+  --esp-32: 128px;
+  --radio-s: 10px;
+  --radio-m: 16px;
+  --radio-l: 24px;
+  --radio-xl: 36px;
+  --radio-pill: 999px;
+  --desenfoque-cristal: 24px;
+  --desenfoque-nav: 16px;
+  --font-sans: "Geist", -apple-system, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+}
+.titular-xl { font-family: var(--font-sans); font-size: 72px; line-height: 1.02; font-weight: 600; letter-spacing: -0.035em; }
+.titular-l { font-family: var(--font-sans); font-size: 56px; line-height: 1.05; font-weight: 600; letter-spacing: -0.03em; }
+.titular-m { font-family: var(--font-sans); font-size: 40px; line-height: 1.1; font-weight: 600; letter-spacing: -0.025em; }
+.titular-s { font-family: var(--font-sans); font-size: 28px; line-height: 1.15; font-weight: 600; letter-spacing: -0.02em; }
+.titular-xs { font-family: var(--font-sans); font-size: 21px; line-height: 1.25; font-weight: 600; letter-spacing: -0.01em; }
+.entradilla { font-family: var(--font-sans); font-size: 21px; line-height: 1.45; font-weight: 400; letter-spacing: -0.01em; }
+.texto { font-family: var(--font-sans); font-size: 17px; line-height: 1.55; font-weight: 400; letter-spacing: -0.005em; }
+.texto-s { font-family: var(--font-sans); font-size: 14px; line-height: 1.45; font-weight: 400; letter-spacing: 0em; }
+.etiqueta { font-family: var(--font-sans); font-size: 13px; line-height: 1.2; font-weight: 500; letter-spacing: 0.01em; }
+.cifra { font-family: var(--font-sans); font-size: 64px; line-height: 1; font-weight: 500; letter-spacing: -0.04em; }
+@font-face { font-family: "Geist"; src: url("FONTURL") format("woff2"); font-weight: 100 900; font-style: normal; }

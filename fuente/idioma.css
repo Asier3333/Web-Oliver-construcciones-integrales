@@ -1,0 +1,20 @@
+/* ── Selector de idioma (ES / EN) en la barra de navegación ── */
+.idioma { display: inline-flex; flex: none; align-items: center; gap: 2px; padding: 3px; border-radius: var(--radio-pill); background: color-mix(in srgb, var(--tinta) 8%, transparent); }
+.idioma button { height: 28px; min-width: 34px; padding: 0 9px; border: 0; border-radius: var(--radio-pill); background: none; color: var(--tinta-suave); font: inherit; font-size: 12px; font-weight: 600; letter-spacing: .04em; line-height: 1; cursor: pointer; transition: color var(--wp-rapido) var(--wp-curva), background-color var(--wp-rapido) var(--wp-curva); }
+.idioma button:hover { color: var(--tinta); }
+.idioma button[aria-pressed="true"] { background: var(--tinta); color: var(--fondo); cursor: default; }
+.idioma button:focus-visible { outline: 2px solid transparent; box-shadow: var(--foco-anillo); }
+/* Ordenador: el selector va pegado al botón; el hueco mínimo entre piezas baja para que quepa también con la barra compacta */
+@media (min-width: 1001px) {
+  .cab .wp-nav { gap: 20px; }
+  .cab .idioma { margin-right: -4px; }
+  .cab .wp-nav__enlaces { white-space: nowrap; }
+}
+@media (min-width: 1001px) and (max-width: 1060px) {
+  .cab .wp-nav__enlaces { gap: 14px; }
+}
+/* Móvil y tablet: a la derecha, junto al botón del menú */
+@media (max-width: 1000px) {
+  .cab .idioma { margin-left: auto; }
+  .cab .idioma + .nav__menu { margin-left: 0; }
+}

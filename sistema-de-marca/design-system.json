@@ -1,0 +1,149 @@
+{
+ "v": 3,
+ "layout": "files",
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-11-16T12:49:52Z"
+ },
+ "title": "Web y Punto",
+ "namespace": "WebYPunto",
+ "libraries": [],
+ "sections": {},
+ "groups": [
+  "Logos",
+  "Punto"
+ ],
+ "assetGroups": {
+  "Logos": {
+   "name": "Logos",
+   "tile": "l",
+   "order": [
+    "logo-web-y-punto.svg",
+    "logo-web-y-punto-sobre-negro.svg",
+    "isotipo-azul.svg",
+    "isotipo-negro.svg",
+    "isotipo-blanco.svg"
+   ],
+   "files": {
+    "logo-web-y-punto.svg": {
+     "name": "logo-web-y-punto.svg",
+     "blob": "308fd3fe44c1df6f2ce665250a78d849",
+     "size": 29543,
+     "type": "image/svg+xml"
+    },
+    "logo-web-y-punto-sobre-negro.svg": {
+     "name": "logo-web-y-punto-sobre-negro.svg",
+     "blob": "4e60c17856f0958fc3d1675cf44551d4",
+     "size": 29543,
+     "type": "image/svg+xml"
+    },
+    "isotipo-azul.svg": {
+     "name": "isotipo-azul.svg",
+     "blob": "ee1cf9dfb0eaa3842f2248274cc1e80a",
+     "size": 12194,
+     "type": "image/svg+xml"
+    },
+    "isotipo-negro.svg": {
+     "name": "isotipo-negro.svg",
+     "blob": "79710fb33504d98b3300400d795924a6",
+     "size": 12194,
+     "type": "image/svg+xml"
+    },
+    "isotipo-blanco.svg": {
+     "name": "isotipo-blanco.svg",
+     "blob": "8bec5df2f4ae4d85fe3a487c98529ca3",
+     "size": 12194,
+     "type": "image/svg+xml"
+    }
+   }
+  },
+  "Punto": {
+   "name": "Punto",
+   "tile": "m",
+   "order": [
+    "punto-senala-cta.png",
+    "punto-idea.png",
+    "punto-saludo.png",
+    "punto-celebra.png",
+    "punto-neutro.png",
+    "punto-guino.png",
+    "punto-pensando.png",
+    "punto-duda.png",
+    "punto-sorpresa.png",
+    "plantilla-referencia-punto.png"
+   ],
+   "files": {
+    "punto-senala-cta.png": {
+     "name": "punto-senala-cta.png",
+     "blob": "fade6d635982f20a764a0dd6c48f5c18",
+     "size": 32695,
+     "type": "image/png"
+    },
+    "punto-idea.png": {
+     "name": "punto-idea.png",
+     "blob": "6a40b25baf0afbeed2565f059b704ad2",
+     "size": 33708,
+     "type": "image/png"
+    },
+    "punto-saludo.png": {
+     "name": "punto-saludo.png",
+     "blob": "d2ad9c30d64de673004a1b7d32be327c",
+     "size": 57611,
+     "type": "image/png"
+    },
+    "punto-celebra.png": {
+     "name": "punto-celebra.png",
+     "blob": "c9745fb27e89c71afce4f6d8be8794b0",
+     "size": 65693,
+     "type": "image/png"
+    },
+    "punto-neutro.png": {
+     "name": "punto-neutro.png",
+     "blob": "182cd15bc423cee252888457cc3d1374",
+     "size": 40860,
+     "type": "image/png"
+    },
+    "punto-guino.png": {
+     "name": "punto-guino.png",
+     "blob": "49cbf3c999f7700a40759662f1f1e0f9",
+     "size": 41054,
+     "type": "image/png"
+    },
+    "punto-pensando.png": {
+     "name": "punto-pensando.png",
+     "blob": "b736d557aa03b7cda8dfc77062d6784c",
+     "size": 43931,
+     "type": "image/png"
+    },
+    "punto-duda.png": {
+     "name": "punto-duda.png",
+     "blob": "a423d2fb2e94c36205fc00bfff4d876c",
+     "size": 49669,
+     "type": "image/png"
+    },
+    "punto-sorpresa.png": {
+     "name": "punto-sorpresa.png",
+     "blob": "be0f608c884520d516ed4b2e3a46f812",
+     "size": 41028,
+     "type": "image/png"
+    },
+    "plantilla-referencia-punto.png": {
+     "name": "plantilla-referencia-punto.png",
+     "blob": "519d3fdb888c9754caf0eba275d7e940",
+     "size": 1611752,
+     "type": "image/png"
+    }
+   }
+  }
+ },
+ "blobs": {},
+ "docs": {
+  "sections": []
+ },
+ "lastChange": {
+  "by": "Marcos",
+  "at": "2026-11-16T12:49:52Z",
+  "via": "Claude",
+  "note": "Nuevo sistema de marca: blanco, negro y azul #304FFE; cristal y profundidad."
+ }
+}

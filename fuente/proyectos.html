@@ -1,0 +1,201 @@
+<!-- ═══════════════ PÁGINA: NUESTROS PROYECTOS ═══════════════
+     FOTOS: cada hueco lleva data-foto="proyecto-toma". Para poner la foto real, sustituye el contenido del hueco
+     por <img src="…" alt="…">. Medidas recomendadas:
+       · portada   1600 × 1000 px (captura de escritorio de la portada; si es más alta, se recorre al pasar el cursor)
+       · movil      780 × 1600 px (captura de móvil)
+       · detalle-1 1200 × 1400 px (un detalle: una sección, un formulario, una animación)
+       · detalle-2 2100 ×  900 px (una franja ancha: rejilla de servicios, galería…)
+     El muro del hero se rellena con las portadas. -->
+<div data-vista="proyectos" id="pagina-proyectos" hidden>
+<main>
+
+<!-- ═════════ HERO: un muro de proyectos en perspectiva que el cursor ilumina ═════════ -->
+<section class="wp-seccion pr-hero" data-theme="oscuro" id="pr-hero">
+  <div class="pr-hero__escena" aria-hidden="true">
+    <div class="muro" id="muro">
+{{MURO}}
+    </div>
+  </div>
+  <div class="pr-hero__luz" aria-hidden="true"></div>
+
+  <div class="pr-hero__texto">
+    <div>
+      <span class="wp-chip"><span class="wp-chip__punto late"></span><span><span data-plazas="ocupadas">6</span> proyectos realizados · cero plantillas</span></span>
+    </div>
+    <h1 class="titular-xl"><span class="pr-hero__uno">Hechas a medida.</span> <span class="pr-hero__dos">Una a una<span class="punto-final" aria-hidden="true"></span><span class="sr">.</span></span></h1>
+    <p class="entradilla wp-suave">Cada web que publicamos empieza de cero, para un negocio concreto. <span class="solo-cursor">Mueve el cursor y échales un vistazo.</span><span class="solo-tactil">Baja y échales un vistazo.</span></p>
+    <div class="hero__acciones">
+      <a class="wp-btn wp-btn--primario" href="{{CALENDLY}}" target="_blank" rel="noopener" data-iman>Quiero una web así</a>
+      <a class="wp-btn wp-btn--texto" href="#pr-casos">Ver los proyectos <span class="wp-btn__flecha" aria-hidden="true">↓</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ CASOS ═════════ -->
+<section class="wp-seccion pr-casos" data-theme="claro" id="pr-casos">
+  <div class="wp-ancho">
+    <header class="cabecera">
+      <span class="wp-chip wp-chip--velo aparece">Casos</span>
+      <h2 class="titular-l aparece" style="--i:1">Tres negocios. Tres webs que no se parecen.</h2>
+      <p class="entradilla wp-suave aparece" style="--i:2">Pasa el cursor por cada portada para recorrerla.</p>
+    </header>
+
+    <!-- ── 01 · Modular Maker ── -->
+    <article class="pr-caso c-modular" id="pr-modular-maker">
+      <div class="pr-caso__info aparece">
+        <span class="caso__num">01 / 03</span>
+        <h3 class="titular-l">Modular Maker</h3>
+        <p class="entradilla wp-suave">Una landing que enseña cómo avanza la obra mientras bajas, y que termina en un formulario para pedir presupuesto en menos de 48 h.</p>
+        <dl class="pr-ficha">
+          <div><dt>Sector</dt><dd>Construcción modular</dd></div>
+          <div><dt>Tipo de web</dt><dd>Landing</dd></div>
+          <div><dt>Lo más destacado</dt><dd>Portada animada por scroll</dd></div>
+        </dl>
+        <ul class="caso__etq"><li>Landing</li><li>Animación por scroll</li><li>Formulario de presupuesto</li></ul>
+      </div>
+      <div class="pr-caso__fotos">
+        <figure class="marco aparece" data-inclina data-foto="modular-maker-portada">
+          <div class="marco__barra"><i></i><i></i><i></i><span>Modular Maker</span></div>
+          <div class="marco__ventana c-modular">
+            <div class="captura">
+              <div class="captura__nav"><span>MODULAR MAKER</span><i></i><i></i><i></i><b>Presupuesto</b></div>
+              <div class="captura__hero"><h4>La casa de tu vida, <em>construida con precisión.</em></h4><p>Calidad, precisión y rapidez en construcción modular.</p></div>
+              <div class="captura__foto"></div>
+              <div class="captura__tres"><i></i><i></i><i></i></div>
+              <div class="captura__lineas"><i></i><i></i><i></i></div>
+              <div class="captura__banda"></div>
+              <div class="captura__tres"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <span class="marco__aviso">Vista provisional</span>
+        </figure>
+        <div class="pr-caso__par">
+          <figure class="foto foto--movil aparece" data-foto="modular-maker-movil"><div class="foto__movil"><i class="fm-nav"></i><b>La casa de tu vida.</b><i class="fm-l"></i><i class="fm-f"></i><u>Presupuesto</u></div><span class="marco__aviso">Móvil · provisional</span></figure>
+          <figure class="foto foto--detalle aparece" style="--i:1" data-foto="modular-maker-detalle-1"><div class="foto__detalle"><span>Día 1</span><b>Día 90</b><span>Día 180</span><i></i></div><span class="marco__aviso">Detalle · provisional</span></figure>
+        </div>
+        <figure class="foto foto--ancha aparece" data-foto="modular-maker-detalle-2"><div class="foto__ancha"><i></i><i></i><i></i><i></i></div><span class="marco__aviso">Detalle · provisional</span></figure>
+      </div>
+    </article>
+
+    <!-- ── 02 · Genera Energía ── -->
+    <article class="pr-caso pr-caso--inv c-genera" id="pr-genera-energia">
+      <div class="pr-caso__info aparece">
+        <span class="caso__num">02 / 03</span>
+        <h3 class="titular-l">Genera Energía</h3>
+        <p class="entradilla wp-suave">Una web con presupuestador por pasos: el cliente calcula su instalación y lo que va a ahorrar, al momento.</p>
+        <dl class="pr-ficha">
+          <div><dt>Sector</dt><dd>Instalación de placas solares</dd></div>
+          <div><dt>Tipo de web</dt><dd>Web corporativa</dd></div>
+          <div><dt>Lo más destacado</dt><dd>Presupuestador con cálculo de ahorro</dd></div>
+        </dl>
+        <ul class="caso__etq"><li>Presupuestador</li><li>Calculadora de ahorro</li><li>Web corporativa</li></ul>
+      </div>
+      <div class="pr-caso__fotos">
+        <figure class="marco aparece" data-inclina data-foto="genera-energia-portada">
+          <div class="marco__barra"><i></i><i></i><i></i><span>Genera Energía</span></div>
+          <div class="marco__ventana c-genera">
+            <div class="captura">
+              <div class="captura__nav"><span>GENERA</span><i></i><i></i><i></i><b>Calcular</b></div>
+              <div class="captura__hero"><h4>Tu propia energía, <em>desde tu tejado.</em></h4><p>Calcula tu instalación y tu ahorro en un minuto.</p></div>
+              <div class="captura__foto"></div>
+              <div class="captura__tres"><i></i><i></i><i></i></div>
+              <div class="captura__banda"></div>
+              <div class="captura__lineas"><i></i><i></i><i></i></div>
+              <div class="captura__tres"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <span class="marco__aviso">Vista provisional</span>
+        </figure>
+        <div class="pr-caso__par">
+          <figure class="foto foto--detalle aparece" data-foto="genera-energia-detalle-1"><div class="foto__detalle"><span>Paso 1</span><b>Paso 2</b><span>Paso 3</span><i></i></div><span class="marco__aviso">Detalle · provisional</span></figure>
+          <figure class="foto foto--movil aparece" style="--i:1" data-foto="genera-energia-movil"><div class="foto__movil"><i class="fm-nav"></i><b>Tu propia energía.</b><i class="fm-l"></i><i class="fm-f"></i><u>Calcular</u></div><span class="marco__aviso">Móvil · provisional</span></figure>
+        </div>
+        <figure class="foto foto--ancha aparece" data-foto="genera-energia-detalle-2"><div class="foto__ancha"><i></i><i></i><i></i><i></i></div><span class="marco__aviso">Detalle · provisional</span></figure>
+      </div>
+    </article>
+
+    <!-- ── 03 · Reformas García ── -->
+    <article class="pr-caso c-reformas" id="pr-reformas-garcia">
+      <div class="pr-caso__info aparece">
+        <span class="caso__num">03 / 03</span>
+        <h3 class="titular-l">Reformas García</h3>
+        <p class="entradilla wp-suave">Una web de aire clásico y actual, con una portada que lleva directo a pedir presupuesto.</p>
+        <dl class="pr-ficha">
+          <div><dt>Sector</dt><dd>Reformas de cocinas y baños</dd></div>
+          <div><dt>Tipo de web</dt><dd>Web corporativa</dd></div>
+          <div><dt>Lo más destacado</dt><dd>Portada directa a presupuesto</dd></div>
+        </dl>
+        <ul class="caso__etq"><li>Web corporativa</li><li>Estilo clásico</li><li>Contacto directo</li></ul>
+      </div>
+      <div class="pr-caso__fotos">
+        <figure class="marco aparece" data-inclina data-foto="reformas-garcia-portada">
+          <div class="marco__barra"><i></i><i></i><i></i><span>Reformas García</span></div>
+          <div class="marco__ventana c-reformas">
+            <div class="captura">
+              <div class="captura__nav"><span>REFORMAS GARCÍA</span><i></i><i></i><i></i><b>Presupuesto</b></div>
+              <div class="captura__hero"><h4>Cocinas y baños, <em>bien hechos.</em></h4><p>Reformas integrales con acabados que duran.</p></div>
+              <div class="captura__foto"></div>
+              <div class="captura__lineas"><i></i><i></i><i></i></div>
+              <div class="captura__tres"><i></i><i></i><i></i></div>
+              <div class="captura__banda"></div>
+              <div class="captura__tres"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <span class="marco__aviso">Vista provisional</span>
+        </figure>
+        <div class="pr-caso__par">
+          <figure class="foto foto--movil aparece" data-foto="reformas-garcia-movil"><div class="foto__movil"><i class="fm-nav"></i><b>Cocinas y baños.</b><i class="fm-l"></i><i class="fm-f"></i><u>Presupuesto</u></div><span class="marco__aviso">Móvil · provisional</span></figure>
+          <figure class="foto foto--detalle aparece" style="--i:1" data-foto="reformas-garcia-detalle-1"><div class="foto__detalle"><span>Antes</span><b>Después</b><span>Detalle</span><i></i></div><span class="marco__aviso">Detalle · provisional</span></figure>
+        </div>
+        <figure class="foto foto--ancha aparece" data-foto="reformas-garcia-detalle-2"><div class="foto__ancha"><i></i><i></i><i></i><i></i></div><span class="marco__aviso">Detalle · provisional</span></figure>
+      </div>
+    </article>
+
+    <!-- ── Casos en preparación ── -->
+    <div class="pr-prox">
+      <header class="cabecera">
+        <h2 class="titular-m aparece">Y tres más, en preparación.</h2>
+        <p class="entradilla wp-suave aparece" style="--i:1">Las webs ya están hechas. Estamos preparando sus fotos y su historia para enseñártelas aquí.</p>
+      </header>
+      <ol class="pr-prox__rejilla">
+        <li class="aparece" data-foto="caso-04-portada"><div class="pr-prox__marco"><i></i><i></i><i></i></div><span class="caso__num">04</span><h3 class="titular-xs">Caso en preparación</h3></li>
+        <li class="aparece" style="--i:1" data-foto="caso-05-portada"><div class="pr-prox__marco"><i></i><i></i><i></i></div><span class="caso__num">05</span><h3 class="titular-xs">Caso en preparación</h3></li>
+        <li class="aparece" style="--i:2" data-foto="caso-06-portada"><div class="pr-prox__marco"><i></i><i></i><i></i></div><span class="caso__num">06</span><h3 class="titular-xs">Caso en preparación</h3></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ CIERRE: el hueco que queda es el tuyo ═════════ -->
+<section class="wp-seccion pr-cierre" data-theme="oscuro">
+  <span class="wp-halo" style="right:-200px;bottom:-460px;width:1000px;height:900px" aria-hidden="true"></span>
+  <div class="wp-ancho pr-cierre__rejilla">
+    <div class="pr-cierre__texto">
+      <span class="wp-chip aparece"><span class="wp-chip__punto late"></span><span>Quedan <span data-plazas="libres">4</span> plazas</span></span>
+      <h2 class="titular-l aparece" style="--i:1">El siguiente proyecto puede ser el tuyo.</h2>
+      <p class="entradilla wp-suave aparece" style="--i:2">Reserva una llamada de 15 minutos y te decimos qué haríamos con tu web. En 7 días puede estar aquí, con las demás.</p>
+      <div class="contacto__acciones aparece" style="--i:3">
+        <a class="wp-btn wp-btn--primario" href="{{CALENDLY}}" target="_blank" rel="noopener" data-iman>Reserva tu plaza</a>
+        <a class="wp-btn wp-btn--cristal" href="#clientes-fundadores" data-iman>Ver la oferta</a>
+      </div>
+    </div>
+
+    <div class="pr-hueco-caja aparece" style="--i:1">
+      <div class="wp-punto pr-hueco__mascota" aria-hidden="true">
+        <img class="wp-punto__img" src="{{PUNTO_SENALA}}" alt="" width="88" height="90">
+        <p class="wp-punto__nota">Este hueco es para ti.</p>
+      </div>
+      <div class="pr-hueco" aria-hidden="true">
+        <div class="navegador__barra"><span class="navegador__luces"><i></i><i></i><i></i></span><span class="navegador__url">tunegocio.es</span></div>
+        <div class="pr-hueco__dentro">
+          <span class="caso__num">07</span>
+          <b>Tu web<i></i></b>
+          <span>Lista en 7 días</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+</div>

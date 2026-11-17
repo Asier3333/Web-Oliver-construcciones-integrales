@@ -1,0 +1,55 @@
+<!-- @dsCard height=320 -->
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Web y Punto</title>
+<style>
+  html, body { margin: 0; height: 100%; }
+  body { background: var(--fondo); color: var(--tinta); font-family: var(--font-sans); overflow: hidden; }
+  .cover { position: relative; height: 320px; overflow: hidden; }
+  .art { position: absolute; top: 0; left: 480px; width: 480px; height: 320px; overflow: hidden; }
+  .art svg { display: block; width: 480px; height: 320px; }
+  .deep { fill: var(--tinta); }
+  .brand { fill: var(--azul); }
+  .tint { fill: var(--azul-velo); }
+  .cut { fill: var(--fondo); }
+  .slab { rx: var(--radio-xl); }
+  .words { position: absolute; left: var(--esp-8); bottom: var(--esp-8); max-width: 440px; }
+  .name { margin: 0; font-size: 96px; line-height: .95; font-weight: 600; letter-spacing: -.04em; color: var(--tinta); }
+  .tag { margin: var(--esp-4) 0 0 4px; font-size: 14px; line-height: 20px; color: var(--tinta-suave); }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 320" width="480" height="320">
+<!--
+  blocks      tinta 208×288 slab bled off the top (the 30 % black) · azul disc Ø192, the full stop of the name, largest hue · azul-velo pill 208×40 under the slab for relief · tinta disc Ø48 satellite — ≈36 % of 960×320
+  arrangement one tall slab with satellites: slab left, the azul “punto” low and right overlapping nothing, gutters esp-6
+  pattern     discs — the literal motif of the brand (“y Punto”, the mascot is a sphere): a 5×7 grid of Ø8 dots cut out of the slab in fondo at an esp-8 pitch, the last one swapped for azul
+  scales      sides in esp-4 multiples; gutters esp-6; pitch esp-8; slab corners radio-xl; pill rx = half its height (20); discs r = half the side
+-->
+<rect class="deep slab" x="24" y="-40" width="208" height="288" rx="36"/>
+<rect class="tint" x="24" y="264" width="208" height="40" rx="20"/>
+<circle class="brand" cx="360" cy="192" r="96"/>
+<circle class="deep" cx="432" cy="48" r="24"/>
+<g class="cut">
+<circle cx="64" cy="24" r="4"/><circle cx="96" cy="24" r="4"/><circle cx="128" cy="24" r="4"/><circle cx="160" cy="24" r="4"/><circle cx="192" cy="24" r="4"/>
+<circle cx="64" cy="56" r="4"/><circle cx="96" cy="56" r="4"/><circle cx="128" cy="56" r="4"/><circle cx="160" cy="56" r="4"/><circle cx="192" cy="56" r="4"/>
+<circle cx="64" cy="88" r="4"/><circle cx="96" cy="88" r="4"/><circle cx="128" cy="88" r="4"/><circle cx="160" cy="88" r="4"/><circle cx="192" cy="88" r="4"/>
+<circle cx="64" cy="120" r="4"/><circle cx="96" cy="120" r="4"/><circle cx="128" cy="120" r="4"/><circle cx="160" cy="120" r="4"/><circle cx="192" cy="120" r="4"/>
+<circle cx="64" cy="152" r="4"/><circle cx="96" cy="152" r="4"/><circle cx="128" cy="152" r="4"/><circle cx="160" cy="152" r="4"/><circle cx="192" cy="152" r="4"/>
+<circle cx="64" cy="184" r="4"/><circle cx="96" cy="184" r="4"/><circle cx="128" cy="184" r="4"/><circle cx="160" cy="184" r="4"/><circle cx="192" cy="184" r="4"/>
+<circle cx="64" cy="216" r="4"/><circle cx="96" cy="216" r="4"/><circle cx="128" cy="216" r="4"/><circle cx="160" cy="216" r="4"/>
+</g>
+<circle class="brand" cx="192" cy="216" r="8"/>
+</svg>
+</div>
+<div class="words">
+<h1 class="name">Web<br>y Punto</h1>
+<p class="tag">Diseño web para PYMES.</p>
+</div>
+</div>
+</body>
+</html>

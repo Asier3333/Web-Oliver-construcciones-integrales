@@ -1,0 +1,95 @@
+/* ── Formulario de análisis: selector de canal, correo y aviso de confirmación ── */
+
+/* Selector WhatsApp / Correo: una píldora que se desliza */
+.canal { min-width: 0; margin: 0; padding: 0; border: 0; }
+.canal legend { padding: 0; margin-bottom: var(--esp-2); }
+.canal__opciones { position: relative; display: grid; grid-template-columns: 1fr 1fr; padding: 4px; border-radius: var(--radio-pill); border: 1px solid var(--linea-control); background: rgba(248, 248, 255, .05); }
+.canal__opciones::before { content: ""; position: absolute; left: 4px; top: 4px; bottom: 4px; width: calc(50% - 4px); border-radius: var(--radio-pill); background: var(--tinta); transition: transform .5s var(--wp-curva); }
+.canal__opciones[data-canal="correo"]::before { transform: translateX(100%); }
+.canal__op { position: relative; display: block; cursor: pointer; }
+.canal__op input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.canal__op span { position: relative; display: flex; align-items: center; justify-content: center; gap: var(--esp-2); height: 42px; border-radius: var(--radio-pill); font-size: 15px; font-weight: 500; color: var(--tinta-suave); transition: color .35s var(--wp-curva); }
+.canal__op .ico { width: 18px; height: 18px; }
+.canal__op input:checked + span { color: var(--fondo); }
+.canal__op input:focus-visible + span { box-shadow: var(--foco-anillo); }
+.analisis [data-ayuda][hidden] { display: none; }
+
+/* Correo en el pie y en la página de contacto */
+.pie__correo { font-size: 14px; color: var(--tinta-suave); text-decoration: none; border-radius: var(--radio-s); transition: color .2s var(--wp-curva); overflow-wrap: anywhere; }
+.pie__correo:hover { color: var(--tinta); }
+.pie__correo:focus-visible { outline: 2px solid transparent; box-shadow: var(--foco-anillo); }
+.co-correo { display: grid; grid-template-columns: 1fr auto; gap: var(--esp-6); align-items: center; margin-top: var(--esp-6); padding: clamp(24px, 3vw, 40px); scroll-margin-top: 120px; }
+.co-correo__dir { margin-top: var(--esp-3); font-size: clamp(22px, 3.2vw, 40px); line-height: 1.1; font-weight: 600; letter-spacing: -.03em; overflow-wrap: anywhere; }
+.co-correo__dir i { font-style: normal; color: var(--azul-texto); text-shadow: 0 0 18px rgba(48, 79, 254, .9); }
+.co-correo p { margin-top: var(--esp-2); }
+.co-correo__botones { display: flex; flex-wrap: wrap; gap: var(--esp-3); align-items: center; }
+[data-copia].copiado { color: var(--azul-texto); }
+@media (max-width: 1000px) { .co-correo { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .co-correo__botones .wp-btn { width: 100%; } }
+
+/* ── Aviso ── */
+.aviso { position: fixed; inset: 0; z-index: 80; display: grid; place-items: center; padding: clamp(12px, 3vw, 32px); overflow: hidden auto; overscroll-behavior: contain; color: var(--tinta); }
+.aviso[hidden] { display: none; }
+.aviso__velo { position: fixed; inset: 0; background: rgba(0, 0, 0, .62); -webkit-backdrop-filter: blur(14px) saturate(140%); backdrop-filter: blur(14px) saturate(140%); animation: aviso-velo .5s var(--wp-curva) both; }
+.aviso__caja { position: relative; width: min(100%, 520px); padding: clamp(28px, 5vw, 48px); border-radius: var(--radio-xl); border: 1px solid var(--cristal-borde); background: rgba(10, 10, 16, .82); box-shadow: var(--cristal-brillo), 0 40px 120px rgba(48, 79, 254, .4), 0 30px 80px rgba(0, 0, 0, .7); -webkit-backdrop-filter: blur(var(--desenfoque-cristal)) saturate(160%); backdrop-filter: blur(var(--desenfoque-cristal)) saturate(160%); animation: aviso-entra .7s var(--wp-curva) both; outline: 0; }
+.aviso__caja::before { content: ""; position: absolute; left: 50%; top: 50%; width: 120px; height: 120px; margin: -60px 0 0 -60px; border-radius: 50%; border: 1px solid rgba(132, 150, 255, .8); pointer-events: none; animation: aviso-onda 1.1s var(--wp-curva) both; z-index: -1; }
+.aviso__fondo { position: absolute; inset: 0; z-index: -1; border-radius: inherit; overflow: hidden; pointer-events: none; }
+.aviso__halo { left: 50%; bottom: -520px; width: 760px; height: 760px; margin-left: -380px; opacity: 1; }
+.aviso.cierra .aviso__velo { animation: aviso-velo .3s var(--wp-curva) reverse both; }
+.aviso.cierra .aviso__caja { animation: aviso-sale .3s var(--wp-curva) both; }
+@keyframes aviso-velo { from { opacity: 0; } }
+@keyframes aviso-entra { from { opacity: 0; transform: translateY(36px) scale(.9); filter: blur(12px); } }
+@keyframes aviso-sale { to { opacity: 0; transform: translateY(16px) scale(.96); } }
+@keyframes aviso-onda { from { transform: scale(.4); opacity: 1; } to { transform: scale(9); opacity: 0; } }
+.aviso__x { position: absolute; right: 16px; top: 16px; z-index: 2; width: 40px; height: 40px; border: 0; border-radius: 50%; background: rgba(248, 248, 255, .08); color: var(--tinta); cursor: pointer; transition: background-color .2s var(--wp-curva), transform .4s var(--wp-curva); }
+.aviso__x:hover { background: rgba(248, 248, 255, .16); transform: rotate(90deg); }
+.aviso__x:focus-visible { outline: 2px solid transparent; box-shadow: var(--foco-anillo); }
+.aviso__x span { position: absolute; left: 12px; top: 19px; width: 16px; height: 1.5px; background: currentColor; transform: rotate(45deg); }
+.aviso__x span + span { transform: rotate(-45deg); }
+.aviso__paso { display: grid; gap: var(--esp-4); justify-items: start; }
+.aviso__paso[hidden] { display: none; }
+.aviso__paso > * { animation: sube .7s var(--wp-curva) both; }
+.aviso__paso > :nth-child(2) { animation-delay: .06s; } .aviso__paso > :nth-child(3) { animation-delay: .12s; } .aviso__paso > :nth-child(4) { animation-delay: .18s; } .aviso__paso > :nth-child(5) { animation-delay: .24s; } .aviso__paso > :nth-child(n+6) { animation-delay: .3s; }
+.aviso__paso h2 { padding-right: 36px; }
+.aviso__resumen { display: grid; gap: 1px; width: 100%; margin: var(--esp-2) 0; border-radius: var(--radio-m); overflow: hidden; background: var(--linea); }
+.aviso__resumen div { display: flex; justify-content: space-between; gap: var(--esp-4); padding: 12px var(--esp-4); background: rgba(16, 16, 24, .92); font-size: 15px; }
+.aviso__resumen dt { color: var(--tinta-tenue); }
+.aviso__resumen dd { margin: 0; font-weight: 500; text-align: right; overflow-wrap: anywhere; }
+.aviso__acciones { display: flex; flex-wrap: wrap; gap: var(--esp-3); align-items: center; width: 100%; }
+.aviso__acciones .wp-btn--primario, .aviso__acciones .wp-btn--solido { flex: 1 1 220px; }
+.aviso__acciones [hidden] { display: none; }
+.aviso__direccion { font-size: 14px; color: var(--tinta-suave); }
+.aviso__direccion[hidden] { display: none; }
+.aviso__direccion b { font-weight: 500; color: var(--tinta); overflow-wrap: anywhere; }
+.aviso__copia { margin-left: 6px; padding: 4px 10px; border-radius: var(--radio-pill); border: 1px solid var(--linea-control); background: none; color: var(--tinta); font: inherit; font-size: 13px; font-weight: 500; cursor: pointer; }
+.aviso__copia:focus-visible { outline: 2px solid transparent; box-shadow: var(--foco-anillo); }
+
+.aviso__paso--hecho { justify-items: center; text-align: center; padding-top: 104px; }
+.aviso__paso--hecho h2 { padding: 0; }
+.aviso__fiesta { position: absolute; left: 50%; top: -34px; width: 132px; height: 132px; margin-left: -66px; animation: none !important; }
+.aviso__punto { position: relative; display: block; width: 132px; height: auto; filter: drop-shadow(0 18px 26px rgba(48, 79, 254, .55)); animation: aviso-salta .9s var(--wp-curva) both; }
+@keyframes aviso-salta { from { opacity: 0; transform: translateY(70px) scale(.5); } 60% { transform: translateY(-12px) scale(1.04); } }
+.aviso__chispas { position: absolute; left: 50%; top: 56%; width: 0; height: 0; }
+.aviso__chispas i { position: absolute; left: 0; top: 0; width: var(--t); height: var(--t); margin: calc(var(--t) / -2); border-radius: 50%; background: var(--c); animation: aviso-chispa 1.3s var(--wp-curva) both; animation-delay: var(--d); }
+@keyframes aviso-chispa { from { transform: rotate(var(--a)) translateX(10px) scale(.3); opacity: 1; } 70% { opacity: 1; } to { transform: rotate(var(--a)) translateX(var(--r)) scale(1); opacity: 0; } }
+.aviso__plazo { display: flex; align-items: center; gap: var(--esp-4); width: 100%; margin: var(--esp-2) 0; padding: var(--esp-4); border-radius: var(--radio-l); background: rgba(16, 16, 24, .92); border: 1px solid var(--linea); text-align: left; }
+.aviso__plazo p { display: grid; gap: 2px; font-size: 14px; color: var(--tinta-suave); }
+.aviso__plazo b { font-size: 17px; font-weight: 600; letter-spacing: -.01em; color: var(--tinta); }
+.aviso__plazo b::first-letter { text-transform: uppercase; }
+.aviso__reloj { width: 64px; height: 64px; flex: none; }
+.aviso__reloj circle { fill: none; stroke: var(--linea); stroke-width: 3; }
+.aviso__reloj .aviso__reloj-v { stroke: var(--azul); stroke-linecap: round; stroke-dasharray: 100; stroke-dashoffset: 100; transform: rotate(-90deg); transform-origin: 50% 50%; filter: drop-shadow(0 0 6px rgba(48, 79, 254, .9)); animation: aviso-reloj 1.6s var(--wp-curva) .35s forwards; }
+@keyframes aviso-reloj { to { stroke-dashoffset: 0; } }
+.aviso__reloj text { fill: var(--tinta); font-family: var(--font-sans); font-size: 14px; font-weight: 600; letter-spacing: -.02em; }
+.aviso__paso--hecho .aviso__acciones { justify-content: center; }
+
+@media (max-width: 640px) {
+  .aviso { place-items: end center; padding: 0; }
+  .aviso__caja { width: 100%; border-radius: var(--radio-xl) var(--radio-xl) 0 0; border-bottom: 0; padding-bottom: max(28px, env(safe-area-inset-bottom)); animation-name: aviso-sube; }
+  .aviso__acciones .wp-btn { width: 100%; flex: 1 1 100%; }
+}
+@keyframes aviso-sube { from { transform: translateY(100%); } }
+@media (prefers-reduced-motion: reduce) {
+  .aviso__reloj .aviso__reloj-v { stroke-dashoffset: 0; }
+  .aviso__chispas { display: none; }
+}

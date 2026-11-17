@@ -1,0 +1,75 @@
+<!-- @dsCard group="Composición" height=1500 width=1200 -->
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><title>Hero — vista previa</title>
+<style>
+  .h-hero { padding: var(--esp-6) var(--esp-8) 0; min-height: 800px; box-sizing: border-box; }
+  .h-centro { text-align: center; padding-top: var(--esp-24); }
+  .h-centro h1 { margin: var(--esp-6) auto var(--esp-4); max-width: 820px; }
+  .h-centro p { margin: 0 auto var(--esp-8); max-width: 520px; }
+  .h-acciones { display: inline-flex; align-items: center; gap: var(--esp-6); }
+  .h-escena { position: relative; height: 300px; margin-top: var(--esp-12); }
+  .h-escena .wp-cristal { position: absolute; width: 280px; text-align: left; }
+  .h-barra { height: 6px; border-radius: var(--radio-pill); background: var(--linea); overflow: hidden; margin-top: var(--esp-4); }
+  .h-barra span { display: block; width: 72%; height: 100%; border-radius: inherit; background: var(--azul); }
+  .h-rejilla { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--esp-6); margin-top: var(--esp-12); }
+  .h-cifras { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--esp-6); margin-top: var(--esp-24); padding-top: var(--esp-12); border-top: 1px solid var(--linea); }
+</style>
+</head>
+<body>
+<section class="wp-seccion h-hero" data-theme="oscuro">
+  <span class="wp-halo" style="left:50%;bottom:-470px;margin-left:-520px;width:1040px;height:900px"></span>
+  <div class="wp-ancho">
+    <nav class="wp-nav" aria-label="Principal">
+      <img class="wp-nav__logo" src="/_blob/4e60c17856f0958fc3d1675cf44551d4" alt="Web y Punto">
+      <ul class="wp-nav__enlaces">
+        <li><a href="#">Oferta Clientes Fundadores</a></li>
+        <li><a href="#">Nuestros proyectos</a></li>
+        <li><a href="#">Equipo</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+      <a class="wp-btn wp-btn--solido wp-btn--s" href="#">Auditoría web gratuita</a>
+    </nav>
+    <div class="h-centro">
+      <span class="wp-chip"><span class="wp-chip__punto"></span>Clientes Fundadores · 10 plazas</span>
+      <h1 class="titular-xl wp-equilibrado">Tu web profesional, lista en 7 días.</h1>
+      <p class="entradilla wp-suave">Con todo el proceso a la vista.</p>
+      <div class="h-acciones">
+        <a class="wp-btn wp-btn--primario" href="#">Reserva tu plaza</a>
+        <a class="wp-btn wp-btn--texto" href="#">Ver nuestros proyectos <span class="wp-btn__flecha" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <div class="h-escena">
+      <div class="wp-cristal" style="left:40px;top:70px">
+        <div class="wp-punto wp-punto--asomado" style="right:auto;left:var(--esp-8)"><img class="wp-punto__img" src="/_blob/fade6d635982f20a764a0dd6c48f5c18" alt=""></div>
+        <span class="wp-tarjeta__numero">Portal de cliente</span>
+        <h3 class="wp-tarjeta__titulo">Ves el avance cuando quieras</h3>
+        <p class="texto-s wp-suave" style="margin:0">Entras, miras y preguntas a tu diseñador.</p>
+      </div>
+      <div class="wp-cristal" style="right:40px;top:20px">
+        <span class="wp-tarjeta__numero">Tu web · día 5 de 7</span>
+        <h3 class="wp-tarjeta__titulo">Diseño de la home aprobado</h3>
+        <div class="h-barra" role="img" aria-label="Avance: 72 %"><span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="wp-seccion" data-theme="claro">
+  <div class="wp-ancho">
+    <span class="wp-chip wp-chip--velo">Cómo trabajamos</span>
+    <h2 class="titular-l wp-equilibrado" style="margin:var(--esp-6) 0 var(--esp-4);max-width:720px">Solo tres webs a la vez. La tuya es una.</h2>
+    <p class="entradilla wp-suave" style="margin:0;max-width:560px">Hablas con quien la diseña y ves cada paso en tu portal.</p>
+    <div class="h-rejilla">
+      <article class="wp-tarjeta wp-tarjeta--interactiva"><span class="wp-tarjeta__numero">01</span><h3 class="wp-tarjeta__titulo">Nos pasas tus recursos</h3><p class="wp-tarjeta__texto">Fotos, vídeos y lo que tengas escrito. Si no hay textos, los redactamos.</p></article>
+      <article class="wp-tarjeta wp-tarjeta--alzada wp-tarjeta--destacada"><span class="wp-tarjeta__numero">02</span><h3 class="wp-tarjeta__titulo">Diseñamos a la vista</h3><p class="wp-tarjeta__texto">A medida, sin plantillas. Sigues el avance en tu portal de cliente.</p></article>
+      <article class="wp-tarjeta wp-tarjeta--interactiva"><span class="wp-tarjeta__numero">03</span><h3 class="wp-tarjeta__titulo">Publicamos en 7 días</h3><p class="wp-tarjeta__texto">Desde que recibimos tus recursos hasta la web en marcha.</p></article>
+    </div>
+    <div class="h-cifras">
+      <div class="wp-cifra"><span class="wp-cifra__valor">7<small>días</small></span><span class="wp-cifra__pie">De tus recursos a la web publicada</span></div>
+      <div class="wp-cifra"><span class="wp-cifra__valor">3</span><span class="wp-cifra__pie">Webs a la vez, como máximo</span></div>
+      <div class="wp-cifra"><span class="wp-cifra__valor">10</span><span class="wp-cifra__pie">Plazas de Clientes Fundadores</span></div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

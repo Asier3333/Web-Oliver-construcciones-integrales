@@ -1,0 +1,169 @@
+<!-- ═══════════════ PÁGINA: CONTACTO ═══════════════ -->
+<div data-vista="contacto" id="pagina-contacto" hidden>
+<main>
+
+<!-- ═════════ HERO: el punto en el centro y cuatro formas de hablar girando a su alrededor ═════════ -->
+<section class="wp-seccion co-hero" data-theme="oscuro">
+  <div class="wp-ancho">
+    <div>
+      <span class="wp-chip"><span class="wp-chip__punto late"></span><span>Contacto · en Web y Punto son las <b id="co-hora">--:--</b></span></span>
+    </div>
+    <h1 class="titular-xl"><span class="co-hero__saludo" id="co-saludo">Hola.</span> <span class="co-hero__dos">Hablemos<span class="punto-final" aria-hidden="true"></span><span class="sr">.</span></span></h1>
+    <p class="entradilla wp-suave">Cuatro formas de empezar. Elige la que te resulte más cómoda: ninguna te compromete a nada.</p>
+
+    <div class="orbita" id="orbita">
+      <span class="orbita__anillo" style="--a:380px;--b:112px" aria-hidden="true"></span>
+      <span class="orbita__anillo" style="--a:250px;--b:74px" aria-hidden="true"></span>
+      <span class="orbita__pulso" aria-hidden="true"></span>
+      <span class="orbita__pulso" style="animation-delay:-1.5s" aria-hidden="true"></span>
+      <span class="orbita__pulso" style="animation-delay:-3s" aria-hidden="true"></span>
+      <span class="orbita__nucleo" aria-hidden="true"></span>
+      <a class="orbita__canal" href="#co-llamada" style="--x:-338px;--y:-30px"><svg class="ico"><use href="#i-cal"/></svg><span><b>Llamada</b><small>15 minutos</small></span></a>
+      <a class="orbita__canal" href="#co-whatsapp" style="--x:338px;--y:-48px"><svg class="ico"><use href="#i-chat"/></svg><span><b>WhatsApp</b><small>Por chat</small></span></a>
+      <a class="orbita__canal" href="#co-analisis" style="--x:-160px;--y:122px"><svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></svg><span><b>Análisis gratuito</b><small>En menos de 24 h</small></span></a>
+      <a class="orbita__canal" href="#co-correo" style="--x:160px;--y:122px"><svg class="ico"><use href="#i-correo"/></svg><span><b>Correo</b><small>A tu ritmo</small></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ LLAMADA: el calendario ═════════ -->
+<section class="wp-seccion co-llamada" data-theme="claro" id="co-llamada">
+  <span class="wp-halo co-llamada__halo" aria-hidden="true"></span>
+  <div class="wp-ancho co-llamada__rejilla">
+    <div class="co-llamada__texto">
+      <span class="wp-chip wp-chip--velo aparece">Llamada de 15 minutos</span>
+      <h2 class="titular-l aparece" style="--i:1">Elige día y hablamos.</h2>
+      <p class="entradilla wp-suave aparece" style="--i:2">Nos cuentas tu negocio, te decimos qué haríamos con tu web y si encaja en la oferta. Si no te convence, no pasa nada.</p>
+      <ul class="co-lista aparece" style="--i:3">
+        <li><svg class="ico"><use href="#i-check"/></svg>Gratis y sin compromiso</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>Hablas con quien diseña tu web</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>Sin tecnicismos</li>
+      </ul>
+    </div>
+
+    <div class="agenda-caja aparece" style="--i:1">
+      <div class="wp-punto agenda__mascota" aria-hidden="true">
+        <img class="wp-punto__img" src="{{PUNTO_SENALA}}" alt="" width="88" height="90">
+        <p class="wp-punto__nota">Elige tu día aquí.</p>
+      </div>
+
+      <div class="wp-tarjeta agenda" id="agenda">
+        <div class="agenda__cab persona">
+          <span class="avatar">W.</span>
+          <div><b>Llamada con Web y Punto</b><span>Gratis · 15 minutos</span></div>
+        </div>
+
+        <!-- Calendario propio: elige el día y abre Calendly en ese día. Funciona en cualquier sitio. -->
+        <div class="agenda__propia" id="agenda-propia">
+          <div class="agenda__mes">
+            <button class="agenda__flecha" type="button" id="ag-ant" aria-label="Mes anterior">‹</button>
+            <h3 id="ag-titulo" aria-live="polite">Este mes</h3>
+            <button class="agenda__flecha" type="button" id="ag-sig" aria-label="Mes siguiente">›</button>
+          </div>
+          <div class="agenda__sem" aria-hidden="true"><span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+          <div class="agenda__dias" id="ag-dias" role="group" aria-label="Elige un día"><span class="agenda__punto" id="ag-punto" aria-hidden="true"></span></div>
+          <div class="agenda__pie">
+            <p id="ag-elegido" aria-live="polite">Elige un día para ver las horas libres.</p>
+            <a class="wp-btn wp-btn--primario" id="ag-ir" href="{{CALENDLY}}" target="_blank" rel="noopener" data-iman>Abrir el calendario</a>
+          </div>
+          <p class="wp-campo__ayuda">Las horas libres las ves en Calendly, donde confirmas la reserva.</p>
+        </div>
+
+        <!-- Calendly incrustado: se activa solo donde el navegador permite cargarlo (vuestro dominio). -->
+        <div class="agenda__calendly" id="agenda-calendly" hidden></div>
+        <p class="agenda__alt" id="agenda-alt" hidden>¿No ves el calendario? <a class="wp-acento" href="{{CALENDLY}}" target="_blank" rel="noopener">Ábrelo en Calendly</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ OTRAS DOS FORMAS ═════════ -->
+<section class="wp-seccion isla co-otras" data-theme="oscuro">
+  <span class="wp-halo" style="left:50%;top:50%;margin:-420px 0 0 -520px;width:1040px;height:840px" aria-hidden="true"></span>
+  <div class="wp-ancho">
+    <header class="cabecera">
+      <span class="wp-chip aparece"><span class="wp-chip__punto"></span>Sin llamada</span>
+      <h2 class="titular-l aparece" style="--i:1">¿Prefieres escribir? También vale.</h2>
+    </header>
+
+    <div class="co-otras__rejilla">
+      <div class="wp-cristal co-wa aparece" id="co-whatsapp">
+        <div>
+          <span class="wp-chip wp-chip--velo">WhatsApp</span>
+          <h3 class="titular-s">Escríbenos por chat.</h3>
+          <p class="wp-suave">Para dudas rápidas. Te responde quien diseña las webs, sin intermediarios.</p>
+        </div>
+        <div class="co-wa__temas" role="group" aria-label="¿Sobre qué quieres hablar?">
+          <button type="button" class="co-wa__tema" aria-pressed="true" data-texto="Hola, quiero una web nueva para mi negocio. ¿Me contáis cómo funciona?">Quiero una web nueva</button>
+          <button type="button" class="co-wa__tema" aria-pressed="false" data-texto="Hola, ya tengo web y quiero mejorarla. ¿Podéis echarle un vistazo?">Mejorar mi web</button>
+          <button type="button" class="co-wa__tema" aria-pressed="false" data-texto="Hola, tengo una duda sobre la oferta de Clientes Fundadores.">Tengo una duda</button>
+        </div>
+        <div class="co-wa__chat">
+          <label class="sr" for="co-wa-texto">Tu mensaje</label>
+          <textarea class="co-wa__burbuja" id="co-wa-texto" rows="3">Hola, quiero una web nueva para mi negocio. ¿Me contáis cómo funciona?</textarea>
+        </div>
+        <div class="co-wa__pie">
+          <a class="wp-btn wp-btn--solido" id="co-wa-enviar" href="{{WHATSAPP}}" target="_blank" rel="noopener" data-iman><svg class="ico"><use href="#i-chat"/></svg>Abrir WhatsApp</a>
+          <span class="wp-tenue">+34 693 73 19 80</span>
+        </div>
+      </div>
+
+      <div class="wp-cristal analisis aparece" id="co-analisis" style="--i:1">
+        <div>
+          <span class="wp-chip wp-chip--velo">¿Ya tienes web?</span>
+          <h3 class="titular-s">Análisis gratuito en menos de 24 h.</h3>
+          <p class="wp-suave" style="margin-top:var(--esp-2)">Dinos cuál es tu web. Te enviamos qué está fallando y cómo mejorarla, sin coste.</p>
+        </div>
+        <form id="co-form" data-analisis novalidate>
+          <label class="wp-campo" for="c-web"><span class="wp-campo__etiqueta">Tu web</span><input class="wp-campo__control" id="c-web" name="web" type="text" inputmode="url" autocomplete="url" placeholder="tunegocio.es" required></label>
+          <label class="wp-campo" for="c-nombre"><span class="wp-campo__etiqueta">Tu nombre</span><input class="wp-campo__control" id="c-nombre" name="nombre" type="text" autocomplete="name" placeholder="Nombre y negocio" required></label>
+          <label class="wp-campo" for="c-mejora"><span class="wp-campo__etiqueta">¿Qué te gustaría mejorar? <span class="wp-tenue" style="font-weight:400">(opcional)</span></span><textarea class="wp-campo__control" id="c-mejora" name="mejora" rows="2" placeholder="Que me llamen más, que se vea bien en el móvil…"></textarea></label>
+          <fieldset class="canal">
+            <legend class="wp-campo__etiqueta">¿Por dónde nos lo envías?</legend>
+            <div class="canal__opciones" data-canal="whatsapp">
+              <label class="canal__op" for="c-canal-wa"><input type="radio" name="canal" id="c-canal-wa" value="whatsapp" checked><span><svg class="ico"><use href="#i-chat"/></svg>WhatsApp</span></label>
+              <label class="canal__op" for="c-canal-correo"><input type="radio" name="canal" id="c-canal-correo" value="correo"><span><svg class="ico"><use href="#i-correo"/></svg>Correo</span></label>
+            </div>
+          </fieldset>
+          <p class="analisis__error" id="co-error" role="alert">Escribe la dirección de tu web y tu nombre para preparar la solicitud.</p>
+          <button class="wp-btn wp-btn--solido" type="submit">Pedir mi análisis</button>
+          <p class="wp-campo__ayuda" data-ayuda="whatsapp">Se abre WhatsApp con tu solicitud ya escrita. Solo tienes que enviarla.</p>
+          <p class="wp-campo__ayuda" data-ayuda="correo" hidden>Se abre tu correo con la solicitud ya escrita para {{CORREO}}. Solo tienes que enviarla.</p>
+        </form>
+      </div>
+    </div>
+
+    <div class="wp-cristal co-correo aparece" id="co-correo">
+      <div>
+        <span class="wp-chip wp-chip--velo">Correo</span>
+        <p class="co-correo__dir">info<i>.</i>webypunto@gmail<i>.</i>com</p>
+        <p class="wp-suave">Si prefieres contárnoslo con calma, escríbenos. Te respondemos en menos de 24 h.</p>
+      </div>
+      <div class="co-correo__botones">
+        <button class="wp-btn wp-btn--solido" type="button" data-copia="{{CORREO}}" data-ok="Dirección copiada">Copiar dirección</button>
+        <a class="wp-btn wp-btn--cristal" href="mailto:{{CORREO}}"><svg class="ico"><use href="#i-correo"/></svg>Escribir un correo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ QUÉ PASA DESPUÉS ═════════ -->
+<section class="wp-seccion co-despues" data-theme="claro">
+  <div class="wp-ancho">
+    <header class="cabecera">
+      <span class="wp-chip wp-chip--velo aparece">Qué pasa después</span>
+      <h2 class="titular-m aparece" style="--i:1">De tu mensaje a tu web publicada.</h2>
+    </header>
+    <ol class="co-pasos">
+      <li class="aparece"><span class="co-pasos__n">1</span><h3 class="titular-xs">Hablamos 15 minutos.</h3><p>Nos cuentas tu negocio y vemos juntos si encaja.</p></li>
+      <li class="aparece" style="--i:1"><span class="co-pasos__n">2</span><h3 class="titular-xs">Nos envías tus recursos.</h3><p>Fotos, vídeos y textos. Si no tienes textos, los redactamos nosotros.</p></li>
+      <li class="aparece" style="--i:2"><span class="co-pasos__n">3</span><h3 class="titular-xs">En 7 días, tu web publicada.</h3><p>Y durante esa semana, menos de 2 horas de tu tiempo.</p></li>
+    </ol>
+    <div class="co-despues__fin aparece">
+      <a class="wp-btn wp-btn--texto" href="#clientes-fundadores">Ver la oferta completa <span class="wp-btn__flecha" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+</div>

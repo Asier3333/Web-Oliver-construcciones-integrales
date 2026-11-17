@@ -1,0 +1,38 @@
+/* ── Menú móvil a pantalla completa: se abre como un punto que crece desde el botón ── */
+.menu-movil { display: none; }
+@media (max-width: 1000px) {
+  .cab .wp-nav__enlaces { display: none; }
+  .menu-movil { display: block; position: fixed; inset: 0; z-index: -1; visibility: hidden; pointer-events: none; transition: visibility 0s .85s; --ox: calc(100% - 48px); --oy: 48px; }
+  .cab.abierto .menu-movil { visibility: visible; pointer-events: auto; transition-delay: 0s; }
+  .menu-movil__onda, .menu-movil__panel { position: absolute; inset: 0; clip-path: circle(0 at var(--ox) var(--oy)); transition: clip-path .85s var(--wp-curva); will-change: clip-path; }
+  .menu-movil__onda { background: var(--azul); transition-delay: .08s; }
+  .menu-movil__panel { background: var(--fondo); color: var(--tinta); display: flex; flex-direction: column; justify-content: space-between; gap: var(--esp-8); padding: 112px clamp(20px, 6vw, 48px) clamp(24px, 5vw, 40px); overflow: hidden auto; overscroll-behavior: contain; }
+  .cab.abierto .menu-movil__onda { clip-path: circle(150vmax at var(--ox) var(--oy)); transition-delay: 0s; }
+  .cab.abierto .menu-movil__panel { clip-path: circle(150vmax at var(--ox) var(--oy)); transition-delay: .16s; }
+  .menu-movil .wp-halo { left: 50%; bottom: -420px; width: 760px; height: 760px; margin-left: -380px; animation: respira 9s ease-in-out infinite; }
+
+  .menu-movil__lista { position: relative; display: grid; }
+  .menu-movil__lista li, .menu-movil__pie { opacity: 0; transform: translateY(36px); filter: blur(10px); transition: opacity .25s var(--wp-curva), transform .25s var(--wp-curva), filter .25s var(--wp-curva); }
+  .cab.abierto .menu-movil__lista li, .cab.abierto .menu-movil__pie { opacity: 1; transform: none; filter: none; transition-duration: .7s; transition-delay: calc(.34s + var(--i) * 75ms); }
+  .menu-movil__lista a { display: grid; grid-template-columns: 34px 1fr auto; align-items: baseline; gap: var(--esp-2); padding: clamp(16px, 3.4vh, 26px) 0; border-bottom: 1px solid var(--linea); color: var(--tinta); text-decoration: none; font-size: clamp(27px, 7.6vw, 44px); line-height: 1.08; font-weight: 600; letter-spacing: -.03em; }
+  .menu-movil__lista a span { font-size: 13px; font-weight: 500; letter-spacing: .01em; color: var(--azul-texto); font-variant-numeric: tabular-nums; }
+  .menu-movil__lista a b { font-weight: 400; font-size: .7em; color: var(--tinta-tenue); transition: transform .3s var(--wp-curva), color .3s var(--wp-curva); }
+  .menu-movil__lista a:hover b, .menu-movil__lista a:focus-visible b, .menu-movil__lista a[aria-current] b { transform: translateX(6px); color: var(--azul-texto); }
+  .menu-movil__lista a:focus-visible { outline: 2px solid transparent; box-shadow: var(--foco-anillo); border-radius: var(--radio-s); }
+  .menu-movil__pie { position: relative; display: grid; gap: var(--esp-3); }
+  .menu-movil__pie .wp-btn { width: 100%; height: 56px; }
+  .menu-movil__pie p { margin-top: var(--esp-2); text-align: center; font-size: 13px; color: var(--tinta-tenue); }
+
+  .cab.abierto .wp-nav { background: transparent; border-color: transparent; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .nav__menu { transition: transform .5s var(--wp-curva), background-color .3s var(--wp-curva); }
+  .cab.abierto .nav__menu { transform: rotate(180deg); background: rgba(248, 248, 255, .1); }
+}
+@media (min-width: 641px) and (max-width: 1000px) {
+  .cab.abierto .wp-nav > .wp-btn { visibility: hidden; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .menu-movil__onda, .menu-movil__panel { clip-path: none !important; opacity: 0; }
+  .cab.abierto .menu-movil__onda { opacity: 0; }
+  .cab.abierto .menu-movil__panel { opacity: 1; }
+  .menu-movil__lista li, .menu-movil__pie { transform: none !important; filter: none !important; }
+}

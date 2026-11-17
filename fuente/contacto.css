@@ -1,0 +1,120 @@
+/* ── Página: Contacto ──
+   Composición: hero negro con el punto en el centro y las tres formas de contacto girando a su alrededor; la llamada (calendario)
+   en claro como pieza principal, WhatsApp y análisis en una isla negra de cristal, y los tres pasos siguientes en claro. */
+
+/* ── Hero ── */
+.co-hero { padding-top: 148px; padding-bottom: clamp(40px, 5vw, 64px); text-align: center; isolation: isolate; }
+.co-hero h1 { max-width: 900px; margin: var(--esp-6) auto var(--esp-6); }
+.co-hero__saludo, .co-hero__dos { display: inline-block; animation: sube 1s var(--wp-curva) .15s both; }
+.co-hero__dos { color: var(--tinta-suave); animation-delay: .4s; white-space: nowrap; }
+.co-hero .punto-final { animation-delay: .9s; }
+.co-hero .entradilla { max-width: 560px; margin: 0 auto; animation: sube 1s var(--wp-curva) .6s both; }
+.co-hero .wp-chip b { font-weight: 500; font-variant-numeric: tabular-nums; }
+
+.orbita { position: relative; height: 360px; max-width: 1000px; margin: var(--esp-8) auto 0; animation: sube 1.2s var(--wp-curva) .8s both; }
+.orbita__anillo { position: absolute; left: 50%; top: 50%; width: calc(var(--a) * 2); height: calc(var(--b) * 2); margin: calc(var(--b) * -1) 0 0 calc(var(--a) * -1); border-radius: 50%; border: 1px solid rgba(248, 248, 255, .13); transform: rotate(-7deg); pointer-events: none; }
+.orbita__nucleo, .orbita__pulso { position: absolute; left: 50%; top: 50%; width: 116px; height: 116px; margin: -58px 0 0 -58px; border-radius: 50%; pointer-events: none; }
+.orbita__nucleo { z-index: 2; background: radial-gradient(circle at 32% 27%, #aebbff, #304ffe 46%, #0b1672); box-shadow: 0 0 70px rgba(48, 79, 254, .95), 0 0 220px rgba(48, 79, 254, .55), inset -12px -16px 34px rgba(0, 0, 0, .38); animation: respira 7s ease-in-out infinite; }
+.orbita__pulso { border: 1px solid rgba(132, 150, 255, .75); animation: co-pulso 4.5s linear infinite; }
+@keyframes co-pulso { from { transform: scale(1); opacity: .8; } to { transform: scale(5.4); opacity: 0; } }
+.orbita__canal { position: absolute; left: 50%; top: 50%; z-index: var(--z, 3); display: flex; align-items: center; gap: var(--esp-3); height: 60px; padding: 0 var(--esp-6) 0 var(--esp-4); border-radius: var(--radio-pill); border: 1px solid var(--cristal-borde); background: var(--cristal); color: var(--tinta); box-shadow: var(--cristal-brillo), var(--elev-2); text-decoration: none; text-align: left; white-space: nowrap; opacity: var(--o, 1); transform: translate(-50%, -50%) translate(var(--x, 0px), var(--y, 0px)) scale(var(--s, 1)); -webkit-backdrop-filter: blur(var(--desenfoque-cristal)) saturate(160%); backdrop-filter: blur(var(--desenfoque-cristal)) saturate(160%); transition: border-color .3s var(--wp-curva), background-color .3s var(--wp-curva); }
+.orbita__canal:hover, .orbita__canal:focus-visible { border-color: var(--azul-texto); background: rgba(48, 79, 254, .24); opacity: 1; }
+.orbita__canal:focus-visible { outline: 2px solid transparent; box-shadow: var(--foco-anillo); }
+.orbita__canal .ico { width: 22px; height: 22px; color: var(--azul-texto); }
+.orbita__canal b { display: block; font-size: 16px; line-height: 1.2; font-weight: 600; letter-spacing: -.01em; }
+.orbita__canal small { display: block; font-size: 13px; line-height: 1.3; color: var(--tinta-suave); }
+
+/* ── Llamada ── */
+.co-llamada__halo { right: -260px; top: 40px; width: 900px; height: 900px; }
+.co-llamada__rejilla { display: grid; grid-template-columns: .82fr 1fr; gap: clamp(40px, 7vw, 104px); align-items: center; }
+.co-llamada__texto { display: grid; gap: var(--esp-6); justify-items: start; }
+.co-lista { display: grid; gap: var(--esp-3); font-size: 16px; }
+.co-lista li { display: flex; align-items: center; gap: var(--esp-3); }
+.co-lista .ico { color: var(--azul-texto); }
+
+.agenda-caja { position: relative; }
+.agenda__mascota { position: absolute; right: 100%; top: 132px; margin-right: -14px; z-index: 2; flex-direction: row-reverse; align-items: flex-end; }
+.agenda__mascota .wp-punto__img { width: 96px; }
+.agenda__mascota .wp-punto__nota { margin-bottom: 58px; margin-right: -10px; white-space: nowrap; box-shadow: var(--cristal-brillo), var(--elev-2); }
+.agenda { padding: clamp(20px, 3vw, 36px); border-radius: var(--radio-xl); box-shadow: var(--elev-3); display: grid; gap: var(--esp-6); }
+.agenda__cab { padding-bottom: var(--esp-4); border-bottom: 1px solid var(--linea); }
+.agenda__cab .avatar { width: 44px; height: 44px; font-size: 16px; }
+.agenda__cab b { font-size: 17px; }
+.agenda__propia { display: grid; gap: var(--esp-4); }
+.agenda__mes { display: flex; align-items: center; justify-content: space-between; }
+.agenda__mes h3 { font-size: 21px; line-height: 1.2; font-weight: 600; letter-spacing: -.015em; }
+.agenda__mes h3::first-letter { text-transform: uppercase; }
+.agenda__propia[hidden], .agenda__calendly[hidden], .agenda__alt[hidden] { display: none; }
+.agenda__flecha { width: 40px; height: 40px; display: grid; place-items: center; border: 0; border-radius: 50%; background: var(--fondo-hundido); color: var(--tinta); font: inherit; font-size: 22px; line-height: 1; cursor: pointer; transition: background-color .2s var(--wp-curva), transform .2s var(--wp-curva), opacity .2s var(--wp-curva); }
+.agenda__flecha:hover:not(:disabled) { background: var(--azul-velo); transform: scale(1.06); }
+.agenda__flecha:disabled { opacity: .35; cursor: default; }
+.agenda__flecha:focus-visible, .agenda__dia:focus-visible { outline: 2px solid transparent; box-shadow: var(--foco-anillo); }
+.agenda__sem, .agenda__dias { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+.agenda__sem span { text-align: center; font-size: 13px; font-weight: 500; color: var(--tinta-tenue); }
+.agenda__dias { position: relative; min-height: 264px; align-content: start; }
+.agenda__dia { position: relative; z-index: 1; aspect-ratio: 1; max-height: 52px; width: 100%; justify-self: center; display: grid; place-items: center; border: 0; border-radius: 50%; background: none; color: var(--tinta); font: inherit; font-size: 16px; font-weight: 500; font-variant-numeric: tabular-nums; cursor: pointer; transition: color .25s var(--wp-curva), background-color .2s var(--wp-curva); }
+.agenda__dia:hover:not(:disabled):not([aria-pressed="true"]) { background: var(--azul-velo); color: var(--azul-texto); }
+.agenda__dia:disabled { color: var(--tinta-tenue); opacity: .42; cursor: default; }
+.agenda__dia.hoy::after { content: ""; position: absolute; bottom: 5px; left: 50%; width: 4px; height: 4px; margin-left: -2px; border-radius: 50%; background: currentColor; }
+.agenda__dia[aria-pressed="true"] { color: var(--sobre-azul); }
+.agenda__punto { position: absolute; left: 0; top: 0; width: 46px; height: 46px; margin: -23px 0 0 -23px; border-radius: 50%; background: var(--azul); box-shadow: var(--azul-halo); pointer-events: none; opacity: 0; transform: translate(var(--px, 0px), var(--py, 0px)) scale(.2); transition: transform .55s var(--wp-curva), opacity .3s var(--wp-curva); }
+.agenda__punto.on { opacity: 1; transform: translate(var(--px, 0px), var(--py, 0px)) scale(1); }
+.agenda__dias.cambia .agenda__dia { animation: sube .5s var(--wp-curva) both; animation-delay: calc(var(--k) * 12ms); }
+.agenda__pie { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--esp-4); padding-top: var(--esp-4); border-top: 1px solid var(--linea); }
+.agenda__pie p { font-size: 16px; font-weight: 500; }
+.agenda__pie p::first-letter { text-transform: uppercase; }
+.agenda__calendly { height: 700px; margin: 0 calc(clamp(20px, 3vw, 36px) * -.5); border-radius: var(--radio-l); overflow: hidden; }
+.agenda__calendly iframe { display: block; width: 100%; height: 100%; border: 0; }
+.agenda__alt { font-size: 14px; color: var(--tinta-tenue); }
+
+/* ── WhatsApp y análisis ── */
+.co-otras__rejilla { display: grid; grid-template-columns: 1fr 1fr; gap: var(--esp-6); align-items: stretch; }
+.co-wa { display: grid; gap: var(--esp-6); align-content: space-between; padding: clamp(24px, 3vw, 40px); }
+.co-wa h3 { margin: var(--esp-3) 0 var(--esp-2); }
+.co-otras .analisis h3 { margin-top: var(--esp-3); }
+.co-wa__temas { display: flex; flex-wrap: wrap; gap: var(--esp-2); }
+.co-wa__tema { height: 36px; padding: 0 var(--esp-4); border-radius: var(--radio-pill); border: 1px solid var(--linea-control); background: none; color: var(--tinta-suave); font: inherit; font-size: 14px; font-weight: 500; cursor: pointer; transition: color .2s var(--wp-curva), background-color .2s var(--wp-curva), border-color .2s var(--wp-curva); }
+.co-wa__tema:hover { color: var(--tinta); border-color: var(--tinta-suave); }
+.co-wa__tema[aria-pressed="true"] { background: var(--tinta); border-color: var(--tinta); color: var(--fondo); }
+.co-wa__tema:focus-visible { outline: 2px solid transparent; box-shadow: var(--foco-anillo); }
+.co-wa__chat { display: grid; justify-items: end; padding: var(--esp-4); border-radius: var(--radio-l); background: rgba(0, 0, 0, .35); border: 1px solid var(--linea); }
+.co-wa__burbuja { width: min(100%, 360px); min-height: 92px; padding: 12px 16px; border: 0; border-radius: 18px 18px 5px 18px; background: var(--azul); color: var(--sobre-azul); font: inherit; font-size: 16px; line-height: 1.4; resize: none; box-shadow: var(--azul-halo); }
+.co-wa__burbuja:focus-visible { outline: 2px solid transparent; box-shadow: var(--foco-anillo); }
+.co-wa__pie { display: flex; flex-wrap: wrap; align-items: center; gap: var(--esp-4); font-size: 14px; }
+
+/* ── Qué pasa después ── */
+.co-despues { padding-top: clamp(64px, 8vw, 104px); }
+.co-pasos { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--esp-8); }
+.co-pasos li { display: grid; gap: var(--esp-2); align-content: start; padding-top: var(--esp-6); border-top: 1px solid var(--linea); }
+.co-pasos__n { display: grid; place-items: center; width: 32px; height: 32px; margin-bottom: var(--esp-2); border-radius: 50%; background: var(--azul-velo); color: var(--azul-texto); font-size: 14px; font-weight: 600; }
+.co-pasos li:last-child .co-pasos__n { background: var(--azul); color: var(--sobre-azul); box-shadow: var(--azul-halo); }
+.co-pasos p { color: var(--tinta-suave); }
+.co-despues__fin { margin-top: var(--esp-8); }
+
+@media (max-width: 1240px) {
+  .agenda__mascota { right: auto; left: 28px; top: auto; bottom: 100%; margin: 0 0 -22px; flex-direction: row; }
+  .agenda__mascota .wp-punto__img { width: 80px; }
+  .agenda__mascota .wp-punto__nota { margin: 0 0 30px; }
+  .agenda-caja { margin-top: var(--esp-12); }
+}
+@media (max-width: 1000px) {
+  .co-llamada__rejilla, .co-otras__rejilla { grid-template-columns: 1fr; }
+  .agenda-caja { margin-top: var(--esp-16); }
+}
+@media (max-width: 760px) {
+  /* sin espacio para girar: el punto arriba y las tres formas en columna */
+  .orbita { height: auto; display: grid; gap: 10px; padding-top: 172px; max-width: 420px; }
+  .orbita__anillo { display: none; }
+  .orbita__nucleo, .orbita__pulso { top: 86px; width: 96px; height: 96px; margin: -48px 0 0 -48px; }
+  .orbita__canal { position: relative; left: auto; top: auto; transform: none; opacity: 1; height: 64px; }
+  .co-pasos { grid-template-columns: 1fr; gap: var(--esp-6); }
+}
+@media (max-width: 640px) {
+  .co-hero { padding-top: 124px; }
+  .agenda__dias { min-height: 0; }
+  .agenda__dia { font-size: 15px; }
+  .agenda__punto { width: 40px; height: 40px; margin: -20px 0 0 -20px; }
+  .agenda__pie .wp-btn { width: 100%; }
+  .co-wa__pie .wp-btn { width: 100%; }
+  .agenda__calendly { height: 760px; }
+}

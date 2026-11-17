@@ -1,0 +1,62 @@
+WEB Y PUNTO — WEB COMPLETA
+Copia de seguridad del 17 de noviembre de 2026, 11:15 — sustituye a la copia de las 07:37
+Versión publicada: 1794899998-91ac (español + inglés)  ·  https://claude.ai/artifact/7TVriwS2m6cz1zo9tbopuq
+
+QUÉ CONTIENE ESTA VERSIÓN
+  Siete páginas en un solo archivo: Home, Oferta Clientes Fundadores, Nuestros proyectos, Equipo,
+  Contacto, Política de privacidad y Términos y condiciones. Además: menú móvil a pantalla completa,
+  formulario de análisis con canal WhatsApp/correo y ventana de confirmación, y pie con el logo centrado.
+  Versión en inglés de toda la web, con selector ES | EN en la barra de navegación.
+
+PARA VOLVER A ESTA VERSIÓN
+  index.html es la web completa, idéntica a la publicada. Se abre con doble clic en cualquier navegador:
+  lleva dentro estilos, efectos, logo, tipografía e imágenes de Punto.
+  Para restaurarla en Claude: adjunta este zip (o solo index.html) y pide «vuelve a publicar esta versión».
+
+PARA SEGUIR EDITANDO DESDE AQUÍ
+  Adjunta el zip entero a Claude. Con las piezas de fuente/ puede cambiar una página sin tocar las demás
+  y volver a generar index.html con construir.py (comprobado: produce un index.html idéntico al de esta copia).
+
+CARPETAS
+  index.html         La web completa en un solo archivo.
+  construir.py       Une las piezas y genera index.html. Uso: python3 construir.py
+  fuente/            Las piezas de la web:
+                       home.html          Estructura común (nav, menú móvil, pie) y la Home
+                       oferta.html        Página Oferta Clientes Fundadores
+                       proyectos.html     Página Nuestros proyectos (huecos de foto: data-foto="…")
+                       equipo.html        Página Equipo (huecos de foto: data-foto="…")
+                       contacto.html      Página Contacto
+                       legal.html         Política de privacidad y Términos y condiciones
+                       aviso.html         Ventana de confirmación del formulario
+                       *.css              Estilos de cada página; menu.css, formulario.css y pie.css son comunes
+                       comun.js           Cambio de página y menú móvil
+                       i18n.js            Capa de inglés: aplica la traducción y permite volver al español
+                       en.json            Diccionario español → inglés (un texto por línea)
+                       idioma.css         Estilo del selector ES | EN
+                       home.js, oferta.js, proyectos.js, equipo.js, contacto.js, formulario.js, pie.js
+  marca/             tokens.json y tokens.css (colores, tipografía, espaciado, radios, sombras),
+                     componentes.css (botones, chips, cristal, tarjetas), guia-de-marca.md y la tipografía Geist.
+  recursos/logos/    Logo e isotipo en SVG, en los colores de la marca.
+  recursos/punto/    Poses de Punto recortadas (baja resolución) y la plantilla original.
+  sistema-de-marca/  Los archivos del sistema de marca «Web y Punto» publicado en Claude (guía, tokens, componentes).
+
+DATOS QUE CAMBIARÁS MÁS A MENUDO
+  Plazas de la oferta ......... fuente/home.js       → plazasTotal y plazasOcupadas (ahora 10 y 6)
+  Calendly y WhatsApp ......... construir.py         → CAL y WA; fuente/contacto.js y fuente/formulario.js → CONFIG
+  Correo de contacto .......... construir.py         → 'CORREO'; fuente/formulario.js → CONFIG.correo
+  Días elegibles del calendario fuente/contacto.js   → diasHabiles (ahora lunes a viernes)
+  Textos en inglés ............ fuente/en.json      → cada línea es "texto en español": "texto en inglés"
+                                fuente/i18n.js      → titulares del hero de Home y Oferta, manifiesto de Equipo y títulos de pestaña
+  Idioma de la primera visita . fuente/i18n.js      → CONFIG.detectar (true: según el navegador; false: siempre español)
+  Si cambias un texto en español, cambia también su clave en en.json o ese texto se quedará en español en la versión inglesa.
+  En index.html los mismos datos se encuentran buscando esas palabras.
+
+PENDIENTE EN ESTA VERSIÓN
+  · Fotos de proyectos (12 + 3 portadas) y fotos del equipo y con clientes (7): los huecos llevan la etiqueta «provisional».
+  · Textos legales: completar los datos resaltados entre corchetes y revisarlos con un profesional.
+  · Confirmar los tres proyectos mostrados, la cifra «6 de 10» y el reparto de las 2 horas en la página de la oferta.
+  · Retratos, biografías y renders finales de Punto.
+  · Al publicar en vuestro dominio: comprobar el calendario de Calendly incrustado, decidir si el formulario
+    envía directamente a vuestro correo y separar las páginas en direcciones propias para Google
+    (también la versión inglesa, si queréis que Google la indexe).
+  · Revisar las decisiones de traducción: inglés de EE. UU., «Y punto.» → «Period.», «PYMES» → «small businesses».

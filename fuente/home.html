@@ -1,0 +1,508 @@
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    {{SIMBOLOS_LOGO}}
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M12 3.5a8.5 8.5 0 0 0-7.4 12.7L3.5 20.5l4.5-1.1A8.5 8.5 0 1 0 12 3.5z"/><path d="M9 10.5h6M9 13.5h3.5"/></symbol>
+    <symbol id="i-correo" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="3"/><path d="M4.5 8.5l7.5 5.5 7.5-5.5"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="4" y="5.5" width="16" height="14.5" rx="3"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4"/></symbol>
+  </defs>
+</svg>
+
+<div class="progreso" aria-hidden="true"></div>
+
+<header class="cab" data-theme="oscuro" id="cab">
+  <nav class="wp-nav" aria-label="Principal">
+    <a class="nav__logo-enlace" href="#inicio" aria-label="Web y Punto, inicio">
+      <svg class="wp-nav__logo" viewBox="{{LOGO_VB}}" role="img" aria-label="Web y Punto"><use href="#logo"/></svg>
+    </a>
+    <ul class="wp-nav__enlaces" id="menu">
+      <!-- Las cuatro son páginas propias. -->
+      <li><a href="#clientes-fundadores" data-pagina="clientes-fundadores">Oferta Clientes Fundadores</a></li>
+      <li><a href="#pagina-proyectos" data-pagina="proyectos">Nuestros proyectos</a></li>
+      <li><a href="#pagina-equipo" data-pagina="equipo">Equipo</a></li>
+      <li><a href="#pagina-contacto" data-pagina="contacto">Contacto</a></li>
+    </ul>
+    <div class="idioma" role="group" aria-label="Idioma"><button type="button" data-idioma="es" lang="es" aria-label="Español" aria-pressed="true">ES</button><button type="button" data-idioma="en" lang="en" aria-label="English" aria-pressed="false">EN</button></div>
+    <button class="nav__menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil"><span></span><span></span></button>
+    <a class="wp-btn wp-btn--solido wp-btn--s" href="{{CALENDLY}}" target="_blank" rel="noopener" data-iman>Auditoría web gratuita</a>
+  </nav>
+
+  <div class="menu-movil" id="menu-movil" data-theme="oscuro" aria-hidden="true" inert>
+    <span class="menu-movil__onda" aria-hidden="true"></span>
+    <div class="menu-movil__panel">
+      <span class="wp-halo" aria-hidden="true"></span>
+      <ul class="menu-movil__lista">
+        <li style="--i:0"><a href="#clientes-fundadores" data-pagina="clientes-fundadores"><span>01</span>Oferta Clientes Fundadores<b aria-hidden="true">→</b></a></li>
+        <li style="--i:1"><a href="#pagina-proyectos" data-pagina="proyectos"><span>02</span>Nuestros proyectos<b aria-hidden="true">→</b></a></li>
+        <li style="--i:2"><a href="#pagina-equipo" data-pagina="equipo"><span>03</span>Equipo<b aria-hidden="true">→</b></a></li>
+        <li style="--i:3"><a href="#pagina-contacto" data-pagina="contacto"><span>04</span>Contacto<b aria-hidden="true">→</b></a></li>
+      </ul>
+      <div class="menu-movil__pie" style="--i:4">
+        <a class="wp-btn wp-btn--primario" href="{{CALENDLY}}" target="_blank" rel="noopener">Auditoría web gratuita</a>
+        <a class="wp-btn wp-btn--cristal" href="{{WHATSAPP}}" target="_blank" rel="noopener"><svg class="ico"><use href="#i-chat"/></svg>WhatsApp</a>
+        <p>Diseño web para PYMES</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div data-vista="inicio" id="vista-inicio">
+<main>
+
+<!-- ═════════ HERO ═════════ -->
+<section class="wp-seccion hero" data-theme="oscuro" id="inicio">
+  <canvas class="hero__cielo" aria-hidden="true"></canvas>
+  <div class="hero__orbe" aria-hidden="true"></div>
+  <div class="hero__horizonte" aria-hidden="true"></div>
+
+  <div class="wp-ancho">
+    <div class="hero__icono" aria-hidden="true"><svg viewBox="{{ISO_VB}}"><use href="#iso"/></svg></div>
+    <div>
+      <a class="wp-chip hero__chip" href="#oferta"><span class="wp-chip__punto late"></span><span>Clientes Fundadores · quedan <span data-plazas="libres">4</span> plazas</span></a>
+    </div>
+    <h1 class="titular-xl">
+      <span class="pal" style="--i:0">Una</span> <span class="pal" style="--i:1">web</span> <span class="pal" style="--i:2">a</span> <span class="pal" style="--i:3">la</span> <span class="pal" style="--i:4">altura</span> <span class="pal" style="--i:5">de</span> <span class="pal" style="--i:6">tu</span> <span class="pal" style="--i:7">negocio.</span>
+      <span class="ypunto"><span class="pal" style="--i:9">Y</span> <span class="pal" style="--i:10">punto</span><span class="punto-final" aria-hidden="true"></span><span class="sr">.</span></span>
+    </h1>
+    <p class="entradilla wp-suave">Diseñamos páginas web a medida para PYMES y te enseñamos cada paso del proceso.</p>
+    <div class="hero__acciones">
+      <a class="wp-btn wp-btn--primario" href="{{CALENDLY}}" target="_blank" rel="noopener" data-iman>Hablemos 15 min</a>
+      <a class="wp-btn wp-btn--texto" href="#proyectos">Ver nuestros proyectos <span class="wp-btn__flecha" aria-hidden="true">→</span></a>
+    </div>
+    <p class="hero__nota">Llamada gratuita y sin compromiso.</p>
+
+    <div class="escena" id="escena">
+      <div class="navegador" id="navegador" role="img" aria-label="Animación: una página web que se diseña y se publica en siete días">
+        <div class="navegador__barra">
+          <span class="navegador__luces"><i></i><i></i><i></i></span>
+          <span class="navegador__url">tunegocio.es</span>
+          <span class="navegador__dia"><span class="tramos"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span>Día <b id="dia-n">1</b> de 7</span></span>
+        </div>
+        <div class="obra">
+          <div class="obra__nav">
+            <span class="obra__logo traz"></span>
+            <span class="obra__links"><i></i><i></i><i></i></span>
+            <span class="obra__boton traz"></span>
+          </div>
+          <div class="obra__hero">
+            <div class="obra__texto">
+              <div class="obra__titulo">Tu negocio,<br>bien presentado.</div>
+              <span class="obra__linea"></span><span class="obra__linea"></span>
+              <span class="obra__cta traz">Pide cita</span>
+            </div>
+            <div class="obra__foto traz"><b></b></div>
+          </div>
+          <div class="obra__fila"><span class="obra__caja traz"></span><span class="obra__caja traz"></span><span class="obra__caja traz"></span></div>
+          <span class="obra__nota">¿Cambiamos esta foto?</span>
+          <div class="obra__movil"><i></i><i></i><b></b><i></i><u></u></div>
+          <span class="obra__sello"><i></i>Publicada</span>
+        </div>
+      </div>
+
+      <div class="flotante promesa">
+        <div class="wp-cristal">
+          <div class="wp-punto wp-punto--asomado" style="right:auto;left:var(--esp-8)"><img class="wp-punto__img" src="{{PUNTO_SENALA}}" alt="" width="88" height="90"></div>
+          <p>Tu nueva página web profesional, lista en solo <strong>7 días.</strong></p>
+          <small>Desde que recibimos tus fotos, vídeos y textos.</small>
+        </div>
+      </div>
+
+      <div class="flotante flotante--b directo" aria-hidden="true">
+        <div class="wp-cristal">
+          <div class="persona"><span class="avatar">W.</span><div><b>Tu diseñador</b><span><i class="enlinea"></i>En línea</span></div></div>
+          <p class="burbuja">Ya tienes la home en tu portal.</p>
+        </div>
+      </div>
+
+      <a class="sigue" href="#proyectos">Mira lo que hemos hecho</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ CINTA ═════════ -->
+<div class="cinta" data-theme="oscuro" aria-label="Qué incluye cada web">
+  <div class="cinta__pista">
+    <ul>
+      <li>Diseño 100 % a medida</li><li>Lista en 7 días</li><li>Hablas con tu diseñador</li><li>Máximo 3 proyectos a la vez</li><li>Portal de cliente en tiempo real</li><li>Móvil, tablet y ordenador</li><li>WhatsApp y formularios integrados</li><li>Cero plantillas</li>
+    </ul>
+    <ul aria-hidden="true">
+      <li>Diseño 100 % a medida</li><li>Lista en 7 días</li><li>Hablas con tu diseñador</li><li>Máximo 3 proyectos a la vez</li><li>Portal de cliente en tiempo real</li><li>Móvil, tablet y ordenador</li><li>WhatsApp y formularios integrados</li><li>Cero plantillas</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═════════ PORTAFOLIO ═════════ -->
+<section class="wp-seccion" data-theme="claro" id="proyectos">
+  <div class="wp-ancho">
+    <header class="cabecera">
+      <span class="wp-chip wp-chip--velo aparece">Nuestros proyectos</span>
+      <h2 class="titular-l aparece" style="--i:1">Hechas a medida. Ninguna se parece a otra.</h2>
+      <p class="entradilla wp-suave aparece" style="--i:2">Tres de nuestras últimas webs. Pasa el cursor por cada una para recorrerla.</p>
+    </header>
+
+    <div class="pila" id="pila">
+      <!-- PROYECTOS: sustituye cada .captura por la captura real (una <img> larga dentro de .marco__ventana). -->
+      <article class="caso" style="--n:0">
+        <div class="caso__info">
+          <span class="caso__num">01 / 03</span>
+          <h3 class="titular-m">Modular Maker</h3>
+          <p class="caso__sector">Construcción modular</p>
+          <p>Una landing con portada animada por scroll que enseña cómo avanza la obra, y un formulario para pedir presupuesto en menos de 48 h.</p>
+          <ul class="caso__etq"><li>Landing</li><li>Animación por scroll</li><li>Formulario de presupuesto</li></ul>
+        </div>
+        <figure class="marco" data-inclina>
+          <div class="marco__barra"><i></i><i></i><i></i><span>Modular Maker</span></div>
+          <div class="marco__ventana c-modular">
+            <div class="captura">
+              <div class="captura__nav"><span>MODULAR MAKER</span><i></i><i></i><i></i><b>Presupuesto</b></div>
+              <div class="captura__hero"><h4>La casa de tu vida, <em>construida con precisión.</em></h4><p>Calidad, precisión y rapidez en construcción modular.</p></div>
+              <div class="captura__foto"></div>
+              <div class="captura__tres"><i></i><i></i><i></i></div>
+              <div class="captura__lineas"><i></i><i></i><i></i></div>
+              <div class="captura__banda"></div>
+              <div class="captura__tres"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <span class="marco__aviso">Vista provisional</span>
+        </figure>
+      </article>
+
+      <article class="caso" style="--n:1">
+        <div class="caso__info">
+          <span class="caso__num">02 / 03</span>
+          <h3 class="titular-m">Genera Energía</h3>
+          <p class="caso__sector">Instalación de placas solares</p>
+          <p>Una web con presupuestador por pasos: el cliente calcula su instalación y lo que va a ahorrar, al momento.</p>
+          <ul class="caso__etq"><li>Presupuestador</li><li>Calculadora de ahorro</li><li>Web corporativa</li></ul>
+        </div>
+        <figure class="marco" data-inclina>
+          <div class="marco__barra"><i></i><i></i><i></i><span>Genera Energía</span></div>
+          <div class="marco__ventana c-genera">
+            <div class="captura">
+              <div class="captura__nav"><span>GENERA</span><i></i><i></i><i></i><b>Calcular</b></div>
+              <div class="captura__hero"><h4>Tu propia energía, <em>desde tu tejado.</em></h4><p>Calcula tu instalación y tu ahorro en un minuto.</p></div>
+              <div class="captura__foto"></div>
+              <div class="captura__tres"><i></i><i></i><i></i></div>
+              <div class="captura__banda"></div>
+              <div class="captura__lineas"><i></i><i></i><i></i></div>
+              <div class="captura__tres"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <span class="marco__aviso">Vista provisional</span>
+        </figure>
+      </article>
+
+      <article class="caso" style="--n:2">
+        <div class="caso__info">
+          <span class="caso__num">03 / 03</span>
+          <h3 class="titular-m">Reformas García</h3>
+          <p class="caso__sector">Reformas de cocinas y baños</p>
+          <p>Una web de aire clásico y actual, con una portada que lleva directo a pedir presupuesto.</p>
+          <ul class="caso__etq"><li>Web corporativa</li><li>Estilo clásico</li><li>Contacto directo</li></ul>
+        </div>
+        <figure class="marco" data-inclina>
+          <div class="marco__barra"><i></i><i></i><i></i><span>Reformas García</span></div>
+          <div class="marco__ventana c-reformas">
+            <div class="captura">
+              <div class="captura__nav"><span>REFORMAS GARCÍA</span><i></i><i></i><i></i><b>Presupuesto</b></div>
+              <div class="captura__hero"><h4>Cocinas y baños, <em>bien hechos.</em></h4><p>Reformas integrales con acabados que duran.</p></div>
+              <div class="captura__foto"></div>
+              <div class="captura__lineas"><i></i><i></i><i></i></div>
+              <div class="captura__tres"><i></i><i></i><i></i></div>
+              <div class="captura__banda"></div>
+              <div class="captura__tres"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <span class="marco__aviso">Vista provisional</span>
+        </figure>
+      </article>
+    </div>
+
+    <div class="pila__fin aparece">
+      <p class="entradilla">¿Quieres ver más?</p>
+      <a class="wp-btn wp-btn--solido" href="#pagina-proyectos" data-iman>Ver todos los proyectos</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ CLIENTES FUNDADORES ═════════ -->
+<section class="wp-seccion isla" data-theme="oscuro" id="oferta">
+  <span class="wp-halo" style="right:-180px;top:-120px;width:760px;height:760px" aria-hidden="true"></span>
+  <div class="wp-ancho">
+    <div class="oferta__rejilla">
+      <div class="oferta__texto">
+        <span class="wp-chip aparece"><span class="wp-chip__punto late"></span>Oferta Clientes Fundadores</span>
+        <h2 class="titular-l aparece" style="--i:1">Tu web a medida, a cambio de algo más que dinero.</h2>
+        <p class="entradilla wp-suave aparece" style="--i:2">Consigue tu página web profesional, multipágina y adaptada a ordenador, tablet y móvil en solo 7 días. A cambio no pagas solo en dinero: también aportas tu reseña, tu permiso para enseñar la web en nuestro portafolio y tu proyecto como caso de estudio.</p>
+        <blockquote class="cita aparece" style="--i:3">No vendemos una web barata. Intercambiamos una web hecha con total dedicación por tu reseña y tu caso de estudio.</blockquote>
+      </div>
+
+      <div class="wp-cristal plazas aparece" id="plazas" style="--i:2">
+        <div class="plazas__cab">
+          <div>
+            <span class="wp-tarjeta__numero" style="margin-bottom:var(--esp-3)">Plazas ocupadas</span>
+            <p class="plazas__num"><span data-cuenta data-plazas="ocupadas">6</span><small>/ <span data-plazas="total">10</span></small></p>
+          </div>
+          <p class="plazas__quedan"><b>Quedan <span data-plazas="libres">4</span> plazas</b>y después se cierra.</p>
+        </div>
+        <div class="casillas" id="casillas" role="img" aria-label="6 de 10 plazas ocupadas"></div>
+        <div class="barra" aria-hidden="true"><i></i></div>
+        <div class="plazas__pie">
+          <p>Solo aceptamos <span data-plazas="total">10</span> proyectos con estas condiciones. Ya hemos hecho <span data-plazas="ocupadas">6</span>.</p>
+          <div class="plazas__cta">
+            <img class="wp-punto__img" src="{{PUNTO_SENALA}}" alt="" width="72" height="74">
+            <a class="wp-btn wp-btn--primario" href="{{CALENDLY}}" target="_blank" rel="noopener" data-iman>Reserva tu plaza</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="listas">
+      <div class="wp-tarjeta foco lista aparece">
+        <h3 class="titular-s">Qué incluye</h3>
+        <ul>
+          <li><svg class="ico"><use href="#i-check"/></svg>Diseño 100 % a medida, cero plantillas.</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Multipágina y adaptada a móvil, tablet y ordenador.</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Botón directo a WhatsApp, formularios conectados a email marketing y vídeo de ventas si encaja.</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Portal de cliente con seguimiento en tiempo real.</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Trato directo con tu diseñador, sin intermediarios ni gestores de cuenta.</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Entrega en 7 días desde que recibimos tus fotos y vídeos.</li>
+        </ul>
+      </div>
+      <div class="wp-tarjeta foco lista aparece" style="--i:1">
+        <h3 class="titular-s">Qué aportas tú</h3>
+        <ol>
+          <li><b>1</b>Una reseña en Google y un testimonio escrito o en vídeo.</li>
+          <li><b>2</b>Tu permiso para mostrar la web en nuestro portafolio.</li>
+          <li><b>3</b>Tu participación en un caso de estudio, con acceso a métricas básicas de antes y después.</li>
+        </ol>
+        <p class="lista__nota">Y una inversión de lanzamiento que te explicamos en la llamada, sin sorpresas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ CÓMO TRABAJAMOS ═════════ -->
+<section class="wp-seccion" data-theme="claro" id="proceso">
+  <div class="wp-ancho">
+    <header class="cabecera">
+      <span class="wp-chip wp-chip--velo aparece">Cómo trabajamos</span>
+      <h2 class="titular-l aparece" style="--i:1">Solo tres proyectos a la vez. El tuyo es uno.</h2>
+      <p class="entradilla wp-suave aparece" style="--i:2">Trabajamos con pocos clientes para que cada web reciba toda la atención. Y hablas siempre con quien la diseña.</p>
+    </header>
+
+    <div class="bento">
+      <article class="wp-tarjeta foco bento__a aparece">
+        <div>
+          <h3 class="titular-s">Máximo 3 proyectos a la vez.</h3>
+          <p>Cuando los tres huecos están ocupados, no aceptamos más. Así el tuyo no espera en una cola.</p>
+        </div>
+        <div class="huecos" aria-hidden="true">
+          <div class="hueco">Proyecto en curso <span>Día 6 de 7</span></div>
+          <div class="hueco">Proyecto en curso <span>Día 2 de 7</span></div>
+          <div class="hueco hueco--tuyo">El tuyo <span>Empieza hoy</span></div>
+          <div class="hueco hueco--espera">Siguiente proyecto <span>En espera</span></div>
+        </div>
+      </article>
+
+      <article class="wp-tarjeta foco bento__b aparece" style="--i:1">
+        <div>
+          <h3 class="titular-s">Hablas con tu diseñador, directamente.</h3>
+          <p>Sin comerciales, sin intermediarios y sin gestores de cuenta. Escribes y te responde quien está construyendo tu web.</p>
+        </div>
+        <div class="chat" id="chat" aria-hidden="true">
+          <div class="chat__cab persona"><span class="avatar">W.</span><div><b>Tu diseñador</b><span><i class="enlinea"></i>En línea</span></div></div>
+          <p class="msj msj--tu on">¿Podemos poner la foto del local en la portada?</p>
+          <p class="msj msj--escribe"><span class="escribe"><i></i><i></i><i></i></span></p>
+          <p class="msj on" data-resp>Hecho. Ya puedes verla en tu portal.</p>
+          <p class="msj msj--tu on" data-fin>Perfecta, gracias.</p>
+        </div>
+      </article>
+
+      <article class="wp-tarjeta foco bento__c aparece">
+        <div>
+          <h3 class="titular-s">Todo el proceso, a la vista.</h3>
+          <p>Tienes un portal de cliente donde ves cómo avanza tu web en tiempo real. Entras, miras y preguntas cuando quieras.</p>
+        </div>
+        <ul class="portal" aria-label="Ejemplo de portal de cliente">
+          <li><svg class="ico"><use href="#i-check"/></svg>Recursos recibidos <span>Antes de empezar</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Estructura aprobada <span>Día 1</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Home diseñada <span>Día 2</span></li>
+          <li><i class="encurso"></i>Páginas interiores <span>En curso</span></li>
+          <li class="pendiente"><i class="pend"></i>Publicación <span>Día 7</span></li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="semana" id="semana">
+      <header class="cabecera">
+        <h3 class="titular-m aparece">De tus recursos a tu web publicada, en 7 días.</h3>
+      </header>
+      <div class="semana__antes aparece">
+        <img class="wp-punto__img" src="{{PUNTO_IDEA}}" alt="" width="60" height="58">
+        <p><b>El contador empieza cuando lo tenemos todo.</b> Los 7 días cuentan desde que recibimos los recursos que necesitamos de ti: fotos, vídeos y textos. Si no tienes textos, los redactamos nosotros.</p>
+      </div>
+      <ol class="dias" id="dias">
+        <li class="dia"><span class="dia__n">Día 1</span><h4>Estrategia</h4><p>Definimos el objetivo, las páginas y el mensaje.</p></li>
+        <li class="dia"><span class="dia__n">Día 2</span><h4>Diseño de la home</h4><p>La primera versión, ya visible en tu portal.</p></li>
+        <li class="dia"><span class="dia__n">Día 3</span><h4>Páginas interiores</h4><p>Servicios, sobre ti y contacto.</p></li>
+        <li class="dia"><span class="dia__n">Día 4</span><h4>Integraciones</h4><p>WhatsApp, formularios y email marketing.</p></li>
+        <li class="dia"><span class="dia__n">Día 5</span><h4>Tu revisión</h4><p>Nos dices qué cambiar y lo cambiamos.</p></li>
+        <li class="dia"><span class="dia__n">Día 6</span><h4>Móvil y detalles</h4><p>Ajuste fino en móvil, tablet y ordenador.</p></li>
+        <li class="dia dia--fin"><span class="dia__n">Día 7</span><h4>Publicación</h4><p>Tu web, en marcha.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ FUNDADORES ═════════ -->
+<section class="wp-seccion equipo isla" data-theme="claro" id="equipo">
+  <div class="wp-ancho">
+    <header class="cabecera">
+      <span class="wp-chip wp-chip--velo aparece">Equipo</span>
+      <h2 class="titular-l aparece" style="--i:1">Dos personas. Las mismas que hacen tu web.</h2>
+      <p class="entradilla wp-suave aparece" style="--i:2">Sin departamentos ni intermediarios: quien te atiende es quien diseña y construye tu página.</p>
+    </header>
+    <div class="equipo__rejilla">
+      <!-- FOTOS: sustituye el contenido de .fundador__foto por una <img> cuando las tengáis. -->
+      <article class="wp-tarjeta wp-tarjeta--interactiva fundador aparece">
+        <div class="fundador__foto" aria-hidden="true"><span class="wp-halo"></span><span class="fundador__letra">M<i></i></span></div>
+        <div class="fundador__info">
+          <span class="wp-chip wp-chip--velo">Estrategia y clientes</span>
+          <h3 class="titular-s">Marcos</h3>
+          <p>Trato con los clientes, diseño estratégico y toma de decisiones.</p>
+        </div>
+      </article>
+      <article class="wp-tarjeta wp-tarjeta--interactiva fundador aparece" style="--i:1">
+        <div class="fundador__foto" aria-hidden="true"><span class="wp-halo"></span><span class="fundador__letra">A<i></i></span></div>
+        <div class="fundador__info">
+          <span class="wp-chip wp-chip--velo">Tecnología e IA</span>
+          <h3 class="titular-s">Asier</h3>
+          <p>Informático. Se ocupa de la parte técnica de cada web y de todo lo que lleva IA.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ PREGUNTAS ═════════ -->
+<section class="wp-seccion" data-theme="claro" id="preguntas">
+  <div class="wp-ancho faq__rejilla">
+    <header class="cabecera">
+      <span class="wp-chip wp-chip--velo aparece">Preguntas frecuentes</span>
+      <h2 class="titular-m aparece" style="--i:1">Lo que nos suelen preguntar.</h2>
+      <a class="wp-btn wp-btn--texto aparece" style="--i:2" href="{{WHATSAPP}}" target="_blank" rel="noopener">Pregúntanos otra cosa <span class="wp-btn__flecha" aria-hidden="true">→</span></a>
+    </header>
+    <div class="aparece" style="--i:1">
+      <details class="faq" open><summary>¿Desde cuándo cuentan los 7 días?</summary><p>Desde que recibimos todos los recursos que necesitamos de ti: fotos, vídeos y textos. Hasta entonces el contador no empieza.</p></details>
+      <details class="faq"><summary>¿Y si no tengo textos para la web?</summary><p>Los redactamos nosotros a partir de lo que nos cuentes de tu negocio.</p></details>
+      <details class="faq"><summary>¿Qué aporto como Cliente Fundador?</summary><p>Una reseña en Google, un testimonio escrito o en vídeo, tu permiso para enseñar la web en nuestro portafolio y tu participación en un caso de estudio. Además de una inversión de lanzamiento que te explicamos en la llamada.</p></details>
+      <details class="faq"><summary>¿Usáis plantillas?</summary><p>No. Cada web se diseña desde cero para el negocio, y se adapta a móvil, tablet y ordenador.</p></details>
+      <details class="faq"><summary>¿Con quién hablo durante el proyecto?</summary><p>Con tu diseñador, directamente. No hay comerciales ni gestores de cuenta por medio.</p></details>
+      <details class="faq"><summary>Ya tengo web. ¿Me sirve de algo?</summary><p>Sí. Pide el <a class="wp-acento" href="#analisis">análisis gratuito</a> y en menos de 24 h te decimos qué está fallando y cómo mejorarlo.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ CONTACTO ═════════ -->
+<section class="wp-seccion contacto" data-theme="oscuro" id="contacto">
+  <span class="wp-halo" style="left:50%;bottom:-520px;margin-left:-260px;width:1100px;height:900px" aria-hidden="true"></span>
+  <div class="wp-ancho contacto__rejilla">
+    <div class="contacto__texto">
+      <span class="wp-chip aparece"><span class="wp-chip__punto late"></span><span>Quedan <span data-plazas="libres">4</span> plazas</span></span>
+      <h2 class="titular-l aparece" style="--i:1">Tu web nueva empieza con una llamada de 15 minutos.</h2>
+      <p class="entradilla wp-suave aparece" style="--i:2">Nos cuentas tu negocio y te decimos qué haríamos con tu web y si encaja en una de las plazas que quedan. Si no te convence, no pasa nada.</p>
+      <div class="contacto__acciones aparece" style="--i:3">
+        <a class="wp-btn wp-btn--primario" href="{{CALENDLY}}" target="_blank" rel="noopener" data-iman><svg class="ico"><use href="#i-cal"/></svg>Hablemos 15 min</a>
+        <a class="wp-btn wp-btn--cristal" href="{{WHATSAPP}}" target="_blank" rel="noopener" data-iman><svg class="ico"><use href="#i-chat"/></svg>Escríbenos por WhatsApp</a>
+      </div>
+      <ul class="garantias aparece" style="--i:4">
+        <li><svg class="ico"><use href="#i-check"/></svg>Gratis y sin compromiso</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>Sin tecnicismos</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>Hablas con quien diseña tu web</li>
+      </ul>
+    </div>
+
+    <div class="wp-cristal analisis aparece" id="analisis" style="--i:2">
+      <div class="wp-punto wp-punto--asomado" aria-hidden="true"><img class="wp-punto__img" src="{{PUNTO_SALUDO}}" alt="" width="88" height="84"></div>
+      <div>
+        <span class="wp-chip wp-chip--velo">¿Ya tienes web?</span>
+        <h3 class="titular-s">Análisis gratuito en menos de 24 h.</h3>
+        <p class="wp-suave" style="margin-top:var(--esp-2)">Dinos cuál es tu web. Te enviamos qué está fallando y cómo mejorarla, sin coste.</p>
+      </div>
+      <form id="form-analisis" data-analisis novalidate>
+        <label class="wp-campo" for="f-web"><span class="wp-campo__etiqueta">Tu web</span><input class="wp-campo__control" id="f-web" name="web" type="text" inputmode="url" autocomplete="url" placeholder="tunegocio.es" required></label>
+        <label class="wp-campo" for="f-nombre"><span class="wp-campo__etiqueta">Tu nombre</span><input class="wp-campo__control" id="f-nombre" name="nombre" type="text" autocomplete="name" placeholder="Nombre y negocio" required></label>
+        <label class="wp-campo" for="f-mejora"><span class="wp-campo__etiqueta">¿Qué te gustaría mejorar? <span class="wp-tenue" style="font-weight:400">(opcional)</span></span><textarea class="wp-campo__control" id="f-mejora" name="mejora" rows="2" placeholder="Que me llamen más, que se vea bien en el móvil…"></textarea></label>
+        <fieldset class="canal">
+          <legend class="wp-campo__etiqueta">¿Por dónde nos lo envías?</legend>
+          <div class="canal__opciones" data-canal="whatsapp">
+            <label class="canal__op" for="f-canal-wa"><input type="radio" name="canal" id="f-canal-wa" value="whatsapp" checked><span><svg class="ico"><use href="#i-chat"/></svg>WhatsApp</span></label>
+            <label class="canal__op" for="f-canal-correo"><input type="radio" name="canal" id="f-canal-correo" value="correo"><span><svg class="ico"><use href="#i-correo"/></svg>Correo</span></label>
+          </div>
+        </fieldset>
+        <p class="analisis__error" id="f-error" role="alert">Escribe la dirección de tu web y tu nombre para preparar la solicitud.</p>
+        <button class="wp-btn wp-btn--solido" type="submit">Pedir mi análisis</button>
+        <p class="wp-campo__ayuda" data-ayuda="whatsapp">Se abre WhatsApp con tu solicitud ya escrita. Solo tienes que enviarla.</p>
+        <p class="wp-campo__ayuda" data-ayuda="correo" hidden>Se abre tu correo con la solicitud ya escrita para {{CORREO}}. Solo tienes que enviarla.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+</div>
+
+{{VISTA_OFERTA}}
+
+{{VISTA_PROYECTOS}}
+
+{{VISTA_EQUIPO}}
+
+{{VISTA_CONTACTO}}
+
+{{VISTA_LEGAL}}
+
+<!-- ═════════ PIE: logo en el centro, páginas a la izquierda y contacto a la derecha ═════════ -->
+<footer class="wp-seccion fin foco" data-theme="oscuro">
+  <span class="wp-halo fin__halo" aria-hidden="true"></span>
+  <div class="wp-ancho">
+    <div class="fin__rejilla">
+      <nav class="fin__paginas" aria-label="Páginas">
+        <h3>Páginas</h3>
+        <ul>
+          <li><a href="#clientes-fundadores" data-pagina="clientes-fundadores"><span>Oferta Clientes Fundadores</span><b aria-hidden="true">→</b></a></li>
+          <li><a href="#pagina-proyectos" data-pagina="proyectos"><span>Nuestros proyectos</span><b aria-hidden="true">→</b></a></li>
+          <li><a href="#pagina-equipo" data-pagina="equipo"><span>Equipo</span><b aria-hidden="true">→</b></a></li>
+          <li><a href="#pagina-contacto" data-pagina="contacto"><span>Contacto</span><b aria-hidden="true">→</b></a></li>
+        </ul>
+      </nav>
+
+      <div class="fin__centro">
+        <a class="fin__logo" href="#inicio" aria-label="Web y Punto, ir al inicio"><svg viewBox="{{LOGO_VB}}" role="img" aria-label="Web y Punto"><use href="#logo"/></svg></a>
+        <p class="fin__lema">Diseño web para PYMES. Tu página profesional, lista en 7 días y con todo el proceso a la vista.</p>
+      </div>
+
+      <div class="fin__contacto">
+        <h3>Hablemos</h3>
+        <a class="wp-btn wp-btn--solido" href="{{CALENDLY}}" target="_blank" rel="noopener" data-iman><svg class="ico"><use href="#i-cal"/></svg>Hablemos 15 min</a>
+        <a class="wp-btn wp-btn--cristal" href="{{WHATSAPP}}" target="_blank" rel="noopener" data-iman><svg class="ico"><use href="#i-chat"/></svg>WhatsApp</a>
+        <p class="fin__datos"><a href="mailto:{{CORREO}}">{{CORREO}}</a><span>+34 693 73 19 80</span></p>
+      </div>
+    </div>
+
+    <div class="fin__horizonte" aria-hidden="true"><span class="fin__arco"></span></div>
+
+    <div class="fin__legal">
+      <span>© 2026 Web y Punto · Diseño web para PYMES</span>
+      <nav aria-label="Legal">
+        <a href="#pagina-privacidad" data-pagina="privacidad">Política de privacidad</a>
+        <a href="#pagina-terminos" data-pagina="terminos">Términos y condiciones</a>
+      </nav>
+      <button class="fin__arriba" type="button" data-arriba>Volver arriba <i aria-hidden="true">↑</i></button>
+    </div>
+  </div>
+</footer>
+
+{{AVISO}}
+<a class="wa" id="wa" href="{{WHATSAPP}}" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg class="ico"><use href="#i-chat"/></svg></a>
