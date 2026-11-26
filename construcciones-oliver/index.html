@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Construcciones Oliver | Reformas integrales en Cullera</title>
+<meta name="description" content="Empresa familiar de Cullera, cuarta generación. Reformas integrales, obra nueva, fachadas y ascensores para casas, negocios y comunidades.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Construcciones Integrales Oliver: cuatro generaciones construyendo en Cullera">
+<meta property="og:description" content="Reformas integrales, obra nueva y rehabilitación de edificios con equipo propio, en Cullera y alrededores.">
+<meta property="og:image" content="https://cdn.pymesenlared.es/img/529/7527/20087/0x0/fb_img_1603977053642.1683646830.jpg">
+<meta name="theme-color" content="#2B201A">
+
+<script>
+  /* Activa las animaciones antes del primer pintado (sin parpadeo) y solo si el usuario no pide movimiento reducido */
+  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    document.documentElement.classList.add("anim");
+  }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.pymesenlared.es">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "GeneralContractor"],
+  "name": "Construcciones Integrales Oliver",
+  "legalName": "Construcciones Integrales Oliver S.L.",
+  "description": "Empresa familiar de cuarta generación. Reformas integrales, obra nueva, rehabilitación de fachadas y edificios, eliminación de barreras arquitectónicas, ascensores y acondicionamiento de negocios.",
+  "url": "[URL]",
+  "telephone": "[TELÉFONO]",
+  "email": "[EMAIL]",
+  "image": "https://cdn.pymesenlared.es/img/529/7527/20087/0x0/fb_img_1603977053642.1683646830.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cullera",
+    "addressRegion": "Valencia",
+    "postalCode": "46400",
+    "addressCountry": "ES"
+  },
+  "areaServed": "Cullera y alrededores",
+  "numberOfEmployees": { "@type": "QuantitativeValue", "value": 7 },
+  "knowsAbout": [
+    "Reformas integrales de viviendas y locales",
+    "Obra nueva: viviendas unifamiliares y naves",
+    "Rehabilitación de fachadas y edificios",
+    "Eliminación de barreras arquitectónicas e instalación de ascensores",
+    "Acondicionamiento de negocios"
+  ]
+}
+</script>
+
+<style>
+/* =========================================================
+   Tokens
+   ========================================================= */
+:root {
+  /* Paleta: tomada de la propia Cullera — el ocre de las fachadas
+     del casco antiguo, la tierra tostada, la cal y el verde de las persianas */
+  --color-principal: #D9971F;   /* Ocre fachada  — botones principales, franjas */
+  --color-secundario: #2B201A;  /* Tierra tostada — texto y fondos oscuros */
+  --color-neutro: #EDE9E2;      /* Cal — fondo claro */
+  --color-acento: #2F5C45;      /* Verde persiana — WhatsApp, foco, detalles */
+
+  --ocre-hover: #E6A73A;
+  --texto-suave: #5E5047;        /* 6,4:1 sobre cal */
+  --texto-suave-oscuro: #CBBFB2; /* 8,8:1 sobre tierra */
+  --error: #9B2A1A;              /* 6,3:1 sobre cal */
+  --blanco: #FFFFFF;
+
+  --ff-display: "Archivo", "Arial Narrow", system-ui, sans-serif;
+  --ff-texto: "Source Serif 4", Georgia, "Times New Roman", serif;
+
+  --t-small: 0.9375rem;
+  --t-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --t-lead: clamp(1.1875rem, 1.05rem + 0.6vw, 1.4375rem);
+  --t-h3: clamp(1.375rem, 1.15rem + 0.9vw, 1.875rem);
+  --t-h2: clamp(2.125rem, 1.3rem + 3.4vw, 4.25rem);
+  --t-h1: clamp(2.375rem, 0.9rem + 6.6vw, 6.75rem);
+
+  --gutter: clamp(1.25rem, 5vw, 4rem);
+  --max: 1320px;
+  --header-h: 68px;
+  --radio: 4px;
+  --foco: var(--color-acento);
+  --radio-foto: 8px;
+
+  /* Sombras: teñidas de tierra (nunca gris neutro) y en capas, para dar volumen */
+  --sombra-sm: 0 1px 2px rgba(43, 32, 26, 0.10), 0 3px 8px rgba(43, 32, 26, 0.10);
+  --sombra-md: 0 2px 4px rgba(43, 32, 26, 0.08), 0 10px 24px rgba(43, 32, 26, 0.14), 0 24px 48px -16px rgba(43, 32, 26, 0.28);
+  --sombra-lg: 0 4px 10px rgba(43, 32, 26, 0.10), 0 22px 48px rgba(43, 32, 26, 0.18), 0 48px 90px -24px rgba(43, 32, 26, 0.38);
+  /* Sobre fondo oscuro la sombra necesita más densidad para verse */
+  --sombra-oscuro: 0 2px 6px rgba(10, 6, 4, 0.40), 0 18px 40px rgba(10, 6, 4, 0.40), 0 40px 80px -20px rgba(10, 6, 4, 0.60);
+  /* Resplandor ocre para la acción principal */
+  --sombra-ocre: 0 2px 4px rgba(122, 78, 10, 0.25), 0 8px 22px -4px rgba(217, 151, 31, 0.55);
+  --sombra-ocre-hover: 0 4px 8px rgba(122, 78, 10, 0.25), 0 16px 34px -6px rgba(217, 151, 31, 0.70);
+}
+
+/* =========================================================
+   Base
+   ========================================================= */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + 12px); }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+body {
+  margin: 0;
+  background: var(--color-neutro);
+  color: var(--color-secundario);
+  font-family: var(--ff-texto);
+  font-size: var(--t-body);
+  line-height: 1.65;
+  overflow-x: clip; /* ninguna animación puede ensanchar la página */
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--foco); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3 {
+  font-family: var(--ff-display);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.015em;
+  margin: 0;
+  text-wrap: balance;
+}
+p { margin: 0; }
+p + p { margin-top: 1em; }
+
+.visually-hidden {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.skip {
+  position: absolute; left: 1rem; top: -100px; z-index: 100;
+  background: var(--color-secundario); color: var(--color-neutro);
+  padding: 0.75rem 1rem; font-family: var(--ff-display); font-weight: 700;
+}
+.skip:focus { top: 1rem; }
+
+.wrap { width: 100%; max-width: var(--max); margin-inline: auto; padding-inline: var(--gutter); }
+
+/* Ritmo vertical: una sola regla de padding para todas las secciones */
+.section { padding-block: clamp(4.5rem, 10vw, 9rem); }
+
+/* Fondos */
+.fondo-claro  { background: var(--color-neutro); color: var(--color-secundario); --foco: var(--color-acento); }
+.fondo-oscuro { background: var(--color-secundario); color: var(--color-neutro); --foco: var(--color-principal); }
+.fondo-ocre   { background: var(--color-principal); color: var(--color-secundario); --foco: var(--color-secundario); }
+
+.section-head { max-width: 46rem; }
+.section-head h2 { font-size: var(--t-h2); font-stretch: 100%; }
+.section-head .lead { margin-top: 1.25rem; font-size: var(--t-lead); line-height: 1.5; }
+.fondo-claro .lead { color: var(--texto-suave); }
+.fondo-oscuro .lead { color: var(--texto-suave-oscuro); }
+
+/* =========================================================
+   Botones
+   ========================================================= */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.6em;
+  min-height: 52px; padding: 0.75rem 1.5rem;
+  font-family: var(--ff-display); font-weight: 700; font-size: 1.0625rem; font-stretch: 100%;
+  line-height: 1.1; text-decoration: none; text-align: center;
+  border: 2px solid transparent; border-radius: var(--radio);
+  cursor: pointer;
+  transition: background-color .15s ease, color .15s ease, border-color .15s ease, box-shadow .2s ease, transform .2s ease;
+}
+.btn svg { flex: none; }
+.btn:active { transform: translateY(0); }
+.btn-principal {
+  background: linear-gradient(180deg, var(--ocre-hover) 0%, var(--color-principal) 100%);
+  color: var(--color-secundario); border-color: var(--color-principal);
+  box-shadow: var(--sombra-ocre), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+.btn-principal:hover { background: var(--ocre-hover); border-color: var(--ocre-hover); box-shadow: var(--sombra-ocre-hover), inset 0 1px 0 rgba(255, 255, 255, 0.35); transform: translateY(-2px); }
+.btn-linea { background: transparent; color: inherit; border-color: currentColor; }
+.btn-linea:hover { background: rgba(237, 233, 226, 0.12); }
+.fondo-claro .btn-linea:hover { background: rgba(43, 32, 26, 0.06); }
+.fondo-ocre .btn-oscuro, .btn-oscuro { background: var(--color-secundario); color: var(--color-neutro); border-color: var(--color-secundario); }
+.btn-oscuro { box-shadow: 0 2px 4px rgba(43, 32, 26, 0.25), 0 10px 22px -6px rgba(43, 32, 26, 0.55); }
+.btn-oscuro:hover { background: #3E3028; border-color: #3E3028; transform: translateY(-2px); box-shadow: 0 4px 8px rgba(43, 32, 26, 0.25), 0 16px 30px -8px rgba(43, 32, 26, 0.65); }
+.portada .btn-linea { backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); background: rgba(43, 32, 26, 0.25); box-shadow: 0 8px 24px -8px rgba(10, 6, 4, 0.5); }
+
+/* =========================================================
+   Cabecera
+   ========================================================= */
+.cabecera {
+  position: sticky; top: 0; z-index: 40;
+  background: var(--color-neutro);
+  border-bottom: 1px solid rgba(43, 32, 26, 0.14);
+  --foco: var(--color-acento);
+  transition: box-shadow .25s ease;
+}
+.cabecera.con-sombra { box-shadow: 0 1px 0 rgba(43, 32, 26, 0.06), 0 10px 30px -10px rgba(43, 32, 26, 0.30); }
+.cabecera .wrap {
+  display: flex; align-items: center; gap: 0.75rem;
+  min-height: var(--header-h);
+}
+.logo {
+  display: flex; flex-direction: column; text-decoration: none; line-height: 1;
+  margin-right: auto; padding-block: 0.5rem;
+}
+.logo-linea1 {
+  font-family: var(--ff-display); font-weight: 500; font-size: 0.6875rem; font-stretch: 100%;
+  letter-spacing: 0.01em; color: var(--texto-suave);
+}
+.logo-linea2 {
+  font-family: var(--ff-display); font-weight: 900; font-size: 1.625rem; font-stretch: 125%;
+  letter-spacing: -0.02em; margin-top: 0.1rem;
+}
+.menu-boton {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  min-height: 44px; min-width: 44px; padding: 0 0.75rem;
+  background: transparent; color: var(--color-secundario);
+  border: 2px solid var(--color-secundario); border-radius: var(--radio);
+  font-family: var(--ff-display); font-weight: 700; font-size: 0.9375rem; cursor: pointer;
+}
+.menu-boton .barras { width: 16px; height: 12px; position: relative; border-block: 2px solid currentColor; }
+.menu-boton .barras::after { content: ""; position: absolute; left: 0; right: 0; top: 3px; height: 2px; background: currentColor; }
+.menu-boton[aria-expanded="true"] .barras { border-color: transparent; }
+.menu-boton[aria-expanded="true"] .barras::after { top: 3px; transform: rotate(45deg); box-shadow: 0 0 0 0 currentColor; }
+.menu-boton[aria-expanded="true"] .barras::before { content: ""; position: absolute; left: 0; right: 0; top: 3px; height: 2px; background: currentColor; transform: rotate(-45deg); }
+
+.menu {
+  list-style: none; margin: 0; padding: 0.5rem var(--gutter) 1.25rem;
+  position: absolute; left: 0; right: 0; top: 100%;
+  background: var(--color-neutro); border-bottom: 1px solid rgba(43, 32, 26, 0.14);
+  display: none;
+}
+.menu.abierto { display: block; }
+.logo-linea1 { white-space: nowrap; }
+@media (max-width: 399px) {
+  .menu-boton .menu-texto { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .menu-boton { padding: 0; justify-content: center; }
+}
+@media (max-width: 759px) {
+  .portada-pie .foto-nota { display: none; }
+}
+.menu a {
+  display: block; padding: 0.85rem 0;
+  font-family: var(--ff-display); font-weight: 700; font-size: 1.375rem; font-stretch: 112%;
+  text-decoration: none; border-bottom: 1px solid rgba(43, 32, 26, 0.12);
+}
+.cabecera .btn { min-height: 44px; padding: 0.5rem 0.9rem; font-size: 0.9375rem; }
+.cta-corto { display: inline; }
+.cta-largo { display: none; }
+
+@media (min-width: 420px) {
+  .cta-corto { display: none; }
+  .cta-largo { display: inline; }
+}
+@media (min-width: 960px) {
+  .menu-boton { display: none; }
+  .menu {
+    display: flex !important; position: static; padding: 0; border: 0; background: none; gap: 0.25rem;
+    margin-right: 0.75rem;
+  }
+  .menu a {
+    font-size: 1rem; font-stretch: 100%; padding: 0.5rem 0.75rem; border: 0; border-radius: var(--radio);
+  }
+  .menu a:hover { background: rgba(43, 32, 26, 0.07); }
+  .logo-linea1 { font-size: 0.75rem; }
+  .logo-linea2 { font-size: 1.875rem; }
+}
+
+/* =========================================================
+   Portada
+   ========================================================= */
+.portada {
+  position: relative; isolation: isolate;
+  min-height: max(560px, calc(100svh - var(--header-h)));
+  display: flex; align-items: flex-end;
+  color: var(--color-neutro);
+  --foco: var(--color-principal);
+  overflow: hidden;
+}
+.portada-foto { position: absolute; inset: 0; z-index: -2; }
+.portada-foto img { width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%; }
+.portada::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background:
+    linear-gradient(to top, rgba(43,32,26,0.94) 0%, rgba(43,32,26,0.78) 38%, rgba(43,32,26,0.25) 72%, rgba(43,32,26,0.10) 100%),
+    linear-gradient(to right, rgba(43,32,26,0.55) 0%, rgba(43,32,26,0) 60%);
+}
+.portada .wrap { padding-block: clamp(3rem, 8vh, 6rem) clamp(2.5rem, 6vh, 4.5rem); }
+.portada h1 {
+  font-size: var(--t-h1);
+  font-stretch: 100%;
+  line-height: 0.96;
+  letter-spacing: -0.025em;
+  max-width: 13ch;
+  text-shadow: 0 2px 4px rgba(10, 6, 4, 0.25), 0 8px 32px rgba(10, 6, 4, 0.45);
+}
+.portada-apoyo {
+  margin-top: 1.5rem; max-width: 36rem;
+  font-size: var(--t-lead); line-height: 1.5; color: var(--color-neutro);
+}
+.portada-acciones { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+.portada-pie {
+  margin-top: clamp(2.5rem, 7vh, 4rem);
+  padding-top: 1rem; border-top: 1px solid rgba(237,233,226,0.35);
+  font-family: var(--ff-display); font-size: var(--t-small); color: var(--texto-suave-oscuro);
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 2rem;
+}
+@media (min-width: 700px) {
+  .portada h1 { font-stretch: 112%; }
+}
+@media (min-width: 1200px) {
+  .portada h1 { font-stretch: 125%; max-width: 12ch; }
+}
+
+/* =========================================================
+   Franja de confianza
+   ========================================================= */
+.confianza {
+  padding-block: clamp(2.75rem, 6vw, 4.5rem);
+  position: relative; z-index: 1;
+  background: linear-gradient(180deg, #E2A232 0%, var(--color-principal) 100%);
+  box-shadow: 0 -12px 30px -12px rgba(10, 6, 4, 0.45), 0 18px 36px -14px rgba(122, 78, 10, 0.55);
+}
+.confianza ul {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; gap: 2rem 3rem;
+  grid-template-columns: 1fr;
+}
+.confianza li { border-top: 3px solid var(--color-secundario); padding-top: 1rem; }
+.confianza h3 { font-size: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem); font-stretch: 112%; }
+.confianza p { margin-top: 0.5rem; font-size: 1.0625rem; line-height: 1.5; }
+@media (min-width: 640px) { .confianza ul { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1100px) { .confianza ul { grid-template-columns: repeat(4, 1fr); } }
+
+/* =========================================================
+   Servicios
+   ========================================================= */
+.servicios-lista { list-style: none; margin: clamp(3rem, 6vw, 5rem) 0 0; padding: 0; }
+.servicio {
+  display: grid; gap: 1.25rem;
+  padding-block: 2rem;
+  border-top: 2px solid var(--color-secundario);
+}
+.servicio:last-child { border-bottom: 2px solid var(--color-secundario); }
+.servicio-foto {
+  aspect-ratio: 4 / 3; overflow: hidden; background: #D8D1C6;
+  border-radius: var(--radio-foto); box-shadow: var(--sombra-md);
+  transition: box-shadow .3s ease, transform .3s ease;
+}
+.servicio-foto img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.servicio:hover .servicio-foto { box-shadow: var(--sombra-lg); transform: translateY(-3px); }
+.servicio:hover .servicio-foto img { transform: scale(1.03); }
+.servicio h3 { font-size: var(--t-h3); font-stretch: 112%; max-width: 20ch; }
+.servicio p { margin-top: 0.75rem; max-width: 34rem; }
+.servicio .enlace-tipo {
+  display: inline-block; margin-top: 1rem;
+  font-family: var(--ff-display); font-weight: 700; font-size: 1rem;
+  color: var(--color-acento);
+}
+@media (min-width: 760px) {
+  .servicio { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 2.5rem; align-items: center; }
+  .servicio h3 { font-size: clamp(1.75rem, 1rem + 1.6vw, 2.5rem); }
+}
+@media (min-width: 1100px) {
+  .servicio { grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 4rem; padding-block: 2.5rem; }
+}
+
+/* =========================================================
+   Obras (fichas tipo cartel de obra)
+   ========================================================= */
+.obras-grid {
+  display: grid; gap: 2.5rem 1.5rem;
+  grid-template-columns: 1fr;
+  margin-top: clamp(3rem, 6vw, 5rem);
+  align-items: start;
+}
+.obra {
+  margin: 0; border-radius: var(--radio-foto); overflow: hidden;
+  box-shadow: var(--sombra-oscuro);
+  transition: box-shadow .3s ease, transform .3s ease;
+}
+.obra:hover { transform: translateY(-4px); box-shadow: var(--sombra-oscuro), 0 0 0 1px rgba(217, 151, 31, 0.35), 0 26px 60px -20px rgba(217, 151, 31, 0.30); }
+.obra-foto {
+  position: relative; overflow: hidden; aspect-ratio: var(--ar, 3 / 2);
+  background: #3E3028;
+}
+.obra-foto img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+}
+.obra-foto .detalle { opacity: 0; transition: opacity .45s ease, transform .6s ease; transform: scale(1.04); }
+.obra:hover .obra-foto .detalle { opacity: 1; transform: scale(1); }
+.obra-foto .principal { transition: transform .6s ease; }
+.obra:hover .obra-foto .principal { transform: scale(1.04); }
+.obra-foto .pista {
+  position: absolute; right: 0.75rem; bottom: 0.75rem;
+  background: rgba(43,32,26,0.85); color: var(--color-neutro);
+  font-family: var(--ff-display); font-size: 0.8125rem; font-weight: 600;
+  padding: 0.3rem 0.6rem; border-radius: var(--radio);
+  transition: opacity .3s ease;
+}
+.obra:hover .pista { opacity: 0; }
+@media (hover: none) { .obra-foto .pista { display: none; } }
+
+.ficha {
+  background: var(--color-neutro); color: var(--color-secundario);
+  border-top: 8px solid var(--color-principal);
+}
+.ficha h3 {
+  font-size: 1.25rem; font-stretch: 100%; font-weight: 800; line-height: 1.15;
+  padding: 0.9rem 1.1rem 0.75rem;
+}
+.ficha dl { margin: 0; padding: 0 1.1rem 0.9rem; font-family: var(--ff-display); font-size: 0.9375rem; }
+.ficha dl div { display: grid; grid-template-columns: 4.25rem 1fr; gap: 0.75rem; padding-block: 0.45rem; border-top: 1px solid rgba(43,32,26,0.18); }
+.ficha dt { color: var(--texto-suave); }
+.ficha dd { margin: 0; font-weight: 600; }
+
+.obras-cta {
+  background: var(--color-principal); color: var(--color-secundario);
+  padding: 2rem 1.5rem; --foco: var(--color-secundario);
+  background: linear-gradient(160deg, #E6A73A 0%, var(--color-principal) 60%);
+  border-radius: var(--radio-foto);
+  box-shadow: var(--sombra-oscuro), 0 20px 50px -18px rgba(217, 151, 31, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+.obras-cta h3 { font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); font-stretch: 112%; }
+.obras-cta p { margin-top: 0.75rem; }
+.obras-cta .btn { margin-top: 1.5rem; }
+
+@media (min-width: 640px) {
+  .obras-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 1000px) {
+  .obras-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 3rem 1.75rem; }
+  .o-posta   { grid-column: 1 / 8; }
+  .o-maristas{ grid-column: 8 / 13; margin-top: 5rem; }
+  .o-aquo    { grid-column: 1 / 6; }
+  .o-turismo { grid-column: 6 / 13; margin-top: -4rem; }
+  .o-placa   { grid-column: 1 / 5; }
+  .o-cecilia { grid-column: 5 / 9; margin-top: 4rem; }
+  .obras-cta { grid-column: 9 / 13; align-self: end; }
+}
+
+/* =========================================================
+   Comunidades de vecinos (gesto: la malla del andamio se retira)
+   ========================================================= */
+.comunidades-split { display: grid; grid-template-columns: 1fr; }
+.andamio {
+  position: relative; margin: 0; overflow: hidden;
+  aspect-ratio: 4 / 3; background: #D8D1C6;
+  box-shadow: var(--sombra-lg);
+}
+@media (min-width: 1000px) { .andamio { border-radius: 0 var(--radio-foto) var(--radio-foto) 0; } }
+.andamio img { width: 100%; height: 100%; object-fit: cover; }
+.andamio figcaption {
+  position: absolute; left: 0; bottom: 0; z-index: 3;
+  background: var(--color-secundario); color: var(--color-neutro);
+  font-family: var(--ff-display); font-size: 0.875rem; line-height: 1.35;
+  padding: 0.6rem 0.9rem; max-width: 90%;
+}
+.malla, .malla-tubo { display: none; }
+.js-andamio .malla {
+  display: block; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  clip-path: inset(0 0 calc(var(--p, 0) * 100%) 0);
+  background:
+    /* tubos verticales del andamio */
+    linear-gradient(90deg, transparent calc(25% - 3px), rgba(120,112,104,0.95) calc(25% - 3px), rgba(160,152,144,0.95) calc(25% + 3px), transparent calc(25% + 3px)),
+    linear-gradient(90deg, transparent calc(62% - 3px), rgba(120,112,104,0.95) calc(62% - 3px), rgba(160,152,144,0.95) calc(62% + 3px), transparent calc(62% + 3px)),
+    /* malla de protección */
+    repeating-linear-gradient(0deg, rgba(31,66,48,0.55) 0 2px, transparent 2px 7px),
+    repeating-linear-gradient(90deg, rgba(31,66,48,0.55) 0 2px, transparent 2px 7px),
+    rgba(47, 92, 69, 0.72);
+}
+.js-andamio .malla-tubo {
+  display: block; position: absolute; left: 0; right: 0; z-index: 2; height: 10px;
+  top: calc((1 - var(--p, 0)) * 100% - 10px);
+  background: linear-gradient(#A0988F, #6F6860);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+  opacity: calc(1 - var(--p, 0) * var(--p, 0));
+}
+.comunidades-texto { padding: clamp(2.5rem, 6vw, 4rem) var(--gutter) 0; }
+.comunidades-texto h2 { font-size: var(--t-h2); font-stretch: 100%; }
+.comunidades-texto .lead { margin-top: 1.25rem; font-size: var(--t-lead); line-height: 1.5; color: var(--texto-suave); }
+.com-lista { list-style: none; margin: 2.25rem 0 0; padding: 0; }
+.com-lista li { padding-block: 1.1rem; border-top: 2px solid var(--color-secundario); }
+.com-lista h3 { font-size: 1.375rem; font-stretch: 112%; }
+.com-lista p { margin-top: 0.4rem; }
+.comunidades-texto .btn { margin-top: 2rem; }
+@media (min-width: 1000px) {
+  .comunidades-split { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); align-items: center; }
+  .andamio { aspect-ratio: auto; height: min(88vh, 820px); }
+  .comunidades-texto {
+    padding: 0 max(var(--gutter), calc((100vw - var(--max)) / 2 + var(--gutter))) 0 clamp(2.5rem, 5vw, 5rem);
+  }
+}
+
+/* =========================================================
+   Historia
+   ========================================================= */
+.historia-split { display: grid; grid-template-columns: 1fr; }
+.historia-texto { padding-inline: var(--gutter); }
+.historia-texto h2 { font-size: var(--t-h2); font-stretch: 100%; max-width: 14ch; }
+.historia-texto .relato { margin-top: 2rem; max-width: 38rem; }
+.historia-texto .relato p:first-child { font-size: var(--t-lead); line-height: 1.5; }
+.historia-foto { margin: 2.5rem 0 0; aspect-ratio: 4 / 3; overflow: hidden; }
+.historia-foto img { width: 100%; height: 100%; object-fit: cover; }
+.historia-foto figcaption {
+  font-family: var(--ff-display); font-size: 0.875rem; color: var(--texto-suave-oscuro);
+  padding: 0.75rem var(--gutter) 0;
+}
+.historia-listas { display: grid; gap: 2rem; margin-top: 2.75rem; max-width: 40rem; }
+.historia-listas h3 { font-size: 1.125rem; font-stretch: 100%; font-weight: 700; color: var(--color-principal); }
+.historia-listas ul { list-style: none; margin: 0.75rem 0 0; padding: 0; font-family: var(--ff-display); }
+.historia-listas li { padding-block: 0.5rem; border-top: 1px solid rgba(237,233,226,0.22); }
+@media (min-width: 640px) { .historia-listas { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) {
+  .historia-split { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); align-items: stretch; }
+  .historia-texto {
+    padding-left: max(var(--gutter), calc((100vw - var(--max)) / 2 + var(--gutter)));
+    padding-right: clamp(2.5rem, 5vw, 5rem);
+  }
+  .historia-foto { margin: 0; aspect-ratio: auto; display: flex; flex-direction: column; }
+  .historia-foto img { flex: 1; min-height: 0; }
+  .historia-foto figcaption { padding-inline: 0 var(--gutter); }
+}
+
+/* =========================================================
+   Cómo trabajamos
+   ========================================================= */
+.pasos {
+  list-style: none; margin: clamp(3rem, 6vw, 4.5rem) 0 0; padding: 0;
+  display: grid; gap: 2.5rem 2rem; grid-template-columns: 1fr;
+  counter-reset: paso;
+}
+.paso { counter-increment: paso; border-top: 2px solid var(--color-secundario); padding-top: 1.25rem; }
+.paso::before {
+  content: counter(paso);
+  display: block; width: fit-content;
+  font-family: var(--ff-display); font-weight: 900; font-stretch: 125%;
+  font-size: clamp(3rem, 2rem + 3vw, 4.5rem); line-height: 1;
+  color: var(--color-acento);
+  margin-bottom: 1rem;
+}
+.paso h3 { font-size: 1.5rem; font-stretch: 100%; }
+.paso p { margin-top: 0.6rem; color: var(--texto-suave); }
+@media (min-width: 640px) { .pasos { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1100px) { .pasos { grid-template-columns: repeat(4, 1fr); } }
+
+/* =========================================================
+   Contacto
+   ========================================================= */
+.contacto-grid { display: grid; gap: 3rem; grid-template-columns: 1fr; }
+.contacto-intro h2 { font-size: var(--t-h2); font-stretch: 100%; }
+.contacto-intro .lead { margin-top: 1.25rem; font-size: var(--t-lead); line-height: 1.5; color: var(--texto-suave-oscuro); }
+.datos { font-style: normal; margin-top: 2.5rem; }
+.datos dl { margin: 0; font-family: var(--ff-display); }
+.datos dl div { padding-block: 0.9rem; border-top: 1px solid rgba(237,233,226,0.25); }
+.datos dt { font-size: 0.9375rem; color: var(--texto-suave-oscuro); }
+.datos dd { margin: 0.2rem 0 0; font-size: 1.25rem; font-weight: 700; }
+.datos dd a { text-decoration: none; }
+.datos dd a:hover { text-decoration: underline; }
+
+.formulario {
+  background: var(--color-neutro); color: var(--color-secundario);
+  padding: clamp(1.5rem, 4vw, 2.75rem);
+  border-top: 8px solid var(--color-principal);
+  --foco: var(--color-acento);
+  border-radius: var(--radio-foto);
+  box-shadow: var(--sombra-oscuro), 0 -10px 40px -16px rgba(217, 151, 31, 0.45);
+}
+.formulario h3 { font-size: 1.5rem; font-stretch: 112%; }
+.formulario .nota { margin-top: 0.4rem; font-size: var(--t-small); color: var(--texto-suave); }
+.campos { display: grid; gap: 1.25rem; margin-top: 1.75rem; grid-template-columns: 1fr; }
+.campo label, .campo .etiqueta {
+  display: block; font-family: var(--ff-display); font-weight: 700; font-size: 1rem; margin-bottom: 0.4rem;
+}
+.campo .opcional { font-weight: 400; color: var(--texto-suave); }
+.campo input, .campo select, .campo textarea {
+  width: 100%; min-height: 52px;
+  padding: 0.75rem 0.9rem;
+  font: 400 1.0625rem/1.4 var(--ff-display);
+  color: var(--color-secundario); background: var(--blanco);
+  border: 2px solid var(--texto-suave); border-radius: var(--radio);
+  box-shadow: inset 0 2px 4px rgba(43, 32, 26, 0.08), 0 1px 0 rgba(255, 255, 255, 0.6);
+  transition: box-shadow .2s ease, border-color .2s ease;
+}
+.campo input:hover, .campo select:hover, .campo textarea:hover { box-shadow: inset 0 2px 4px rgba(43, 32, 26, 0.08), var(--sombra-sm); }
+.campo select {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--color-secundario) 50%), linear-gradient(135deg, var(--color-secundario) 50%, transparent 50%);
+  background-position: calc(100% - 20px) 50%, calc(100% - 14px) 50%;
+  background-size: 6px 6px; background-repeat: no-repeat;
+  padding-right: 2.5rem;
+}
+.campo textarea { min-height: 8rem; resize: vertical; }
+.campo .nota { display: block; margin-top: 0.35rem; line-height: 1.4; }
+.campo input:focus-visible, .campo select:focus-visible, .campo textarea:focus-visible {
+  outline: 3px solid var(--color-acento); outline-offset: 1px; border-color: var(--color-secundario);
+  box-shadow: 0 0 0 6px rgba(47, 92, 69, 0.18), var(--sombra-sm);
+}
+.campo [aria-invalid="true"] { border-color: var(--error); }
+.campo .error { display: block; margin-top: 0.35rem; font-family: var(--ff-display); font-size: 0.9375rem; font-weight: 600; color: var(--error); }
+.campo .error:empty { display: none; }
+.campo-check { display: grid; grid-template-columns: auto 1fr; gap: 0.75rem; align-items: start; }
+.campo-check input { width: 22px; height: 22px; min-height: 0; margin: 0.15rem 0 0; accent-color: var(--color-acento); }
+.campo-check label { font-family: var(--ff-texto); font-weight: 400; font-size: 1rem; margin: 0; }
+.campo-check .error { grid-column: 1 / -1; }
+.formulario .btn { width: 100%; margin-top: 1.75rem; }
+.envio-error { margin-top: 1rem; font-family: var(--ff-display); font-weight: 600; color: var(--error); }
+.envio-error:empty { display: none; }
+.confirmacion { padding-block: 1rem; }
+.confirmacion h3 { font-size: clamp(1.75rem, 1.3rem + 1.5vw, 2.25rem); }
+.confirmacion p { margin-top: 1rem; }
+.confirmacion:focus { outline: none; }
+@media (min-width: 640px) {
+  .campos { grid-template-columns: 1fr 1fr; }
+  .campo-ancho { grid-column: 1 / -1; }
+}
+@media (min-width: 1000px) {
+  .contacto-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 5rem; align-items: start; }
+}
+
+/* =========================================================
+   Pie
+   ========================================================= */
+.pie { padding-block: 3.5rem 7rem; font-family: var(--ff-display); }
+.pie-grid { display: grid; gap: 2rem; grid-template-columns: 1fr; }
+.pie .logo-linea1 { color: var(--color-secundario); }
+.pie p { margin-top: 0.75rem; font-family: var(--ff-texto); max-width: 26rem; }
+.pie ul { list-style: none; margin: 0; padding: 0; }
+.pie li a { display: inline-block; padding-block: 0.35rem; font-weight: 600; }
+.pie-legal {
+  margin-top: 2.5rem; padding-top: 1.25rem; border-top: 2px solid var(--color-secundario);
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; font-size: 0.9375rem;
+}
+.pie-legal ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; }
+@media (min-width: 760px) {
+  .pie-grid { grid-template-columns: 2fr 1fr 1fr; }
+  .pie { padding-block: 4rem 3rem; }
+}
+
+/* =========================================================
+   WhatsApp fijo
+   ========================================================= */
+.wa-fijo {
+  position: fixed; right: 16px; bottom: 16px; z-index: 60;
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
+  width: 60px; height: 60px; border-radius: 999px;
+  background: var(--color-acento); color: var(--blanco);
+  border: 2px solid var(--color-neutro);
+  box-shadow: 0 8px 22px rgba(43, 32, 26, 0.35);
+  font-family: var(--ff-display); font-weight: 700; font-size: 1rem; text-decoration: none;
+  --foco: var(--color-principal);
+}
+.wa-fijo { box-shadow: 0 4px 10px rgba(10, 6, 4, 0.25), 0 14px 32px -6px rgba(47, 92, 69, 0.65); transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease; }
+.wa-fijo:hover { background: #24493A; transform: translateY(-3px); box-shadow: 0 6px 14px rgba(10, 6, 4, 0.28), 0 22px 44px -8px rgba(47, 92, 69, 0.75); }
+.wa-fijo .wa-texto { display: none; }
+@media (min-width: 760px) {
+  .wa-fijo { width: auto; padding: 0 1.25rem 0 1rem; right: 24px; bottom: 24px; }
+  .wa-fijo .wa-texto { display: inline; }
+}
+
+/* =========================================================
+   Animaciones — la obra "se levanta" mientras bajas.
+   Todo cuelga de html.anim: sin JS o con movimiento reducido
+   la página se ve completa y quieta.
+   ========================================================= */
+:root {
+  --ease-obra: cubic-bezier(0.2, 0.75, 0.2, 1);
+  --ease-telon: cubic-bezier(0.7, 0, 0.2, 1);
+  --ease-sello: cubic-bezier(0.3, 1.55, 0.5, 1);
+}
+
+/* Portada: secuencia de carga orquestada */
+html.anim .portada-foto img { animation: zoomFoto 2.2s var(--ease-obra) backwards; }
+html.anim .portada h1:not(.partido) { opacity: 0; }
+html.anim .portada h1 .palabra {
+  display: inline-block;
+  animation: subirPalabra 0.9s var(--ease-obra) backwards;
+  animation-delay: calc(0.2s + var(--i, 0) * 85ms);
+}
+html.anim .portada-apoyo { animation: aparecer 0.8s var(--ease-obra) 0.8s backwards; }
+html.anim .portada-acciones > :nth-child(1) { animation: aparecer 0.7s var(--ease-obra) 1s backwards; }
+html.anim .portada-acciones > :nth-child(2) { animation: aparecer 0.7s var(--ease-obra) 1.12s backwards; }
+html.anim .portada-pie { animation: aparecer 0.9s ease 1.35s backwards; }
+
+@keyframes zoomFoto { from { transform: scale(1.12); } }
+@keyframes subirPalabra { from { opacity: 0; transform: translateY(0.5em) rotate(2deg); } }
+@keyframes aparecer { from { opacity: 0; transform: translateY(18px); } }
+
+/* WhatsApp: entra con un pequeño rebote y llama la atención dos veces, nada más */
+.wa-fijo::after {
+  content: ""; position: absolute; inset: -2px; border-radius: inherit;
+  border: 2px solid var(--color-acento); opacity: 0; pointer-events: none;
+}
+html.anim .wa-fijo { animation: pop 0.6s var(--ease-sello) 1.6s backwards; }
+html.anim .wa-fijo::after { animation: anillo 1.6s ease-out 4.5s 2; }
+@keyframes pop { from { opacity: 0; transform: scale(0.3); } }
+@keyframes anillo { 0% { opacity: 0.8; transform: scale(1); } 100% { opacity: 0; transform: scale(1.55); } }
+
+/* Revelado al hacer scroll: suben en cascada dentro de cada tanda */
+html.anim .rv {
+  opacity: 0; transform: translateY(34px);
+  transition: opacity 0.8s var(--ease-obra), transform 0.8s var(--ease-obra);
+  transition-delay: calc(var(--i, 0) * 110ms);
+}
+html.anim .rv.visto { opacity: 1; transform: none; }
+
+/* Fotos: telón que sube desde abajo, como una fachada que se levanta */
+html.anim .rv-foto {
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 1.15s var(--ease-telon);
+  transition-delay: calc(var(--i, 0) * 110ms);
+}
+html.anim .rv-foto.visto { clip-path: inset(0 0 0 0); }
+html.anim .rv-foto img { transform: scale(1.18); transition: transform 1.6s var(--ease-obra); transition-delay: calc(var(--i, 0) * 110ms); }
+html.anim .rv-foto.visto img { transform: scale(1); }
+
+/* Líneas de separación que se trazan como un nivel de obra */
+html.anim .dibuja { border-top-color: transparent; position: relative; }
+html.anim .dibuja::after {
+  content: ""; position: absolute; left: 0; right: 0; top: -2px; height: 2px;
+  background: var(--color-secundario);
+  transform: scaleX(0); transform-origin: left center;
+  transition: transform 1s var(--ease-telon);
+  transition-delay: calc(var(--i, 0) * 110ms);
+}
+html.anim .confianza .dibuja::after { top: -3px; height: 3px; }
+html.anim .dibuja.visto::after { transform: scaleX(1); }
+
+/* Números de "Cómo trabajamos": se estampan como un sello */
+html.anim .sello::before {
+  opacity: 0; transform: scale(1.8) rotate(-8deg); transform-origin: left bottom;
+  transition: transform 0.6s var(--ease-sello), opacity 0.25s ease;
+  transition-delay: calc(var(--i, 0) * 140ms + 250ms);
+}
+html.anim .sello.visto::before { opacity: 1; transform: none; }
+
+/* Confirmación del formulario: el check se dibuja */
+.check { display: block; margin-bottom: 1rem; }
+.check circle, .check path {
+  fill: none; stroke: var(--color-acento); stroke-linecap: round; stroke-linejoin: round;
+  stroke-dasharray: var(--len); stroke-dashoffset: 0;
+}
+.check circle { stroke-width: 3; }
+.check path { stroke-width: 4; }
+html.anim .confirmacion:not([hidden]) .check circle { animation: trazo 0.7s ease-out backwards; }
+html.anim .confirmacion:not([hidden]) .check path { animation: trazo 0.45s ease-out 0.55s backwards; }
+html.anim .confirmacion:not([hidden]) h3,
+html.anim .confirmacion:not([hidden]) p { animation: aparecer 0.6s var(--ease-obra) 0.35s backwards; }
+@keyframes trazo { from { stroke-dashoffset: var(--len); } }
+
+/* =========================================================
+   Movimiento reducido
+   ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+  .obra:hover .obra-foto .principal, .obra-foto .detalle { transform: none; }
+  .btn:hover, .obra:hover, .servicio:hover .servicio-foto, .servicio:hover .servicio-foto img, .wa-fijo:hover { transform: none; }
+}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<!-- ============ 1. Cabecera ============ -->
+<header class="cabecera">
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="Construcciones Integrales Oliver, ir al inicio">
+      <span class="logo-linea1">Construcciones Integrales</span>
+      <span class="logo-linea2">Oliver</span>
+    </a>
+    <nav aria-label="Principal">
+      <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="barras" aria-hidden="true"></span><span class="menu-texto">Menú</span>
+      </button>
+      <ul class="menu" id="menu-principal">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#obras">Obras</a></li>
+        <li><a href="#comunidades">Comunidades</a></li>
+        <li><a href="#historia">Historia</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-principal" href="#contacto"><span class="cta-largo">Pide tu presupuesto</span><span class="cta-corto">Presupuesto</span></a>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- ============ 2. Portada ============ -->
+  <section class="portada" id="inicio" aria-labelledby="titulo-portada">
+    <div class="portada-foto">
+      <img
+        src="https://cdn.pymesenlared.es/img/529/7527/20087/0x0/fb_img_1603977053642.1683646830.jpg"
+        width="1080" height="720" fetchpriority="high"
+        alt="Terraza recién reformada con suelo claro, dos tumbonas, cerramiento de cristal y la montaña al fondo bajo el cielo azul.">
+    </div>
+    <div class="wrap">
+      <h1 id="titulo-portada">Cuatro generaciones construyendo en Cullera</h1>
+      <p class="portada-apoyo">Reformas integrales, obra nueva y rehabilitación de edificios con equipo propio. Para tu casa, tu negocio o tu comunidad de vecinos.</p>
+      <div class="portada-acciones">
+        <a class="btn btn-principal" href="#contacto">Pide tu presupuesto</a>
+        <a class="btn btn-linea" href="https://wa.me/[WHATSAPP]?text=Hola%2C%20quiero%20pedir%20presupuesto%20para%20una%20obra." target="_blank" rel="noopener">
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9.2 8.2c.3-.4.8-.4 1 0l.8 1.6c.1.3 0 .6-.2.8l-.5.5c.5 1.1 1.4 2 2.5 2.5l.5-.5c.2-.2.5-.3.8-.2l1.6.8c.4.2.4.7 0 1-.6.6-1.5.9-2.3.6-2.2-.8-4-2.6-4.8-4.8-.3-.8 0-1.7.6-2.3z" fill="currentColor"/></svg>
+          Escríbenos por WhatsApp<span class="visually-hidden"> (se abre en una ventana nueva)</span>
+        </a>
+      </div>
+      <div class="portada-pie">
+        <span>Trabajamos en Cullera y alrededores</span>
+        <span class="foto-nota">En la foto: terraza tras una reforma integral</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. Franja de confianza ============ -->
+  <section class="confianza fondo-ocre" aria-labelledby="titulo-confianza">
+    <div class="wrap">
+      <h2 id="titulo-confianza" class="visually-hidden">Por qué confiar en nosotros</h2>
+      <ul>
+        <li class="rv dibuja">
+          <h3>Cuarta generación</h3>
+          <p>Una familia de Cullera que se ha pasado el oficio de padres a hijos.</p>
+        </li>
+        <li class="rv dibuja">
+          <h3>Equipo propio</h3>
+          <p>Siete personas en plantilla que conocen tu obra de principio a fin.</p>
+        </li>
+        <li class="rv dibuja">
+          <h3>Obra pública</h3>
+          <p>Hemos construido para la ciudad, de la Posta Sanitaria a la Oficina de Turismo.</p>
+        </li>
+        <li class="rv dibuja">
+          <h3>Cullera y alrededores</h3>
+          <p>Estamos cerca para ir a ver tu obra y seguirla de primera mano.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 4. Servicios ============ -->
+  <section class="section fondo-claro" id="servicios" aria-labelledby="titulo-servicios">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="titulo-servicios">Lo que hacemos</h2>
+        <p class="lead">Cinco tipos de obra y un mismo equipo. Si no sabes en cuál encaja la tuya, cuéntanosla y lo vemos juntos.</p>
+      </div>
+
+      <ul class="servicios-lista">
+        <li class="servicio dibuja">
+          <div class="servicio-foto rv-foto">
+            <img src="https://cdn.pymesenlared.es/img/529/7531/19247/0x1000/img-20200804-wa0048.jpg" width="1333" height="1000" loading="lazy"
+              alt="Cocina reformada en blanco con isla central, taburetes negros, lámparas colgantes y luz bajo los muebles altos.">
+          </div>
+          <div class="rv">
+            <h3>Reformas integrales de viviendas y locales</h3>
+            <p>Tu casa o tu local como lo imaginas, sin tener que coordinar gremios: un solo equipo se encarga de toda la obra.</p>
+            <a class="enlace-tipo" href="#contacto" data-tipo="reforma">Pedir presupuesto de reforma</a>
+          </div>
+        </li>
+        <li class="servicio dibuja">
+          <div class="servicio-foto rv-foto">
+            <img src="https://cdn.pymesenlared.es/img/529/7531/17115/0x1000/whatsapp-image-2020-11-02-at-19.12.17-1.jpeg" width="1000" height="1000" loading="lazy"
+              alt="Vivienda unifamiliar de obra nueva en la urbanización Bulevar: volúmenes blancos de dos plantas con celosías y jardín de césped.">
+          </div>
+          <div class="rv">
+            <h3>Obra nueva: viviendas unifamiliares y naves</h3>
+            <p>Levantamos tu vivienda o tu nave con la misma gente desde los cimientos hasta la entrega de llaves.</p>
+            <a class="enlace-tipo" href="#contacto" data-tipo="obra-nueva">Pedir presupuesto de obra nueva</a>
+          </div>
+        </li>
+        <li class="servicio dibuja">
+          <div class="servicio-foto rv-foto">
+            <img src="https://cdn.pymesenlared.es/img/529/7531/17044/0x1000/002.jpg" width="566" height="900" loading="lazy"
+              alt="Fachada ocre rehabilitada del edificio La Fonda, en Cullera, con balcones de forja negra y contraventanas de madera.">
+          </div>
+          <div class="rv">
+            <h3>Rehabilitación de fachadas y edificios</h3>
+            <p>Fachadas seguras y cuidadas otra vez, también en edificios protegidos del casco histórico.</p>
+            <a class="enlace-tipo" href="#contacto" data-tipo="fachada">Pedir presupuesto de rehabilitación</a>
+          </div>
+        </li>
+        <li class="servicio dibuja">
+          <div class="servicio-foto rv-foto">
+            <img src="https://cdn.pymesenlared.es/img/529/7531/17056/0x1000/001.jpg" width="698" height="876" loading="lazy"
+              alt="Entrada de la Sociedad Musical Santa Cecilia con el ascensor acristalado instalado junto a los escalones de acceso.">
+          </div>
+          <div class="rv">
+            <h3>Eliminación de barreras arquitectónicas y ascensores</h3>
+            <p>Que todo el mundo pueda entrar y subir sin escalones: rampas, accesos adaptados e instalación de ascensores.</p>
+            <a class="enlace-tipo" href="#contacto" data-tipo="accesibilidad">Pedir presupuesto de accesibilidad</a>
+          </div>
+        </li>
+        <li class="servicio dibuja">
+          <div class="servicio-foto rv-foto">
+            <img src="https://cdn.pymesenlared.es/img/529/7531/18152/0x1000/20200626_082043.jpg" width="1333" height="1000" loading="lazy"
+              alt="Local de hostelería La Perla Negra junto a la playa de Cullera: pabellón de cubierta plana con grandes cristaleras.">
+          </div>
+          <div class="rv">
+            <h3>Acondicionamiento de negocios</h3>
+            <p>Dejamos tu local listo para abrir al público y adaptado a lo que necesita tu actividad.</p>
+            <a class="enlace-tipo" href="#contacto" data-tipo="negocio">Pedir presupuesto para tu negocio</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 5. Obras destacadas ============ -->
+  <section class="section fondo-oscuro" id="obras" aria-labelledby="titulo-obras">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="titulo-obras">Obras que puedes ver en Cullera</h2>
+        <p class="lead">Buena parte de nuestro trabajo está a la vista: en la playa, en el centro y en el Faro.</p>
+      </div>
+
+      <div class="obras-grid">
+        <article class="rv obra o-posta">
+          <div class="obra-foto" style="--ar: 3 / 2">
+            <img class="principal" src="https://cdn.pymesenlared.es/img/529/7531/17036/0x1000/001.jpg" width="1115" height="743" loading="lazy"
+              alt="Posta Sanitaria del Oasis: edificio bajo de color claro y cubierta plana, entre palmeras y bloques de apartamentos.">
+            <img class="detalle" src="https://cdn.pymesenlared.es/img/529/7531/17036/0x1000/002.jpg" width="1076" height="716" loading="lazy"
+              alt="Acceso a la Posta Sanitaria entre árboles, con un muro de huecos circulares junto a la entrada.">
+            <span class="pista" aria-hidden="true">Pasa el ratón: otra vista</span>
+          </div>
+          <div class="ficha">
+            <h3>Posta Sanitaria del Oasis</h3>
+            <dl>
+              <div><dt>Tipo</dt><dd>Obra pública de nueva planta</dd></div>
+              <div><dt>Lugar</dt><dd>El Oasis, Cullera</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="rv obra o-maristas">
+          <div class="obra-foto" style="--ar: 4 / 5">
+            <img class="principal" src="https://cdn.pymesenlared.es/img/529/7531/17054/0x1000/004.jpg" width="623" height="832" loading="lazy"
+              alt="Aseos del Colegio Maristas con puertas naranjas y paredes blancas con franjas de azulejo de colores.">
+            <img class="detalle" src="https://cdn.pymesenlared.es/img/529/7531/17054/0x1000/005.jpg" width="1034" height="776" loading="lazy"
+              alt="Vestuario del colegio con bancos de madera, colgadores y una franja de azulejo naranja a lo largo de la pared.">
+          </div>
+          <div class="ficha">
+            <h3>Colegio Maristas</h3>
+            <dl>
+              <div><dt>Tipo</dt><dd>Aseos y vestuarios nuevos</dd></div>
+              <div><dt>Lugar</dt><dd>Cullera</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="rv obra o-aquo">
+          <div class="obra-foto" style="--ar: 4 / 3">
+            <img class="principal" src="https://cdn.pymesenlared.es/img/529/7531/17055/0x1000/001.jpg" width="1281" height="953" loading="lazy"
+              alt="Vaso circular del spa de Aquopolis en construcción, rodeado de gradas escalonadas de hormigón.">
+            <img class="detalle" src="https://cdn.pymesenlared.es/img/529/7531/17055/0x1000/002.jpg" width="606" height="465" loading="lazy"
+              alt="Zona del spa de Aquopolis en obra, con palmeras al fondo y vallado de seguridad.">
+          </div>
+          <div class="ficha">
+            <h3>Parque Acuático Aquopolis</h3>
+            <dl>
+              <div><dt>Tipo</dt><dd>Construcción de un spa</dd></div>
+              <div><dt>Lugar</dt><dd>Cullera</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="rv obra o-turismo">
+          <div class="obra-foto" style="--ar: 3 / 2">
+            <img class="principal" src="https://cdn.pymesenlared.es/img/529/7531/17035/0x1000/001.jpg" width="1331" height="901" loading="lazy"
+              alt="Oficina de Turismo de Cullera tras la ampliación: volumen blanco con pérgola metálica sobre el césped.">
+            <img class="detalle" src="https://cdn.pymesenlared.es/img/529/7531/17035/0x1000/003.jpg" width="618" height="410" loading="lazy"
+              alt="Lateral de la ampliación de la Oficina de Turismo, con revestimiento claro y celosía entre palmeras.">
+          </div>
+          <div class="ficha">
+            <h3>Ampliación de la Oficina de Turismo</h3>
+            <dl>
+              <div><dt>Tipo</dt><dd>Ampliación de edificio público</dd></div>
+              <div><dt>Lugar</dt><dd>Cullera</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="rv obra o-placa">
+          <div class="obra-foto" style="--ar: 3 / 4">
+            <img class="principal" src="https://cdn.pymesenlared.es/img/529/7531/17050/0x1000/003.jpg" width="665" height="1000" loading="lazy"
+              alt="Acera nueva de baldosa junto a un muro de piedra y una farola, en la Plaça Illa dels Pensaments.">
+            <img class="detalle" src="https://cdn.pymesenlared.es/img/529/7531/17050/0x1000/001.jpg" width="590" height="393" loading="lazy"
+              alt="Calle reurbanizada junto a la plaza, con aceras nuevas y bloques de viviendas al fondo.">
+          </div>
+          <div class="ficha">
+            <h3>Plaça Illa dels Pensaments</h3>
+            <dl>
+              <div><dt>Tipo</dt><dd>Urbanización de plaza pública</dd></div>
+              <div><dt>Lugar</dt><dd>El Faro, Cullera</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="rv obra o-cecilia">
+          <div class="obra-foto" style="--ar: 3 / 4">
+            <img class="principal" src="https://cdn.pymesenlared.es/img/529/7531/17056/0x1000/002.jpg" width="688" height="920" loading="lazy"
+              alt="Ascensor exterior de cristal y acero en la entrada de la Sociedad Musical Santa Cecilia.">
+            <img class="detalle" src="https://cdn.pymesenlared.es/img/529/7531/17056/0x1000/001.jpg" width="698" height="876" loading="lazy"
+              alt="Vista más amplia de la entrada de la Sociedad Musical, con la puerta de madera y el ascensor a la derecha.">
+          </div>
+          <div class="ficha">
+            <h3>Sociedad Musical Santa Cecilia</h3>
+            <dl>
+              <div><dt>Tipo</dt><dd>Ascensor sin barreras</dd></div>
+              <div><dt>Lugar</dt><dd>Cullera</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <div class="obras-cta rv">
+          <h3>¿Tu obra se parece a alguna de estas?</h3>
+          <p>Cuéntanos qué tienes en mente y te decimos cómo lo haríamos.</p>
+          <a class="btn btn-oscuro" href="#contacto">Pide tu presupuesto</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. Comunidades de vecinos ============ -->
+  <section class="section fondo-claro" id="comunidades" aria-labelledby="titulo-comunidades">
+    <div class="comunidades-split">
+      <figure class="andamio" id="andamio">
+        <img src="https://cdn.pymesenlared.es/img/529/7531/17045/0x1000/001.jpg" width="988" height="738" loading="lazy"
+          alt="Fachada del edificio Ponderosa, en Cullera, tras la rehabilitación: balcones nuevos con barandilla metálica y toldos rojos.">
+        <div class="malla" aria-hidden="true"></div>
+        <div class="malla-tubo" aria-hidden="true"></div>
+        <figcaption>Edificio Ponderosa, Cullera. Fachada rehabilitada y balcones nuevos.</figcaption>
+      </figure>
+
+      <div class="comunidades-texto">
+        <h2 id="titulo-comunidades">Para comunidades de vecinos</h2>
+        <p class="lead">Una empresa de aquí, con equipo propio, para toda la obra del edificio. Os preparamos un presupuesto claro para llevar a la junta.</p>
+        <ul class="com-lista">
+          <li class="rv dibuja">
+            <h3>Fachadas</h3>
+            <p>Rehabilitamos fachadas y balcones de edificios de viviendas, como los edificios Kronos y Ponderosa, y La Fonda, un edificio protegido.</p>
+          </li>
+          <li class="rv dibuja">
+            <h3>Ascensores</h3>
+            <p>Instalamos ascensores donde antes solo había escaleras, como en la Sociedad Musical Santa Cecilia.</p>
+          </li>
+          <li class="rv dibuja">
+            <h3>Accesibilidad</h3>
+            <p>Quitamos escalones y renovamos zaguanes para que entrar al edificio sea fácil para todos los vecinos.</p>
+          </li>
+        </ul>
+        <a class="btn btn-principal" href="#contacto" data-tipo="fachada">Pide presupuesto para tu comunidad</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7. Nuestra historia ============ -->
+  <section class="section fondo-oscuro" id="historia" aria-labelledby="titulo-historia">
+    <div class="historia-split">
+      <div class="historia-texto">
+        <h2 id="titulo-historia">Un oficio que pasa de padres a hijos</h2>
+        <div class="relato">
+          <p>Construcciones Integrales Oliver es una empresa familiar de Cullera. Somos la cuarta generación que se dedica a la construcción, y el oficio lo aprendimos como se aprende aquí: en la obra, al lado de quien vino antes.</p>
+          <p>Hoy somos siete personas. Un equipo pequeño y propio que conoce cada obra de principio a fin y que responde por ella, porque nuestro nombre va en cada una.</p>
+          <p>Esa forma de trabajar también nos ha llevado a construir para la ciudad y a rehabilitar edificios protegidos del casco histórico, donde cada piedra cuenta.</p>
+        </div>
+        <div class="historia-listas">
+          <div>
+            <h3>Obra pública</h3>
+            <ul>
+              <li class="rv">Posta Sanitaria del Oasis</li>
+              <li class="rv">Ampliación de la Oficina de Turismo</li>
+              <li class="rv">Plaça Illa dels Pensaments</li>
+            </ul>
+          </div>
+          <div class="rv">
+            <h3>Edificios protegidos</h3>
+            <ul>
+              <li class="rv">Casa Abadía de Santa Ana</li>
+              <li class="rv">Ermita de Sant Llorenç</li>
+              <li class="rv">Casa Palomés</li>
+              <li class="rv">Edificio La Fonda</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <figure class="historia-foto rv-foto">
+        <img src="https://cdn.pymesenlared.es/img/529/7531/17040/0x1000/003.jpg" width="1135" height="849" loading="lazy"
+          alt="Muro ocre de la Casa Abadía de Santa Ana, en Cullera, rehabilitada, con balcón de forja y el campanario al fondo.">
+        <figcaption>Casa Abadía de Santa Ana, Cullera. Rehabilitación de un edificio protegido.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ 8. Cómo trabajamos ============ -->
+  <section class="section fondo-claro" id="como-trabajamos" aria-labelledby="titulo-trabajamos">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="titulo-trabajamos">Cómo trabajamos</h2>
+        <p class="lead">Cuatro pasos, siempre con las mismas personas al otro lado.</p>
+      </div>
+      <ol class="pasos">
+        <li class="paso rv dibuja sello">
+          <h3>Nos cuentas tu obra</h3>
+          <p>Llámanos, escríbenos por WhatsApp o rellena el formulario. Con lo básico nos basta para empezar.</p>
+        </li>
+        <li class="paso rv dibuja sello">
+          <h3>Vamos a verla</h3>
+          <p>Visitamos la vivienda, el local o el edificio para entender bien qué necesitas.</p>
+        </li>
+        <li class="paso rv dibuja sello">
+          <h3>Te damos un presupuesto claro</h3>
+          <p>Detallado y por escrito, para que sepas qué incluye antes de decidir.</p>
+        </li>
+        <li class="paso rv dibuja sello">
+          <h3>Hacemos la obra con nuestro equipo</h3>
+          <p>Las mismas personas de principio a fin, y siempre sabes a quién llamar.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 9. Reseñas (oculto hasta tener contenido real) ============ -->
+  <!-- PENDIENTE: añadir cuando el cliente los facilite -->
+  <!-- Testimonios reales de clientes (con su permiso), certificaciones y garantías.
+       Quitar el atributo "hidden" de la sección cuando haya contenido real. NO rellenar con textos inventados. -->
+  <section class="section fondo-oscuro" id="opiniones" aria-labelledby="titulo-opiniones" hidden>
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="titulo-opiniones">Lo que dicen quienes ya han hecho obra con nosotros</h2>
+      </div>
+      <!--
+      <ul class="opiniones-lista">
+        <li>
+          <blockquote><p>[Texto literal de la reseña]</p></blockquote>
+          <p>[Nombre], [tipo de obra], [población]</p>
+        </li>
+      </ul>
+      -->
+      <!-- PENDIENTE: certificaciones y garantías, solo con documentación del cliente -->
+    </div>
+  </section>
+
+  <!-- ============ 10. Contacto ============ -->
+  <section class="section fondo-oscuro" id="contacto" aria-labelledby="titulo-contacto">
+    <div class="wrap contacto-grid">
+      <div class="contacto-intro">
+        <h2 id="titulo-contacto">Cuéntanos tu obra</h2>
+        <p class="lead">Déjanos tus datos y te llamamos para hablar de ella. Si lo prefieres, llámanos o escríbenos directamente.</p>
+
+        <!-- Bloque único de datos de contacto: es la única fuente de teléfono, WhatsApp y email de la web -->
+        <address class="datos rv">
+          <dl>
+            <div><dt>Teléfono</dt><dd><a href="tel:[TELÉFONO]">[TELÉFONO]</a></dd></div>
+            <div><dt>WhatsApp</dt><dd><a href="https://wa.me/[WHATSAPP]" target="_blank" rel="noopener">[WHATSAPP]<span class="visually-hidden"> (se abre en una ventana nueva)</span></a></dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:[EMAIL]">[EMAIL]</a></dd></div>
+            <div><dt>Zona de trabajo</dt><dd>Cullera y alrededores</dd></div>
+          </dl>
+        </address>
+      </div>
+
+      <div class="formulario rv">
+        <div id="form-zona">
+          <h3>Pide tu presupuesto</h3>
+          <p class="nota">Todos los campos son obligatorios salvo el mensaje.</p>
+          <form id="form-presupuesto" action="[URL_DEL_FORMULARIO]" method="post" novalidate>
+            <div class="campos">
+              <div class="campo">
+                <label for="f-nombre">Nombre</label>
+                <input id="f-nombre" name="nombre" type="text" autocomplete="name" required aria-describedby="e-nombre">
+                <span class="error" id="e-nombre"></span>
+              </div>
+              <div class="campo">
+                <label for="f-telefono">Teléfono</label>
+                <input id="f-telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel" required aria-describedby="e-telefono">
+                <span class="error" id="e-telefono"></span>
+              </div>
+              <div class="campo">
+                <label for="f-tipo">Tipo de obra</label>
+                <select id="f-tipo" name="tipo_obra" required aria-describedby="e-tipo">
+                  <option value="">Elige una opción</option>
+                  <option value="reforma">Reforma integral de vivienda o local</option>
+                  <option value="obra-nueva">Obra nueva: vivienda unifamiliar o nave</option>
+                  <option value="fachada">Rehabilitación de fachada o edificio</option>
+                  <option value="accesibilidad">Barreras arquitectónicas o ascensor</option>
+                  <option value="negocio">Acondicionamiento de negocio</option>
+                  <option value="otra">Otra obra</option>
+                </select>
+                <span class="error" id="e-tipo"></span>
+              </div>
+              <div class="campo">
+                <label for="f-poblacion">Población</label>
+                <input id="f-poblacion" name="poblacion" type="text" autocomplete="address-level2" required aria-describedby="e-poblacion">
+                <span class="error" id="e-poblacion"></span>
+              </div>
+              <div class="campo campo-ancho">
+                <label for="f-mensaje">Mensaje <span class="opcional">(opcional)</span></label>
+                <textarea id="f-mensaje" name="mensaje" rows="5" aria-describedby="ayuda-mensaje"></textarea>
+                <span class="nota" id="ayuda-mensaje">Por ejemplo: qué quieres hacer, metros aproximados o cuándo te gustaría empezar.</span>
+              </div>
+              <div class="campo campo-ancho campo-check">
+                <input id="f-privacidad" name="privacidad" type="checkbox" required aria-describedby="e-privacidad">
+                <label for="f-privacidad">He leído y acepto la <a href="[URL]">política de privacidad</a>. Usaremos tus datos solo para responder a tu solicitud.</label>
+                <span class="error" id="e-privacidad"></span>
+              </div>
+            </div>
+            <button class="btn btn-principal" type="submit">Enviar solicitud de presupuesto</button>
+            <p class="envio-error" id="envio-error" role="alert"></p>
+          </form>
+        </div>
+        <div class="confirmacion" id="confirmacion" tabindex="-1" hidden>
+          <svg class="check" width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="25" style="--len:158"/><path d="M17 29l7 7 15-16" style="--len:36"/></svg>
+          <h3>Solicitud enviada</h3>
+          <p id="confirmacion-texto">Gracias. Hemos recibido tu solicitud y te llamaremos para hablar de tu obra.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ 11. Pie ============ -->
+<footer class="pie fondo-ocre">
+  <div class="wrap">
+    <div class="pie-grid">
+      <div>
+        <a class="logo" href="#inicio" aria-label="Construcciones Integrales Oliver, volver al inicio">
+          <span class="logo-linea1">Construcciones Integrales</span>
+          <span class="logo-linea2">Oliver</span>
+        </a>
+        <p>Empresa familiar de cuarta generación. Reformas integrales, obra nueva y rehabilitación en Cullera y alrededores.</p>
+      </div>
+      <nav aria-label="Secciones">
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#obras">Obras</a></li>
+          <li><a href="#comunidades">Comunidades</a></li>
+          <li><a href="#historia">Historia</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Contacto">
+        <ul>
+          <li><a href="#como-trabajamos">Cómo trabajamos</a></li>
+          <li><a href="#contacto">Pide tu presupuesto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="pie-legal">
+      <span>© Construcciones Integrales Oliver S.L.</span>
+      <ul>
+        <li><a href="[URL]">Aviso legal</a></li>
+        <li><a href="[URL]">Política de privacidad</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp fijo, visible en móvil y escritorio -->
+<a class="wa-fijo" href="https://wa.me/[WHATSAPP]?text=Hola%2C%20quiero%20pedir%20presupuesto%20para%20una%20obra." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp (se abre en una ventana nueva)">
+  <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9.2 8.2c.3-.4.8-.4 1 0l.8 1.6c.1.3 0 .6-.2.8l-.5.5c.5 1.1 1.4 2 2.5 2.5l.5-.5c.2-.2.5-.3.8-.2l1.6.8c.4.2.4.7 0 1-.6.6-1.5.9-2.3.6-2.2-.8-4-2.6-4.8-4.8-.3-.8 0-1.7.6-2.3z" fill="currentColor"/></svg>
+  <span class="wa-texto" aria-hidden="true">WhatsApp</span>
+</a>
+
+<script>
+(function () {
+  "use strict";
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  /* ---------- Menú móvil ---------- */
+  var boton = document.querySelector(".menu-boton");
+  var menu = document.getElementById("menu-principal");
+  function cerrarMenu() { boton.setAttribute("aria-expanded", "false"); menu.classList.remove("abierto"); }
+  boton.addEventListener("click", function () {
+    var abierto = boton.getAttribute("aria-expanded") === "true";
+    boton.setAttribute("aria-expanded", String(!abierto));
+    menu.classList.toggle("abierto", !abierto);
+  });
+  menu.addEventListener("click", function (e) { if (e.target.closest("a")) cerrarMenu(); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && boton.getAttribute("aria-expanded") === "true") { cerrarMenu(); boton.focus(); }
+  });
+
+  /* ---------- Animaciones de entrada ---------- */
+  if (document.documentElement.classList.contains("anim")) {
+    // Titular: cada palabra sube por separado
+    var h1 = document.querySelector(".portada h1");
+    var palabras = h1.textContent.trim().split(/\s+/);
+    h1.setAttribute("aria-label", palabras.join(" "));
+    h1.innerHTML = palabras.map(function (p, i) {
+      return '<span class="palabra" aria-hidden="true" style="--i:' + i + '">' + p + "</span>";
+    }).join(" ");
+    h1.classList.add("partido");
+
+    // Revelado al entrar en pantalla, en cascada por tandas
+    var animables = document.querySelectorAll(".rv, .rv-foto, .dibuja, .sello");
+    // Una foto recortada al 100 % no "intersecta", así que se vigila su contenedor
+    var grupos = new Map();
+    animables.forEach(function (el) {
+      var vigilado = el.classList.contains("rv-foto") ? el.parentElement : el;
+      if (!grupos.has(vigilado)) grupos.set(vigilado, []);
+      grupos.get(vigilado).push(el);
+    });
+    function revelar(el, i) {
+      el.style.setProperty("--i", i);
+      el.classList.add("visto");
+      // Al terminar, se retiran las clases de entrada para que los efectos al pasar el ratón respondan sin retraso
+      setTimeout(function () {
+        el.classList.remove("rv", "rv-foto");
+        el.style.removeProperty("--i");
+      }, i * 110 + 1800);
+    }
+    var io = new IntersectionObserver(function (entradas) {
+      var n = 0;
+      entradas.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        io.unobserve(e.target);
+        var i = n++;
+        grupos.get(e.target).forEach(function (el) { revelar(el, i); });
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+    grupos.forEach(function (_, vigilado) { io.observe(vigilado); });
+  }
+
+  /* ---------- Sombra de la cabecera al bajar ---------- */
+  var cabecera = document.querySelector(".cabecera");
+  function sombraCabecera() { cabecera.classList.toggle("con-sombra", window.scrollY > 8); }
+  window.addEventListener("scroll", sombraCabecera, { passive: true });
+  sombraCabecera();
+
+  /* ---------- Enlaces que preseleccionan el tipo de obra ---------- */
+  var selectTipo = document.getElementById("f-tipo");
+  document.querySelectorAll("[data-tipo]").forEach(function (a) {
+    a.addEventListener("click", function () { selectTipo.value = a.getAttribute("data-tipo"); });
+  });
+
+  /* ---------- Gesto: la malla del andamio se retira al hacer scroll ---------- */
+  var andamio = document.getElementById("andamio");
+  function iniciarAndamio() {
+    if (reduce.matches || !andamio) { andamio && andamio.classList.remove("js-andamio"); return; }
+    andamio.classList.add("js-andamio");
+    var pendiente = false;
+    function actualizar() {
+      pendiente = false;
+      var r = andamio.getBoundingClientRect();
+      var vh = window.innerHeight;
+      var inicio = vh * 0.85, fin = vh * 0.15;          // posición del borde superior de la foto
+      var p = (inicio - r.top) / (inicio - fin);
+      p = Math.max(0, Math.min(1, p));
+      andamio.style.setProperty("--p", p.toFixed(3));
+    }
+    function pedir() { if (!pendiente) { pendiente = true; requestAnimationFrame(actualizar); } }
+    window.addEventListener("scroll", pedir, { passive: true });
+    window.addEventListener("resize", pedir);
+    actualizar();
+  }
+  iniciarAndamio();
+  reduce.addEventListener && reduce.addEventListener("change", function () {
+    if (reduce.matches) { andamio.classList.remove("js-andamio"); } else { iniciarAndamio(); }
+  });
+
+  /* ---------- Formulario: validación en cliente y confirmación ---------- */
+  var form = document.getElementById("form-presupuesto");
+  var reglas = [
+    { id: "f-nombre", err: "e-nombre", ok: function (v) { return v.trim().length >= 2; }, msg: "Escribe tu nombre." },
+    { id: "f-telefono", err: "e-telefono", ok: function (v) { return v.replace(/\D/g, "").length >= 9; }, msg: "Escribe un teléfono de al menos 9 cifras para que podamos llamarte." },
+    { id: "f-tipo", err: "e-tipo", ok: function (v) { return v !== ""; }, msg: "Elige el tipo de obra. Si no lo tienes claro, marca «Otra obra»." },
+    { id: "f-poblacion", err: "e-poblacion", ok: function (v) { return v.trim().length >= 2; }, msg: "Escribe la población donde está la obra." },
+    { id: "f-privacidad", err: "e-privacidad", ok: function (_, el) { return el.checked; }, msg: "Marca la casilla para aceptar la política de privacidad." }
+  ];
+  function validarCampo(r) {
+    var el = document.getElementById(r.id);
+    var valido = r.ok(el.value, el);
+    el.setAttribute("aria-invalid", valido ? "false" : "true");
+    document.getElementById(r.err).textContent = valido ? "" : r.msg;
+    return valido;
+  }
+  reglas.forEach(function (r) {
+    var el = document.getElementById(r.id);
+    el.addEventListener(el.type === "checkbox" || el.tagName === "SELECT" ? "change" : "blur", function () {
+      if (el.getAttribute("aria-invalid") === "true" || el.value) validarCampo(r);
+    });
+  });
+
+  function mostrarConfirmacion(nombre, telefono) {
+    document.getElementById("form-zona").hidden = true;
+    var conf = document.getElementById("confirmacion");
+    document.getElementById("confirmacion-texto").textContent =
+      "Gracias, " + nombre + ". Hemos recibido tu solicitud de presupuesto y te llamaremos al " + telefono + " para hablar de tu obra.";
+    conf.hidden = false;
+    conf.focus();
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    document.getElementById("envio-error").textContent = "";
+    var primerError = null;
+    reglas.forEach(function (r) {
+      if (!validarCampo(r) && !primerError) primerError = document.getElementById(r.id);
+    });
+    if (primerError) { primerError.focus(); return; }
+
+    var nombre = document.getElementById("f-nombre").value.trim();
+    var telefono = document.getElementById("f-telefono").value.trim();
+    var destino = form.getAttribute("action");
+
+    // Mientras no exista la URL real del formulario, solo se muestra la confirmación.
+    if (!destino || destino.indexOf("[") === 0) { mostrarConfirmacion(nombre, telefono); return; }
+
+    var boton = form.querySelector("button[type=submit]");
+    boton.disabled = true;
+    fetch(destino, { method: "POST", body: new FormData(form), headers: { "Accept": "application/json" } })
+      .then(function (res) {
+        if (!res.ok) throw new Error(res.status);
+        mostrarConfirmacion(nombre, telefono);
+      })
+      .catch(function () {
+        boton.disabled = false;
+        document.getElementById("envio-error").textContent =
+          "No se ha podido enviar la solicitud. Inténtalo de nuevo o escríbenos por WhatsApp.";
+      });
+  });
+})();
+</script>
+</body>
+</html>

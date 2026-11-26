@@ -7,3 +7,7 @@ Web de Web y Punto (diseño web para PYMES): Home, Oferta Clientes Fundadores, N
 - `marca/`, `recursos/`, `sistema-de-marca/`: tokens, tipografía, logos, poses de Punto y sistema de marca.
 
 Detalles, datos editables y pendientes en [LEEME.txt](LEEME.txt).
+
+## Construcciones Integrales Oliver
+
+Home para Construcciones Integrales Oliver en [`construcciones-oliver/`](construcciones-oliver/). Detalles y placeholders en [construcciones-oliver/LEEME.md](construcciones-oliver/LEEME.md).
