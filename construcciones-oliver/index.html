@@ -10,7 +10,7 @@
 <meta property="og:title" content="Construcciones Integrales Oliver: cuatro generaciones construyendo en Cullera">
 <meta property="og:description" content="Reformas integrales, obra nueva y rehabilitación de edificios con equipo propio, en Cullera y alrededores.">
 <meta property="og:image" content="https://cdn.pymesenlared.es/img/529/7527/20087/0x0/fb_img_1603977053642.1683646830.jpg">
-<meta name="theme-color" content="#2B201A">
+<meta name="theme-color" content="#2E150B">
 
 <script>
   /* Activa las animaciones antes del primer pintado (sin parpadeo) y solo si el usuario no pide movimiento reducido */
@@ -60,15 +60,21 @@
 :root {
   /* Paleta: tomada de la propia Cullera — el ocre de las fachadas
      del casco antiguo, la tierra tostada, la cal y el verde de las persianas */
-  --color-principal: #D9971F;   /* Ocre fachada  — botones principales, franjas */
-  --color-secundario: #2B201A;  /* Tierra tostada — texto y fondos oscuros */
-  --color-neutro: #EDE9E2;      /* Cal — fondo claro */
-  --color-acento: #2F5C45;      /* Verde persiana — WhatsApp, foco, detalles */
+  --color-principal: #F5A400;   /* Ámbar vivo — botones principales, franjas */
+  --color-secundario: #2E150B;  /* Tostado profundo — texto y fondos oscuros */
+  --color-neutro: #FBF6EE;      /* Cal luminosa — fondo claro */
+  --color-acento: #C2410C;      /* Teja — enlaces, foco y detalles (4,8:1 sobre cal) */
+  --color-verde: #1D7A4C;       /* Verde persiana — WhatsApp y confirmaciones */
 
-  --ocre-hover: #E6A73A;
-  --texto-suave: #5E5047;        /* 6,4:1 sobre cal */
-  --texto-suave-oscuro: #CBBFB2; /* 8,8:1 sobre tierra */
-  --error: #9B2A1A;              /* 6,3:1 sobre cal */
+  --ocre-hover: #FFB81F;
+  --texto-suave: #6E4F3E;        /* 6,9:1 sobre cal */
+  --texto-suave-oscuro: #EBD3C1; /* 11,9:1 sobre tostado */
+  --error: #B42318;              /* 6,1:1 sobre cal */
+
+  /* Enlaces: sin subrayado, resaltan por color y peso. Cambian según el fondo */
+  --enlace: var(--color-acento);
+  --enlace-hover: #9A330A;
+  --enlace-fondo: rgba(194, 65, 12, 0.10);
   --blanco: #FFFFFF;
 
   --ff-display: "Archivo", "Arial Narrow", system-ui, sans-serif;
@@ -89,14 +95,14 @@
   --radio-foto: 8px;
 
   /* Sombras: teñidas de tierra (nunca gris neutro) y en capas, para dar volumen */
-  --sombra-sm: 0 1px 2px rgba(43, 32, 26, 0.10), 0 3px 8px rgba(43, 32, 26, 0.10);
-  --sombra-md: 0 2px 4px rgba(43, 32, 26, 0.08), 0 10px 24px rgba(43, 32, 26, 0.14), 0 24px 48px -16px rgba(43, 32, 26, 0.28);
-  --sombra-lg: 0 4px 10px rgba(43, 32, 26, 0.10), 0 22px 48px rgba(43, 32, 26, 0.18), 0 48px 90px -24px rgba(43, 32, 26, 0.38);
+  --sombra-sm: 0 1px 2px rgba(46, 21, 11, 0.10), 0 3px 8px rgba(46, 21, 11, 0.10);
+  --sombra-md: 0 2px 4px rgba(46, 21, 11, 0.08), 0 10px 24px rgba(46, 21, 11, 0.14), 0 24px 48px -16px rgba(46, 21, 11, 0.28);
+  --sombra-lg: 0 4px 10px rgba(46, 21, 11, 0.10), 0 22px 48px rgba(46, 21, 11, 0.18), 0 48px 90px -24px rgba(46, 21, 11, 0.38);
   /* Sobre fondo oscuro la sombra necesita más densidad para verse */
   --sombra-oscuro: 0 2px 6px rgba(10, 6, 4, 0.40), 0 18px 40px rgba(10, 6, 4, 0.40), 0 40px 80px -20px rgba(10, 6, 4, 0.60);
   /* Resplandor ocre para la acción principal */
-  --sombra-ocre: 0 2px 4px rgba(122, 78, 10, 0.25), 0 8px 22px -4px rgba(217, 151, 31, 0.55);
-  --sombra-ocre-hover: 0 4px 8px rgba(122, 78, 10, 0.25), 0 16px 34px -6px rgba(217, 151, 31, 0.70);
+  --sombra-ocre: 0 2px 4px rgba(150, 85, 0, 0.25), 0 8px 22px -4px rgba(245, 164, 0, 0.55);
+  --sombra-ocre-hover: 0 4px 8px rgba(150, 85, 0, 0.25), 0 16px 34px -6px rgba(245, 164, 0, 0.70);
 }
 
 /* =========================================================
@@ -117,8 +123,22 @@ body {
   text-rendering: optimizeLegibility;
 }
 img { display: block; max-width: 100%; height: auto; }
-a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
-a:hover { text-decoration-thickness: 2px; }
+.btn, .logo, .wa-fijo { color: inherit; }
+/* Enlaces de texto: tipografía de titulares, negrita y color propio; sin subrayado.
+   :where() deja la especificidad a cero para que cada componente pueda afinarlos */
+:where(a:not(.btn, .logo, .skip, .wa-fijo)) {
+  color: var(--enlace);
+  font-family: var(--ff-display); font-weight: 700; font-stretch: 105%;
+  letter-spacing: 0.005em;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: color .2s ease, background-color .2s ease, box-shadow .2s ease;
+}
+:where(a:not(.btn, .logo, .skip, .wa-fijo)):hover {
+  color: var(--enlace-hover);
+  background-color: var(--enlace-fondo);
+  box-shadow: 0 0 0 0.25em var(--enlace-fondo);
+}
 :focus-visible { outline: 3px solid var(--foco); outline-offset: 3px; border-radius: 2px; }
 h1, h2, h3 {
   font-family: var(--ff-display);
@@ -149,6 +169,9 @@ p + p { margin-top: 1em; }
 
 /* Fondos */
 .fondo-claro  { background: var(--color-neutro); color: var(--color-secundario); --foco: var(--color-acento); }
+.fondo-oscuro { --enlace: var(--color-principal); --enlace-hover: #FFC94D; --enlace-fondo: rgba(245, 164, 0, 0.16); }
+.fondo-ocre   { --enlace: var(--color-secundario); --enlace-hover: var(--color-secundario); --enlace-fondo: rgba(46, 21, 11, 0.12); }
+.formulario   { --enlace: var(--color-acento); --enlace-hover: #9A330A; --enlace-fondo: rgba(194, 65, 12, 0.10); }
 .fondo-oscuro { background: var(--color-secundario); color: var(--color-neutro); --foco: var(--color-principal); }
 .fondo-ocre   { background: var(--color-principal); color: var(--color-secundario); --foco: var(--color-secundario); }
 
@@ -179,12 +202,12 @@ p + p { margin-top: 1em; }
 }
 .btn-principal:hover { background: var(--ocre-hover); border-color: var(--ocre-hover); box-shadow: var(--sombra-ocre-hover), inset 0 1px 0 rgba(255, 255, 255, 0.35); transform: translateY(-2px); }
 .btn-linea { background: transparent; color: inherit; border-color: currentColor; }
-.btn-linea:hover { background: rgba(237, 233, 226, 0.12); }
-.fondo-claro .btn-linea:hover { background: rgba(43, 32, 26, 0.06); }
+.btn-linea:hover { background: rgba(251, 246, 238, 0.12); }
+.fondo-claro .btn-linea:hover { background: rgba(46, 21, 11, 0.06); }
 .fondo-ocre .btn-oscuro, .btn-oscuro { background: var(--color-secundario); color: var(--color-neutro); border-color: var(--color-secundario); }
-.btn-oscuro { box-shadow: 0 2px 4px rgba(43, 32, 26, 0.25), 0 10px 22px -6px rgba(43, 32, 26, 0.55); }
-.btn-oscuro:hover { background: #3E3028; border-color: #3E3028; transform: translateY(-2px); box-shadow: 0 4px 8px rgba(43, 32, 26, 0.25), 0 16px 30px -8px rgba(43, 32, 26, 0.65); }
-.portada .btn-linea { backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); background: rgba(43, 32, 26, 0.25); box-shadow: 0 8px 24px -8px rgba(10, 6, 4, 0.5); }
+.btn-oscuro { box-shadow: 0 2px 4px rgba(46, 21, 11, 0.25), 0 10px 22px -6px rgba(46, 21, 11, 0.55); }
+.btn-oscuro:hover { background: #4A2414; border-color: #4A2414; transform: translateY(-2px); box-shadow: 0 4px 8px rgba(46, 21, 11, 0.25), 0 16px 30px -8px rgba(46, 21, 11, 0.65); }
+.portada .btn-linea { backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); background: rgba(46, 21, 11, 0.25); box-shadow: 0 8px 24px -8px rgba(10, 6, 4, 0.5); }
 
 /* =========================================================
    Cabecera
@@ -192,11 +215,11 @@ p + p { margin-top: 1em; }
 .cabecera {
   position: sticky; top: 0; z-index: 40;
   background: var(--color-neutro);
-  border-bottom: 1px solid rgba(43, 32, 26, 0.14);
+  border-bottom: 1px solid rgba(46, 21, 11, 0.14);
   --foco: var(--color-acento);
   transition: box-shadow .25s ease;
 }
-.cabecera.con-sombra { box-shadow: 0 1px 0 rgba(43, 32, 26, 0.06), 0 10px 30px -10px rgba(43, 32, 26, 0.30); }
+.cabecera.con-sombra { box-shadow: 0 1px 0 rgba(46, 21, 11, 0.06), 0 10px 30px -10px rgba(46, 21, 11, 0.30); }
 .cabecera .wrap {
   display: flex; align-items: center; gap: 0.75rem;
   min-height: var(--header-h);
@@ -229,7 +252,7 @@ p + p { margin-top: 1em; }
 .menu {
   list-style: none; margin: 0; padding: 0.5rem var(--gutter) 1.25rem;
   position: absolute; left: 0; right: 0; top: 100%;
-  background: var(--color-neutro); border-bottom: 1px solid rgba(43, 32, 26, 0.14);
+  background: var(--color-neutro); border-bottom: 1px solid rgba(46, 21, 11, 0.14);
   display: none;
 }
 .menu.abierto { display: block; }
@@ -244,7 +267,7 @@ p + p { margin-top: 1em; }
 .menu a {
   display: block; padding: 0.85rem 0;
   font-family: var(--ff-display); font-weight: 700; font-size: 1.375rem; font-stretch: 112%;
-  text-decoration: none; border-bottom: 1px solid rgba(43, 32, 26, 0.12);
+  text-decoration: none; border-bottom: 1px solid rgba(46, 21, 11, 0.12);
 }
 .cabecera .btn { min-height: 44px; padding: 0.5rem 0.9rem; font-size: 0.9375rem; }
 .cta-corto { display: inline; }
@@ -261,9 +284,9 @@ p + p { margin-top: 1em; }
     margin-right: 0.75rem;
   }
   .menu a {
-    font-size: 1rem; font-stretch: 100%; padding: 0.5rem 0.75rem; border: 0; border-radius: var(--radio);
+    font-size: 1rem; font-stretch: 108%; padding: 0.5rem 0.75rem; border: 0; border-radius: var(--radio);
   }
-  .menu a:hover { background: rgba(43, 32, 26, 0.07); }
+  .menu a:hover { box-shadow: none; }
   .logo-linea1 { font-size: 0.75rem; }
   .logo-linea2 { font-size: 1.875rem; }
 }
@@ -284,8 +307,8 @@ p + p { margin-top: 1em; }
 .portada::before {
   content: ""; position: absolute; inset: 0; z-index: -1;
   background:
-    linear-gradient(to top, rgba(43,32,26,0.94) 0%, rgba(43,32,26,0.78) 38%, rgba(43,32,26,0.25) 72%, rgba(43,32,26,0.10) 100%),
-    linear-gradient(to right, rgba(43,32,26,0.55) 0%, rgba(43,32,26,0) 60%);
+    linear-gradient(to top, rgba(46,21,11,0.94) 0%, rgba(46,21,11,0.78) 38%, rgba(46,21,11,0.25) 72%, rgba(46,21,11,0.10) 100%),
+    linear-gradient(to right, rgba(46,21,11,0.55) 0%, rgba(46,21,11,0) 60%);
 }
 .portada .wrap { padding-block: clamp(3rem, 8vh, 6rem) clamp(2.5rem, 6vh, 4.5rem); }
 .portada h1 {
@@ -303,7 +326,7 @@ p + p { margin-top: 1em; }
 .portada-acciones { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
 .portada-pie {
   margin-top: clamp(2.5rem, 7vh, 4rem);
-  padding-top: 1rem; border-top: 1px solid rgba(237,233,226,0.35);
+  padding-top: 1rem; border-top: 1px solid rgba(251,246,238,0.35);
   font-family: var(--ff-display); font-size: var(--t-small); color: var(--texto-suave-oscuro);
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 2rem;
 }
@@ -320,8 +343,8 @@ p + p { margin-top: 1em; }
 .confianza {
   padding-block: clamp(2.75rem, 6vw, 4.5rem);
   position: relative; z-index: 1;
-  background: linear-gradient(180deg, #E2A232 0%, var(--color-principal) 100%);
-  box-shadow: 0 -12px 30px -12px rgba(10, 6, 4, 0.45), 0 18px 36px -14px rgba(122, 78, 10, 0.55);
+  background: linear-gradient(180deg, #FFB81F 0%, var(--color-principal) 100%);
+  box-shadow: 0 -12px 30px -12px rgba(10, 6, 4, 0.45), 0 18px 36px -14px rgba(150, 85, 0, 0.55);
 }
 .confianza ul {
   list-style: none; margin: 0; padding: 0;
@@ -345,7 +368,7 @@ p + p { margin-top: 1em; }
 }
 .servicio:last-child { border-bottom: 2px solid var(--color-secundario); }
 .servicio-foto {
-  aspect-ratio: 4 / 3; overflow: hidden; background: #D8D1C6;
+  aspect-ratio: 4 / 3; overflow: hidden; background: #EEE2D2;
   border-radius: var(--radio-foto); box-shadow: var(--sombra-md);
   transition: box-shadow .3s ease, transform .3s ease;
 }
@@ -356,8 +379,7 @@ p + p { margin-top: 1em; }
 .servicio p { margin-top: 0.75rem; max-width: 34rem; }
 .servicio .enlace-tipo {
   display: inline-block; margin-top: 1rem;
-  font-family: var(--ff-display); font-weight: 700; font-size: 1rem;
-  color: var(--color-acento);
+  font-family: var(--ff-display); font-weight: 800; font-size: 1.0625rem; font-stretch: 112%;
 }
 @media (min-width: 760px) {
   .servicio { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 2.5rem; align-items: center; }
@@ -374,17 +396,23 @@ p + p { margin-top: 1em; }
   display: grid; gap: 2.5rem 1.5rem;
   grid-template-columns: 1fr;
   margin-top: clamp(3rem, 6vw, 5rem);
-  align-items: start;
+  align-items: stretch;
 }
+/* Rejilla simétrica: todas las fotos con la misma proporción y todas las fichas a la misma altura */
+.obras-grid .obra-foto { aspect-ratio: 4 / 3; }
+.obras-grid .ficha { flex: 1; }
+/* Reserva dos líneas para el nombre, así las filas Tipo y Lugar quedan alineadas entre fichas */
+@media (min-width: 640px) { .obras-grid .ficha h3 { min-height: calc(2 * 1.15em + 1.65rem); } }
 .obra {
+  display: flex; flex-direction: column;
   margin: 0; border-radius: var(--radio-foto); overflow: hidden;
   box-shadow: var(--sombra-oscuro);
   transition: box-shadow .3s ease, transform .3s ease;
 }
-.obra:hover { transform: translateY(-4px); box-shadow: var(--sombra-oscuro), 0 0 0 1px rgba(217, 151, 31, 0.35), 0 26px 60px -20px rgba(217, 151, 31, 0.30); }
+.obra:hover { transform: translateY(-4px); box-shadow: var(--sombra-oscuro), 0 0 0 1px rgba(245, 164, 0, 0.35), 0 26px 60px -20px rgba(245, 164, 0, 0.30); }
 .obra-foto {
   position: relative; overflow: hidden; aspect-ratio: var(--ar, 3 / 2);
-  background: #3E3028;
+  background: #4A2414;
 }
 .obra-foto img {
   position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
@@ -395,7 +423,7 @@ p + p { margin-top: 1em; }
 .obra:hover .obra-foto .principal { transform: scale(1.04); }
 .obra-foto .pista {
   position: absolute; right: 0.75rem; bottom: 0.75rem;
-  background: rgba(43,32,26,0.85); color: var(--color-neutro);
+  background: rgba(46,21,11,0.85); color: var(--color-neutro);
   font-family: var(--ff-display); font-size: 0.8125rem; font-weight: 600;
   padding: 0.3rem 0.6rem; border-radius: var(--radio);
   transition: opacity .3s ease;
@@ -412,33 +440,36 @@ p + p { margin-top: 1em; }
   padding: 0.9rem 1.1rem 0.75rem;
 }
 .ficha dl { margin: 0; padding: 0 1.1rem 0.9rem; font-family: var(--ff-display); font-size: 0.9375rem; }
-.ficha dl div { display: grid; grid-template-columns: 4.25rem 1fr; gap: 0.75rem; padding-block: 0.45rem; border-top: 1px solid rgba(43,32,26,0.18); }
+.ficha dl div { display: grid; grid-template-columns: 4.25rem 1fr; gap: 0.75rem; padding-block: 0.45rem; border-top: 1px solid rgba(46,21,11,0.18); }
 .ficha dt { color: var(--texto-suave); }
 .ficha dd { margin: 0; font-weight: 600; }
 
 .obras-cta {
   background: var(--color-principal); color: var(--color-secundario);
   padding: 2rem 1.5rem; --foco: var(--color-secundario);
-  background: linear-gradient(160deg, #E6A73A 0%, var(--color-principal) 60%);
+  background: linear-gradient(160deg, #FFB81F 0%, var(--color-principal) 60%);
   border-radius: var(--radio-foto);
-  box-shadow: var(--sombra-oscuro), 0 20px 50px -18px rgba(217, 151, 31, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: var(--sombra-oscuro), 0 20px 50px -18px rgba(245, 164, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 .obras-cta h3 { font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); font-stretch: 112%; }
 .obras-cta p { margin-top: 0.75rem; }
 .obras-cta .btn { margin-top: 1.5rem; }
+.obras-grid .obras-cta { grid-column: 1 / -1; text-align: center; }
+@media (min-width: 760px) {
+  .obras-grid .obras-cta {
+    display: grid; grid-template-columns: auto auto; justify-content: center; align-items: center;
+    gap: 0.25rem 3rem; text-align: left; padding: 2.25rem 3rem;
+  }
+  .obras-cta h3 { grid-column: 1; }
+  .obras-cta p { grid-column: 1; margin-top: 0; }
+  .obras-cta .btn { grid-column: 2; grid-row: 1 / 3; margin-top: 0; }
+}
 
 @media (min-width: 640px) {
   .obras-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (min-width: 1000px) {
-  .obras-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 3rem 1.75rem; }
-  .o-posta   { grid-column: 1 / 8; }
-  .o-maristas{ grid-column: 8 / 13; margin-top: 5rem; }
-  .o-aquo    { grid-column: 1 / 6; }
-  .o-turismo { grid-column: 6 / 13; margin-top: -4rem; }
-  .o-placa   { grid-column: 1 / 5; }
-  .o-cecilia { grid-column: 5 / 9; margin-top: 4rem; }
-  .obras-cta { grid-column: 9 / 13; align-self: end; }
+  .obras-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.5rem 2rem; }
 }
 
 /* =========================================================
@@ -447,7 +478,7 @@ p + p { margin-top: 1em; }
 .comunidades-split { display: grid; grid-template-columns: 1fr; }
 .andamio {
   position: relative; margin: 0; overflow: hidden;
-  aspect-ratio: 4 / 3; background: #D8D1C6;
+  aspect-ratio: 4 / 3; background: #EEE2D2;
   box-shadow: var(--sombra-lg);
 }
 @media (min-width: 1000px) { .andamio { border-radius: 0 var(--radio-foto) var(--radio-foto) 0; } }
@@ -511,7 +542,7 @@ p + p { margin-top: 1em; }
 .historia-listas { display: grid; gap: 2rem; margin-top: 2.75rem; max-width: 40rem; }
 .historia-listas h3 { font-size: 1.125rem; font-stretch: 100%; font-weight: 700; color: var(--color-principal); }
 .historia-listas ul { list-style: none; margin: 0.75rem 0 0; padding: 0; font-family: var(--ff-display); }
-.historia-listas li { padding-block: 0.5rem; border-top: 1px solid rgba(237,233,226,0.22); }
+.historia-listas li { padding-block: 0.5rem; border-top: 1px solid rgba(251,246,238,0.22); }
 @media (min-width: 640px) { .historia-listas { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 1000px) {
   .historia-split { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); align-items: stretch; }
@@ -554,11 +585,10 @@ p + p { margin-top: 1em; }
 .contacto-intro .lead { margin-top: 1.25rem; font-size: var(--t-lead); line-height: 1.5; color: var(--texto-suave-oscuro); }
 .datos { font-style: normal; margin-top: 2.5rem; }
 .datos dl { margin: 0; font-family: var(--ff-display); }
-.datos dl div { padding-block: 0.9rem; border-top: 1px solid rgba(237,233,226,0.25); }
+.datos dl div { padding-block: 0.9rem; border-top: 1px solid rgba(251,246,238,0.25); }
 .datos dt { font-size: 0.9375rem; color: var(--texto-suave-oscuro); }
 .datos dd { margin: 0.2rem 0 0; font-size: 1.25rem; font-weight: 700; }
-.datos dd a { text-decoration: none; }
-.datos dd a:hover { text-decoration: underline; }
+.datos dd a { font-weight: 800; }
 
 .formulario {
   background: var(--color-neutro); color: var(--color-secundario);
@@ -566,7 +596,7 @@ p + p { margin-top: 1em; }
   border-top: 8px solid var(--color-principal);
   --foco: var(--color-acento);
   border-radius: var(--radio-foto);
-  box-shadow: var(--sombra-oscuro), 0 -10px 40px -16px rgba(217, 151, 31, 0.45);
+  box-shadow: var(--sombra-oscuro), 0 -10px 40px -16px rgba(245, 164, 0, 0.45);
 }
 .formulario h3 { font-size: 1.5rem; font-stretch: 112%; }
 .formulario .nota { margin-top: 0.4rem; font-size: var(--t-small); color: var(--texto-suave); }
@@ -581,10 +611,10 @@ p + p { margin-top: 1em; }
   font: 400 1.0625rem/1.4 var(--ff-display);
   color: var(--color-secundario); background: var(--blanco);
   border: 2px solid var(--texto-suave); border-radius: var(--radio);
-  box-shadow: inset 0 2px 4px rgba(43, 32, 26, 0.08), 0 1px 0 rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 2px 4px rgba(46, 21, 11, 0.08), 0 1px 0 rgba(255, 255, 255, 0.6);
   transition: box-shadow .2s ease, border-color .2s ease;
 }
-.campo input:hover, .campo select:hover, .campo textarea:hover { box-shadow: inset 0 2px 4px rgba(43, 32, 26, 0.08), var(--sombra-sm); }
+.campo input:hover, .campo select:hover, .campo textarea:hover { box-shadow: inset 0 2px 4px rgba(46, 21, 11, 0.08), var(--sombra-sm); }
 .campo select {
   appearance: none;
   background-image: linear-gradient(45deg, transparent 50%, var(--color-secundario) 50%), linear-gradient(135deg, var(--color-secundario) 50%, transparent 50%);
@@ -596,7 +626,7 @@ p + p { margin-top: 1em; }
 .campo .nota { display: block; margin-top: 0.35rem; line-height: 1.4; }
 .campo input:focus-visible, .campo select:focus-visible, .campo textarea:focus-visible {
   outline: 3px solid var(--color-acento); outline-offset: 1px; border-color: var(--color-secundario);
-  box-shadow: 0 0 0 6px rgba(47, 92, 69, 0.18), var(--sombra-sm);
+  box-shadow: 0 0 0 6px rgba(194, 65, 12, 0.18), var(--sombra-sm);
 }
 .campo [aria-invalid="true"] { border-color: var(--error); }
 .campo .error { display: block; margin-top: 0.35rem; font-family: var(--ff-display); font-size: 0.9375rem; font-weight: 600; color: var(--error); }
@@ -628,7 +658,7 @@ p + p { margin-top: 1em; }
 .pie .logo-linea1 { color: var(--color-secundario); }
 .pie p { margin-top: 0.75rem; font-family: var(--ff-texto); max-width: 26rem; }
 .pie ul { list-style: none; margin: 0; padding: 0; }
-.pie li a { display: inline-block; padding-block: 0.35rem; font-weight: 600; }
+.pie li a { display: inline-block; padding: 0.3rem 0.35rem; margin-left: -0.35rem; font-size: 1.0625rem; }
 .pie-legal {
   margin-top: 2.5rem; padding-top: 1.25rem; border-top: 2px solid var(--color-secundario);
   display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; font-size: 0.9375rem;
@@ -646,14 +676,14 @@ p + p { margin-top: 1em; }
   position: fixed; right: 16px; bottom: 16px; z-index: 60;
   display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
   width: 60px; height: 60px; border-radius: 999px;
-  background: var(--color-acento); color: var(--blanco);
+  background: var(--color-verde); color: var(--blanco);
   border: 2px solid var(--color-neutro);
-  box-shadow: 0 8px 22px rgba(43, 32, 26, 0.35);
+  box-shadow: 0 8px 22px rgba(46, 21, 11, 0.35);
   font-family: var(--ff-display); font-weight: 700; font-size: 1rem; text-decoration: none;
   --foco: var(--color-principal);
 }
-.wa-fijo { box-shadow: 0 4px 10px rgba(10, 6, 4, 0.25), 0 14px 32px -6px rgba(47, 92, 69, 0.65); transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease; }
-.wa-fijo:hover { background: #24493A; transform: translateY(-3px); box-shadow: 0 6px 14px rgba(10, 6, 4, 0.28), 0 22px 44px -8px rgba(47, 92, 69, 0.75); }
+.wa-fijo { box-shadow: 0 4px 10px rgba(10, 6, 4, 0.25), 0 14px 32px -6px rgba(29, 122, 76, 0.60); transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease; }
+.wa-fijo:hover { background: #155C38; transform: translateY(-3px); box-shadow: 0 6px 14px rgba(10, 6, 4, 0.28), 0 22px 44px -8px rgba(29, 122, 76, 0.70); }
 .wa-fijo .wa-texto { display: none; }
 @media (min-width: 760px) {
   .wa-fijo { width: auto; padding: 0 1.25rem 0 1rem; right: 24px; bottom: 24px; }
@@ -691,7 +721,7 @@ html.anim .portada-pie { animation: aparecer 0.9s ease 1.35s backwards; }
 /* WhatsApp: entra con un pequeño rebote y llama la atención dos veces, nada más */
 .wa-fijo::after {
   content: ""; position: absolute; inset: -2px; border-radius: inherit;
-  border: 2px solid var(--color-acento); opacity: 0; pointer-events: none;
+  border: 2px solid var(--color-verde); opacity: 0; pointer-events: none;
 }
 html.anim .wa-fijo { animation: pop 0.6s var(--ease-sello) 1.6s backwards; }
 html.anim .wa-fijo::after { animation: anillo 1.6s ease-out 4.5s 2; }
@@ -739,7 +769,7 @@ html.anim .sello.visto::before { opacity: 1; transform: none; }
 /* Confirmación del formulario: el check se dibuja */
 .check { display: block; margin-bottom: 1rem; }
 .check circle, .check path {
-  fill: none; stroke: var(--color-acento); stroke-linecap: round; stroke-linejoin: round;
+  fill: none; stroke: var(--color-verde); stroke-linecap: round; stroke-linejoin: round;
   stroke-dasharray: var(--len); stroke-dashoffset: 0;
 }
 .check circle { stroke-width: 3; }
@@ -916,7 +946,7 @@ html.anim .confirmacion:not([hidden]) p { animation: aparecer 0.6s var(--ease-ob
 
       <div class="obras-grid">
         <article class="rv obra o-posta">
-          <div class="obra-foto" style="--ar: 3 / 2">
+          <div class="obra-foto">
             <img class="principal" src="https://cdn.pymesenlared.es/img/529/7531/17036/0x1000/001.jpg" width="1115" height="743" loading="lazy"
               alt="Posta Sanitaria del Oasis: edificio bajo de color claro y cubierta plana, entre palmeras y bloques de apartamentos.">
             <img class="detalle" src="https://cdn.pymesenlared.es/img/529/7531/17036/0x1000/002.jpg" width="1076" height="716" loading="lazy"
@@ -932,40 +962,8 @@ html.anim .confirmacion:not([hidden]) p { animation: aparecer 0.6s var(--ease-ob
           </div>
         </article>
 
-        <article class="rv obra o-maristas">
-          <div class="obra-foto" style="--ar: 4 / 5">
-            <img class="principal" src="https://cdn.pymesenlared.es/img/529/7531/17054/0x1000/004.jpg" width="623" height="832" loading="lazy"
-              alt="Aseos del Colegio Maristas con puertas naranjas y paredes blancas con franjas de azulejo de colores.">
-            <img class="detalle" src="https://cdn.pymesenlared.es/img/529/7531/17054/0x1000/005.jpg" width="1034" height="776" loading="lazy"
-              alt="Vestuario del colegio con bancos de madera, colgadores y una franja de azulejo naranja a lo largo de la pared.">
-          </div>
-          <div class="ficha">
-            <h3>Colegio Maristas</h3>
-            <dl>
-              <div><dt>Tipo</dt><dd>Aseos y vestuarios nuevos</dd></div>
-              <div><dt>Lugar</dt><dd>Cullera</dd></div>
-            </dl>
-          </div>
-        </article>
-
-        <article class="rv obra o-aquo">
-          <div class="obra-foto" style="--ar: 4 / 3">
-            <img class="principal" src="https://cdn.pymesenlared.es/img/529/7531/17055/0x1000/001.jpg" width="1281" height="953" loading="lazy"
-              alt="Vaso circular del spa de Aquopolis en construcción, rodeado de gradas escalonadas de hormigón.">
-            <img class="detalle" src="https://cdn.pymesenlared.es/img/529/7531/17055/0x1000/002.jpg" width="606" height="465" loading="lazy"
-              alt="Zona del spa de Aquopolis en obra, con palmeras al fondo y vallado de seguridad.">
-          </div>
-          <div class="ficha">
-            <h3>Parque Acuático Aquopolis</h3>
-            <dl>
-              <div><dt>Tipo</dt><dd>Construcción de un spa</dd></div>
-              <div><dt>Lugar</dt><dd>Cullera</dd></div>
-            </dl>
-          </div>
-        </article>
-
         <article class="rv obra o-turismo">
-          <div class="obra-foto" style="--ar: 3 / 2">
+          <div class="obra-foto">
             <img class="principal" src="https://cdn.pymesenlared.es/img/529/7531/17035/0x1000/001.jpg" width="1331" height="901" loading="lazy"
               alt="Oficina de Turismo de Cullera tras la ampliación: volumen blanco con pérgola metálica sobre el césped.">
             <img class="detalle" src="https://cdn.pymesenlared.es/img/529/7531/17035/0x1000/003.jpg" width="618" height="410" loading="lazy"
@@ -981,7 +979,7 @@ html.anim .confirmacion:not([hidden]) p { animation: aparecer 0.6s var(--ease-ob
         </article>
 
         <article class="rv obra o-placa">
-          <div class="obra-foto" style="--ar: 3 / 4">
+          <div class="obra-foto">
             <img class="principal" src="https://cdn.pymesenlared.es/img/529/7531/17050/0x1000/003.jpg" width="665" height="1000" loading="lazy"
               alt="Acera nueva de baldosa junto a un muro de piedra y una farola, en la Plaça Illa dels Pensaments.">
             <img class="detalle" src="https://cdn.pymesenlared.es/img/529/7531/17050/0x1000/001.jpg" width="590" height="393" loading="lazy"
@@ -996,8 +994,40 @@ html.anim .confirmacion:not([hidden]) p { animation: aparecer 0.6s var(--ease-ob
           </div>
         </article>
 
+        <article class="rv obra o-maristas">
+          <div class="obra-foto">
+            <img class="principal" src="https://cdn.pymesenlared.es/img/529/7531/17054/0x1000/004.jpg" width="623" height="832" loading="lazy"
+              alt="Aseos del Colegio Maristas con puertas naranjas y paredes blancas con franjas de azulejo de colores.">
+            <img class="detalle" src="https://cdn.pymesenlared.es/img/529/7531/17054/0x1000/005.jpg" width="1034" height="776" loading="lazy"
+              alt="Vestuario del colegio con bancos de madera, colgadores y una franja de azulejo naranja a lo largo de la pared.">
+          </div>
+          <div class="ficha">
+            <h3>Colegio Maristas</h3>
+            <dl>
+              <div><dt>Tipo</dt><dd>Aseos y vestuarios nuevos</dd></div>
+              <div><dt>Lugar</dt><dd>Cullera</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="rv obra o-aquo">
+          <div class="obra-foto">
+            <img class="principal" src="https://cdn.pymesenlared.es/img/529/7531/17055/0x1000/001.jpg" width="1281" height="953" loading="lazy"
+              alt="Vaso circular del spa de Aquopolis en construcción, rodeado de gradas escalonadas de hormigón.">
+            <img class="detalle" src="https://cdn.pymesenlared.es/img/529/7531/17055/0x1000/002.jpg" width="606" height="465" loading="lazy"
+              alt="Zona del spa de Aquopolis en obra, con palmeras al fondo y vallado de seguridad.">
+          </div>
+          <div class="ficha">
+            <h3>Parque Acuático Aquopolis</h3>
+            <dl>
+              <div><dt>Tipo</dt><dd>Construcción de un spa</dd></div>
+              <div><dt>Lugar</dt><dd>Cullera</dd></div>
+            </dl>
+          </div>
+        </article>
+
         <article class="rv obra o-cecilia">
-          <div class="obra-foto" style="--ar: 3 / 4">
+          <div class="obra-foto">
             <img class="principal" src="https://cdn.pymesenlared.es/img/529/7531/17056/0x1000/002.jpg" width="688" height="920" loading="lazy"
               alt="Ascensor exterior de cristal y acero en la entrada de la Sociedad Musical Santa Cecilia.">
             <img class="detalle" src="https://cdn.pymesenlared.es/img/529/7531/17056/0x1000/001.jpg" width="698" height="876" loading="lazy"
